@@ -1,702 +1,1728 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>夏 2024 日本 旅行</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-	margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(50, 48, 44, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-default_background {
-	color: rgba(50, 48, 44, 1);
-}
-.highlight-gray_background {
-	background: rgba(248, 248, 247, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(248, 243, 252, 1);
-}
-.highlight-pink_background {
-	background: rgba(252, 241, 246, 1);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-default_background {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray_background {
-	background: rgba(248, 248, 247, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(248, 243, 252, 1);
-}
-.block-color-pink_background {
-	background: rgba(252, 241, 246, 1);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-uiBlue { background-color: undefined; }
-.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
-.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
-.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
-.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
-.select-value-color-transparentGray { background-color: undefined; }
-.select-value-color-translucentGray { background-color: undefined; }
-.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
-.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
-.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
-.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
-.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
-.select-value-color-pageGlass { background-color: undefined; }
-.select-value-color-washGlass { background-color: undefined; }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="511f8550-dc89-442c-beb4-929781df43b6" class="page sans"><header><img class="page-cover-image" src="https://wallpapercave.com/wp/wp6573584.jpg" style="object-position:center 66.97999999999999%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">⛩️</span></div><h1 class="page-title">夏 2024 日本 旅行</h1><p class="page-description"></p></header><div class="page-body"><div id="62538d5b-5df7-4949-b6a5-0c9fb034c570" class="collection-content"><h4 class="collection-title">Summer Asia Travel Timeline</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Assign</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th></tr></thead><tbody><tr id="227fa404-5a80-4710-945e-d7223a6ab863"><td class="cell-title"><a href="https://www.notion.so/angie-wu-in-japan-227fa4045a804710945ed7223a6ab863?pvs=21">angie wu in japan</a></td><td class="cell-\MT&gt;"></td><td class="cell-Nkzw"><time>@June 29, 2024 → July 5, 2024</time></td><td class="cell-;?tD"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="83bbb047-db5b-4180-8dbe-3e21ef7811f0"><td class="cell-title"><a href="https://www.notion.so/tokyo-83bbb047db5b41808dbe3e21ef7811f0?pvs=21">tokyo 東京</a></td><td class="cell-\MT&gt;"></td><td class="cell-Nkzw"><time>@June 26, 2024 → June 28, 2024</time></td><td class="cell-;?tD"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="17542b8d-507d-4dfb-8f6e-a5b3f1bbcdde"><td class="cell-title"><a href="https://www.notion.so/kamakura-17542b8d507d4dfb8f6ea5b3f1bbcdde?pvs=21">kamakura 鎌倉</a></td><td class="cell-\MT&gt;"></td><td class="cell-Nkzw"><time>@June 27, 2024</time></td><td class="cell-;?tD"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e155d8-a8e5-4635-95f6-14df3b2b2b44"><td class="cell-title"><a href="https://www.notion.so/hakone-20e155d8a8e5463595f614df3b2b2b44?pvs=21">hakone 箱根</a></td><td class="cell-\MT&gt;"></td><td class="cell-Nkzw"><time>@June 28, 2024</time></td><td class="cell-;?tD"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="41cbe02f-251a-46c8-9eb6-a7bebe403599"><td class="cell-title"><a href="https://www.notion.so/kyoto-41cbe02f251a46c89eb6a7bebe403599?pvs=21">kyoto 京都</a></td><td class="cell-\MT&gt;"></td><td class="cell-Nkzw"><time>@June 29, 2024 → July 1, 2024</time></td><td class="cell-;?tD"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="f50b5efa-e2eb-4661-82e5-3cd4f7201b61"><td class="cell-title"><a href="https://www.notion.so/nara-f50b5efae2eb466182e53cd4f7201b61?pvs=21">nara 奈良</a></td><td class="cell-\MT&gt;"></td><td class="cell-Nkzw"><time>@July 1, 2024</time></td><td class="cell-;?tD"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="19aa7365-8e25-4508-8805-0159f51c4d16"><td class="cell-title"><a href="https://www.notion.so/tokyo-19aa73658e25450888050159f51c4d16?pvs=21">tokyo 東京</a></td><td class="cell-\MT&gt;"></td><td class="cell-Nkzw"><time>@July 2, 2024 → July 5, 2024</time></td><td class="cell-;?tD"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="a90991cb-0ce4-4dcc-8504-f46b087a4b15"><td class="cell-title"><a href="https://www.notion.so/rickey-chiu-in-japan-a90991cb0ce44dcc8504f46b087a4b15?pvs=21">rickey chiu in japan</a></td><td class="cell-\MT&gt;"></td><td class="cell-Nkzw"><time>@June 26, 2024 → July 3, 2024</time></td><td class="cell-;?tD"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr></tbody></table><br/><br/></div><hr id="733b940f-858b-47e1-b2cd-6e8a049da70e"/><figure id="82ccfa5d-baf3-4d30-a511-60dd74388c09" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled.png"><img style="width:470.0000305175781px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled.png"/></a></figure><hr id="2164eea7-10dc-4523-b30a-a30d4f746032"/><h1 id="93936182-2679-4960-bd38-6ce72e2f0c9f" class="block-color-red_background">6/29: Initial Arrival at Kyoto 京都の到着</h1><div id="5c188d3a-a7ad-4a8c-a213-449f6b854ca4" class="column-list"><div id="cdfde537-befc-4765-af0f-0a8863ec25e2" style="width:50%" class="column"><h3 id="03f3554c-7124-4705-af50-258c3cffff2c" class="">Accommodation: <strong>Keio Prelia Hotel Kyoto </strong></h3><p id="92093ed7-424f-4429-93bb-08b23b95e1fb" class=""><a href="https://www.keioprelia.co.jp/kyoto/en/">https://www.keioprelia.co.jp/kyoto/en/</a> <strong>(4夜 - 6/29, 6/30, 7/1, 7/2)</strong></p><figure id="7a60c103-7741-4a11-a4ac-d8837b74dcb8" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-03-29_at_6.33.09_PM.png"><img style="width:488.9930725097656px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-03-29_at_6.33.09_PM.png"/></a></figure><p id="aa811d82-5af0-4284-a1b5-ee26fd6562b0" class=""><strong>Standard twin (19㎡) Bed width 113cm - </strong>￥17,784 ($117) per night</p><p id="939a2e71-8a84-4fd0-a7ef-535582e7035b" class="">The price for a 2 people in a standard twin room is around $117 per night, which is around $60 per person. This is the hotel for </p><h3 id="9cb9c331-7e6e-48ce-bae7-891a24d68e1b" class="">Pictures of Yasaka Shrine</h3><div id="c206cf5b-85e0-4bd2-bcaa-f3cb5452c501" class="column-list"><div id="a017610f-2037-44c3-9ec5-5ec22439c0ff" style="width:100%" class="column"><figure id="edea0152-54db-4d1d-93dc-e2e3ddc2de88" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%201.png"><img style="width:221.49307250976562px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%201.png"/></a></figure></div><div id="fe9d37e1-bad6-41bc-bdbb-af455545e0fd" style="width:100%" class="column"><figure id="5732d7ec-1582-4975-ace6-ef1dfdb09e61" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%202.png"><img style="width:221.49307250976562px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%202.png"/></a></figure></div></div></div><div id="f13dbfef-e712-4e98-9664-a18d26adcfe9" style="width:50%" class="column"><h3 id="cd38d23f-945f-4282-901e-6d94b41eceee" class="">Neighborhood Activities and Food</h3><p id="623e7138-beb0-4ede-ae69-538283b84383" class="">Assuming Angie and her mother will arrive at Kyoto around 4 PM from taking the <mark class="highlight-red"><strong>Shinkansen</strong></mark><mark class="highlight-red"> </mark><mark class="highlight-red"><strong>新幹線</strong></mark> from <mark class="highlight-red"><strong>Tokyo NRT Airport</strong></mark><mark class="highlight-red"> </mark><mark class="highlight-red"><strong>東京成田空港</strong></mark>, they should spend around an hour checking in, unpacking, and unwinding at the hotel.</p><p id="f8382eef-60f4-40e9-90a0-4cf5d0627dfa" class="">
-</p><p id="6ea5d8a2-f2bd-4d2d-90a4-072dcda5db08" class="">Following that, around 6 PM, we can have dinner at <strong><mark class="highlight-red">YAYOI Gojo Karasuma Branch (やよい軒 五条烏丸店) </mark></strong>which is only around a block from the hotel. They are open until around 11 PM which means that we can eat this later if needed, and if we come back late another day. The restaurant serves mainly <strong>teishoku style (定食)</strong><mark class="highlight-red"><strong> </strong></mark>which is a set meal. You can see the <a href="https://www.yayoiken.com/en_files/regular_menu_pdf/279_Yayoi_RegularMenu_EN_2404_0314_ol_.pdf?id=3486">menu at this link</a>.</p><p id="7d9d9e9b-1884-4635-a1a6-18ad1fe0c00f" class="">
-</p><p id="a2c75647-0ade-4e1e-9a20-865b3aadcbf7" class="">After dinner, we can check out <mark class="highlight-red"><strong>Yasaka Shrine (八坂神社 御旅所)</strong></mark><mark class="highlight-red"> </mark>which is only a few stops down the metro. It is a popular shrine for <strong>New Years Shrine Visits (初詣)</strong>, and it is well illuminated at night. See the photos at the left. Following that, we can walk around and explore the city and buy some breakfast before heading back to the hotel, since we have to wake up early the next morning.</p><figure id="53cd5cec-9395-47d2-af98-87098b676ff4" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-04-17_at_11.26.19_PM.png"><img style="width:488.9930725097656px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-04-17_at_11.26.19_PM.png"/></a></figure></div></div><h1 id="6cb6c4c4-2709-4487-9ac9-d9a070e1de89" class="block-color-red_background">6/30: Kyoto’s Shrines and Temples　京都の神社と寺</h1><div id="3e3e76eb-03d8-43b6-b53a-d7306a4db76b" class="column-list"><div id="c67d4607-b0b3-4728-97d2-558de09ef90a" style="width:50%" class="column"><h3 id="7f02d5b0-b0eb-46a8-9d18-4ff5604892ce" class="">Thousand Red Gates <mark class="highlight-red">伏見稲荷大社 </mark>(7:30AM)</h3><p id="a8e38058-c1b9-4af0-ab70-26d978004da2" class="">The shrine sits at the base of a mountain, also named Inari, which is 233 meters (764 ft) above sea level, and includes trails up the mountain to many smaller shrines which span 4 kilometers (2.5 mi) and take approximately 2 hours to walk up all the way.</p><p id="8d62c460-65ef-4249-9509-59d8d39a785a" class="">This shrine is always crowded by tourists, so it is best to be there early (at 7 to 8 AM). There is no need to go to the end, but if you would like there should be a view of Kyoto on the peak.</p><h3 id="5b964714-0871-4daf-9eed-c45d898f8385" class="">Yasaka Pagoda <mark class="highlight-red">八坂の塔 </mark>(9:00AM)</h3><p id="1dce2476-2825-4cb0-9442-36b9a0c55865" class="">The <mark class="highlight-red"><strong>Yasaka Pagoda</strong></mark>, also known as the Tower of Yasaka, is a Buddhist pagoda located in Higashiyama-ku, Kyoto, Japan. The 5-story tall pagoda is the last remaining structure of a 6th-century temple complex known as Hōkan Temple. The pagoda is now a tourist attraction. </p><p id="1122377e-ee31-4683-b6c9-e0d76f7692b0" class="">This alleyway shown in the photo is also usually crowded by tourists, so if you want any clear photo opportunities it is best to go early. If clear photos aren’t that important, it may be more convenient to go at the same time we are planning to head to Kiyomizu temple, because they are essentially a few minutes away from one  other.</p><p id="b0d3e863-1169-4cb0-ae1a-59be4f1b5c2c" class="">Note that this is located in the <mark class="highlight-red"><strong>Gion District</strong></mark>, which the Kyoto Government has restricted access for tourists in certain alleyways to prevent geisha harassment.</p><h3 id="7230666f-7e42-4ab6-a8ff-31d348d91d0e" class="">Kiyomizu Temple <mark class="highlight-red">清水寺 </mark>(11:00AM)</h3><p id="2fffe3f5-4b5f-4e37-8337-195d87c30d1f" class=""><mark class="highlight-red"><strong>Kiyomizu-dera</strong></mark> (&quot;Pure Water Monastery&quot;) is a Buddhist temple located in eastern Kyoto, Japan. The temple is part of the Historic Monuments of the Ancient Kyoto UNESCO World Heritage Site. </p><p id="e09b728d-f138-4c78-99b3-aed048a3607c" class="">The popular expression &quot;to jump off the stage at Kiyomizu&quot; is the Japanese translation of the English expression &quot;to take the plunge&quot;.  This refers to an Edo-period tradition that held that if one were to survive a 13-meter (43-foot) jump from the stage, one&#x27;s wish would be granted. </p><p id="e86780a3-4020-4516-b1b5-cb2d6e0eedc0" class="">There is a good view of the city and visitors can take a sip of mountain spring water from <mark class="highlight-red"><strong>Otowa Waterfall 音羽の滝 </strong></mark>using the long scoops provided at the site. Hold out the long scoops, which has been pre-sterilized in UV blue light, to catch one of the 3 streams of spring water. Each stream is said to bestow longevity, success, and love. Go early, as the queues for Otowa Waterfall can get windingly long.</p><p id="ff23e07f-eb54-421a-abf3-f5cf998dc1d0" class="">See the website for more things to do at Kiyomizu Temple. <a href="https://plingthinks.com/2016/09/25/kiyomizu-dera-kyoto-temple-8-things-to-do/">https://plingthinks.com/2016/09/25/kiyomizu-dera-kyoto-temple-8-things-to-do/</a></p><h3 id="ff06ed17-7e91-4105-af95-33632815aa90" class="">Heian Shrine<mark class="highlight-red"> 平安神宮 </mark>(3:00 PM)</h3><p id="7a25b25a-0209-490c-bb11-d69438733d9b" class="">The <mark class="highlight-red"><strong>Heian-jingu</strong></mark> Shrine (平安神宮, Heian-jingū) is a Shinto shrine located in Sakyō-ku, Kyoto, Japan. The Shrine is ranked as a Beppyō Jinja (別表神社), meaning it is one of the most important shrines in all of Japan. </p><p id="a749f658-2c5c-489c-900d-8c9a0ccdf9c8" class="">The history is rooted in the fact that it was built to commemorate the 1100th anniversary of <mark class="highlight-red"><strong>Heian-kyo (平安京, Japan’s Old Capital) </strong></mark>and honor Emperor Tenmu, the emperor that ruled over Kyoto at that time.</p><p id="8d530cea-95cd-4162-8aab-134cfe34f073" class="">The Japanese-style garden in the land of Heian Shrine takes up about half the land area (approximately 33060 meters-squared). It consists of beautiful sakura and maple trees, along with many ponds and flowers.</p></div><div id="a82304d2-9234-4ac7-b658-153dead614ac" style="width:49.99999999999999%" class="column"><p id="03e28cb4-ded9-4075-91c1-331dd94458d7" class="">Due to the commonality of crowding in Kyoto, especially in the Gion District where most of the attractions are located, it is much better to wake up early 6:30 AM or 7 AM to get to the points of interest first to enjoy them.</p><h3 id="a08faed8-20ee-47c7-9dbb-a71f85b26301" class="">Photos of Points of Interest</h3><figure id="bc6859cd-1606-4871-9de6-9a386139639c" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%203.png"><img style="width:537.4913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%203.png"/></a></figure><figure id="8459f854-f551-44c2-b020-2854c1933f05" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%204.png"><img style="width:537.4913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%204.png"/></a></figure><figure id="65b54403-41fd-41f9-8f36-f73e21325c65" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%205.png"><img style="width:2119px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%205.png"/></a></figure><figure id="661f0c4b-efef-4074-9b69-983e876e6ea8" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%206.png"><img style="width:655.6510620117188px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%206.png"/></a></figure></div></div><div id="c030eea8-bc19-4ca0-9241-dec9a97e6d9f" class="column-list"><div id="9a807b58-6539-4c68-a88d-68cd9694e503" style="width:33.33333333333333%" class="column"><h3 id="a11a3b63-efc7-40bb-ab7d-539d2ee9f007" class=""><strong>Rental Kimono Okamoto Kiyomizudera Shop (10:00 AM)</strong></h3><p id="0dc9ce1b-0bd8-4bab-9672-cf221be269b5" class=""><strong>レンタル着物岡本 清水店</strong></p><p id="7f78c69d-f41b-4d01-8586-fb725649cbb5" class=""><a href="https://www.okamoto-kimono-en.com/storeinfo/kiyomizudera.html">https://www.okamoto-kimono-en.com/storeinfo/kiyomizudera.html</a></p><p id="47e76413-e7c2-41f9-8ee6-a834f1cfb28f" class="">This is a popular kimono rental place near <mark class="highlight-red"><strong>Kiyomizu Temple</strong></mark>. The reviews are good and the condition is that you must return it by 6 PM. You can also make reservations in the website above.</p><p id="494e1dbf-cab5-467c-896a-df1ae0228b1d" class="">Note that there are two different times: t<strong>raditional kimonos (着物)</strong> and <strong>yukatas (浴衣</strong>), which are lighter and made for summer weather. </p></div><div id="217650cb-bc1a-4558-b7e3-97687de94dcd" style="width:33.33333333333333%" class="column"><h3 id="3365212f-27eb-47cf-8068-060e20e897bb" class=""><strong>Sanmikouan </strong>(2:00 PM)</h3><p id="0e43c5f2-0eb5-4f4e-9237-fe2460200271" class=""><strong>三味洪庵 京都 本店</strong></p><p id="18afe99d-75f1-49fc-b86a-7a31d96fd84e" class=""><a href="https://sanmikouan.jp/menu/">https://sanmikouan.jp/menu/</a></p><p id="b46c571b-1619-497f-a84d-8777bdb750d2" class="">This is a popular local soba shop that accepts reservation so you can skip the line that usually appears. Check the link above to see the menu.</p><figure id="2ffe2496-2a2a-49be-8fd1-6e3280d2b46d" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%207.png"><img style="width:310.65972900390625px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%207.png"/></a></figure></div><div id="15490020-5fd0-499a-806c-cbb06fe87ba8" style="width:33.33333333333333%" class="column"><h3 id="25f8e383-c1f9-4b09-a545-df9a0800ec61" class="">Map of Route (roughly)</h3><figure id="0537631f-b9eb-45c1-887b-fc643405f762" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-04-05_at_11.57.31_AM.png"><img style="width:265.328125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-04-05_at_11.57.31_AM.png"/></a></figure><p id="a2d9c925-04fa-47b1-b80a-232af83be9e8" class="">
-</p></div></div><div id="5d5e0849-5a1e-4468-9dd8-8971e4197177" class="column-list"><div id="30c824f3-209a-4785-bc6b-c8c9866df995" style="width:50%" class="column"><h3 id="afc7bc64-8c6d-4228-8bff-656aeea0395d" class="">Strolling Gion &amp; Returning Kimonos (5:00 PM)</h3><p id="8295cadd-109d-46b3-9f30-57608749319b" class="">Make sure to return our kimonos at the Okamoto Kiyomizudera shop before 6 PM. We can travel back on the metro and also explore the <mark class="highlight-red"><strong>Gion Historical District</strong></mark> if we have any extra time. Make sure to be mindful and respectful of any geishas and not enter or take pictures of any private walkways.</p><figure id="9077a15f-e316-4788-af77-c651ad20a767" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%208.png"><img style="width:488.9930725097656px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%208.png"/></a></figure></div><div id="a8299f55-d4db-4b7a-835f-cc2b6f83d805" style="width:50%" class="column"><h3 id="b8c005e5-3a0b-410f-8a25-c9ab9bdf0e85" class="">Nidec Kyoto Tower <mark class="highlight-red"><strong>ニデック京都タワー </strong></mark> (7:00 PM)</h3><p id="db25afa3-84c9-4b26-8dac-f1dc73116f62" class="">Take a view on the top of Kyoto Tower around sunset of the city. Tickts are relatively cheap, only around $6.00 USD, which is cheap compared to Tokyo Skytree. There are free telescopes to zoom in on temples and castles. There are also many dinner options nearby before heading back to the hotel. </p><figure id="8d9ca05f-bb92-45e0-adc5-5bde9743af7a" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%209.png"><img style="width:488.9930725097656px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%209.png"/></a></figure><p id="d2ea3629-9208-4799-9214-94fad50d1429" class="">
-</p></div></div><hr id="27f88db1-10f7-4f25-afe7-fadecd1c2c9c"/><figure id="f90d4d36-c8c3-4e94-80dc-00b6e6924726" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2010.png"><img style="width:526.8923950195312px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2010.png"/></a></figure><hr id="206fe7ab-422f-45df-89ad-f0bcf794dd68"/><h1 id="8e0b324c-c540-4ece-8368-e2606b012a8d" class="block-color-red_background"><mark class="highlight-red_background">7/1: Day Trip to Nara　奈良の一日旅</mark></h1><div id="962216ba-da0b-4324-934f-e73bf6831f9f" class="column-list"><div id="a87d5f5d-e4a2-4980-beef-9e01cbbf284c" style="width:50%" class="column"><h3 id="04c5023c-a766-41a0-a7f9-b56709da1f99" class="">Arriving in Nara By Train <mark class="highlight-red">奈良に行く </mark>(10:30 AM)</h3><p id="16cc73aa-319c-4afa-b75b-e1c31e55acfb" class="">The train ride from Kyoto to Nara—specifically<mark class="highlight-red"><strong> Kintetsu-Nara Station</strong></mark> <mark class="highlight-red"><strong>(近鉄奈良駅)</strong></mark> takes around 45 minutes one way, and there is usually one train every 20 minutes.  Assuming we arrive at the station at around 9 AM, we can safely get out of Nara Station at 10:30 AM.</p><h3 id="94a18a84-6a94-4b17-8973-cdf18b3f9fe1" class=""><strong>Tonkatsu Ganko Nara </strong><mark class="highlight-red"><strong>とんかつがんこ奈良店 </strong></mark><strong>(11 AM)</strong></h3><p id="b8d583ba-5e6d-4383-a147-5320a131902a" class="">This is a famous Tonkatsu restaurant that has a very high rating, opens at 11 AM on Mondays. This restaurant is very popular, so it is a good idea to eat it earlier (i.e. close to when we arrive at the station) before exploring the rest of Nara.</p><h3 id="c67f16b6-2b26-4ac4-9994-70681026ab94" class=""><strong>Nakatanidou Mochi Shop Show</strong><mark class="highlight-red"><strong> 中谷堂</strong></mark><strong> (12 PM)</strong></h3><p id="2240579f-700a-40ab-9943-e9e0b62a9ddf" class="">This shop is famous for its theatrical and traditional way of making mochi and has went viral over its captivating process of rhythmic shouting and hammering mochi on a wooden mortar. The line for the mochi is usually quite long, but it moves quite fast. However, the view for the mochi making may be more crowded and hard to see during peak times.</p><p id="7670f2a5-62e3-474f-b28f-ba004a30e684" class="">If you would like to see the viral video on YouTube, it is in the link here: <a href="https://www.youtube.com/watch?v=tmSrULDVRPc"><strong>Pounding Mochi With the Fastest Mochi Maker in Japan</strong></a><strong> (24 million views on Great Big Story)</strong></p><p id="5557f1f5-72df-4422-8522-5d484801c153" class="">From all the reviews however, the mochi seems very delicious and worth the wait.</p><h3 id="b802c83d-25dd-4032-a8ab-80e63aef6b3e" class=""><strong>Kofuku-ji </strong><mark class="highlight-red"><strong>興福寺 </strong></mark><strong>(1 PM)</strong></h3><p id="aff73ef4-d1d0-4389-b6a0-9d17a4dd4fe1" class="">Kofukuji (興福寺) used to be the family <a href="https://www.japan-guide.com/e/e2058.html">temple</a> of the <a href="https://www.japan-guide.com/e/e2132.html">Fujiwara</a>, the most powerful aristocratic clan during much of the <a href="https://www.japan-guide.com/e/e2132.html">Nara and Heian Periods</a>. At 50 meters, the <strong>five-storied pagoda</strong> is Japan&#x27;s second tallest wooden pagoda, just seven meters shorter than the five-storied pagoda at Kyoto&#x27;s <a href="https://www.japan-guide.com/e/e3919.html">Toji Temple</a>.</p><p id="902b2254-a400-4607-87fe-ecbfcdafb959" class="">The complex is quite large, emcompassing a park, many buildings, and the famous <mark class="highlight-red"><strong>Sarusawa Pond (猿沢池)</strong></mark>. This area is part of a large green space that connects the to the <mark class="highlight-red"><strong>Asajigahara Enchi</strong></mark> and then Nara Park, so we can take our time walking through it and enjoying the scenery.</p><h3 id="21f55ea9-dffa-4e12-8bc0-60b36e1dda7d" class=""><strong>Asajigahara Enchi </strong><mark class="highlight-red"><strong>浅茅ヶ原園地 </strong></mark><strong>(2:30 PM)</strong></h3><p id="1f0873c0-bd9c-49f6-9956-50242997c522" class="">Asajigahara-enchi Park, part of the extensive <a href="https://www.gltjp.com/en/directory/item/11611/">Nara Park</a>, is known for its diverse landscape and cultural heritage. Located on the southern side of the park, near the first Torii gate of <a href="https://www.gltjp.com/en/directory/item/12017/">Kasuga Taisha Shrine</a>, this hilly area offers stunning views, especially around the Sagiike Pond where the Ukimido Pavilion stands.</p><p id="973abacf-a220-4c71-b545-2114f3d5491e" class="">This is also quite close to Nara Park proper, so there are many deers in this area as well.</p><h3 id="7b686625-ac89-4fd1-aac8-1ac0d3af3f7c" class=""><strong>Kuki Cake  </strong><mark class="highlight-red"><strong>空気ケーキ</strong></mark><strong> (4 PM)</strong></h3><p id="cebc6f91-9625-4a0b-b4ad-7903537fa02f" class="">Kuki Cake is in a area close to Asajigahara Enchi and is a nice cafe to take a rest to eat some delicious pastries. VIsit the website below or look online for the menu!</p><p id="e756d2c2-799d-4dcb-84a6-810ec7e580fd" class=""><a href="http://www.kuukicake.com/">http://www.kuukicake.com/</a></p><h3 id="94c26e1d-fb4c-4ffe-9fd8-5fb3135e1f11" class=""><strong>Nara Park </strong><mark class="highlight-red"><strong>奈良公園 </strong></mark><strong>(5:30 PM)</strong></h3><p id="0027d5dd-d37f-4fd2-bfd7-117529e2a148" class="">Landscaped, public park with ancient temples &amp; the Nara National Museum of art, plus tame deer. This is Nara Park proper, but essentially just another green space connected with the other places explored earlier in the day. You can feed the deer at Nara Park (along with Asajigahara Enchi) with special deer food that you can buy in the area. The deer are very polite and will bow for you to feed them, but be careful as sometimes they will get aggressive when you don’t give them what they want.</p><h3 id="45fbd99f-92a1-4436-b347-821829c150d0" class=""><strong>Kasuga Taisha </strong><mark class="highlight-red"><strong>春日大社</strong></mark><strong> (6:30 PM)</strong></h3><p id="b1ff0112-559c-4bd3-a205-ec88d25d284c" class="">Kasuga Taisha is one of the most sacred sites in all of Japan. it attracts both devotees and tourists seeking an iconic Shinto experience. It was built during 768 AD, and is beautifully lit up at night. There is no entrance fee but it is a short walk (or hike) from Nara Park and the rest of the previously visited green space.</p><h3 id="96418b78-6da5-4862-956d-4095ea9b8708" class=""><strong>Wagyu Suji Curry </strong><mark class="highlight-red"><strong>和牛スジカレー </strong></mark><strong>(8 PM)</strong></h3><p id="f83b049c-aeec-4174-8dcd-e73c34b3cc48" class="">This restaurant specializes in Japanese curry and omurice, and it receives very high ratings from both Japanese and foreigners.  Check out their menu here: <a href="https://steak-cielbleu.com/">https://steak-cielbleu.com/</a></p></div><div id="a991da42-fd34-46fb-abd6-0c5bdc330d30" style="width:50%" class="column"><figure id="224a3aed-832e-495c-8714-62154df52d79" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2011.png"><img style="width:499.4965515136719px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2011.png"/></a></figure><figure id="ba25c55c-6a90-4d90-b2f0-5a057cb8c2a4" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2012.png"><img style="width:499.4965515136719px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2012.png"/></a></figure><figure id="d6576e55-880f-4747-b4f2-be5bcddfadfa" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2013.png"><img style="width:1023.9583740234375px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2013.png"/></a></figure><figure id="20795005-8d49-4e3d-977d-18ff7c06b786" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2014.png"><img style="width:488.9930725097656px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2014.png"/></a></figure><figure id="91bbae4e-2cb7-449c-a39c-07b74aafa082" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2015.png"><img style="width:499.4965515136719px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2015.png"/></a></figure><figure id="f7b80a6a-2a3b-45ea-b5e5-c93ae9d18052" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2016.png"><img style="width:488.9930725097656px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2016.png"/></a></figure></div></div><figure id="65327b5c-3941-40ae-b738-e8d6adefb6c6"><div class="source"><a href="https://www.google.com/maps/d/u/0/edit?mid=1Iot4wkKRushA3d4L1Uh797EarUIpP5g&amp;usp=sharing">https://www.google.com/maps/d/u/0/edit?mid=1Iot4wkKRushA3d4L1Uh797EarUIpP5g&amp;usp=sharing</a></div></figure><hr id="2eda5a8e-889c-45bc-a14c-0b6382ae3d57"/><figure id="8a3d7150-24d4-4747-afe2-bcca6df074a6" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2017.png"><img style="width:510.998291015625px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2017.png"/></a></figure><hr id="02cd85d0-65e7-4cae-aa81-5da81038ab74"/><h1 id="82df12c0-3a8e-4bc5-95a3-86c1168183eb" class="block-color-red_background">7/2: Arrival in Tokyo　東京の到着</h1><div id="4a0b38ea-8321-4089-af7a-d63622dfaeaa" class="column-list"><div id="349262e3-8bdc-40b5-b058-2ca8121c3e37" style="width:50%" class="column"><h1 id="c0fed99d-cb35-477d-88a6-9dfaff51859e" class="">Bullet Train <mark class="highlight-red">新幹線</mark> </h1><p id="acab978f-8800-4d5c-a811-15f7df08c421" class="">There are online tickets for the bullet train from <mark class="highlight-red"><strong>Kyoto Station 京都駅</strong></mark> to <mark class="highlight-red"><strong>Tokyo Station 東京駅</strong></mark>, and the trip almost always consistently takes just less than 2 hours and 15 minutes. Assuming we take the train at <strong>8:30 AM,</strong> we will need to wake up and check out around 7 to 7:30 AM and head to the station. We will arrive at Tokyo station around <strong>10:45 AM.</strong></p><p id="d0f8c41a-c1ae-4c8f-aee1-fb82327e9413" class="">If you want to buy a ticket where you can see Mt. Fuji outside the window, make sure to purchase the tickets for the <strong>LEFT SIDE</strong> of the train.</p></div><div id="38b17823-9b57-473e-ac11-919e19170569" style="width:50%" class="column"><figure id="7abefec0-fa6d-4a77-a4e8-80a8edec9805" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2018.png"><img style="width:444.982666015625px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2018.png"/></a></figure></div></div><h1 id="86871918-c233-448a-8faf-ccf03996f71a" class="">Accommodations</h1><p id="ab9507bb-4003-4876-8b08-91285738f4f7" class="">From <mark class="highlight-red"><strong>Tokyo Station 東京駅</strong></mark>, we will to Mitsui Garden Hotel Otemachi and drop off all of our luggage so that we can travel around Tokyo that day. </p><div id="e806f3e3-361a-4c97-b426-d5952bedd295" class="column-list"><div id="ac28cfbb-e423-471c-b509-b4d06b3a939e" style="width:50%" class="column"><h3 id="afd402b5-8fc4-4806-b6fd-a8dba9f83472" class=""><strong>Mitsui Garden Hotel Otemachi</strong></h3><figure id="fd10b47a-ddbc-4229-9a79-2a76eaad602f" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2019.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2019.png"/></a></figure><p id="22ec2cc1-b51b-40fe-beaa-84171b41623f" class=""><strong>(Rickey: 1夜 - 7/3) </strong>             </p><p id="607a6292-9b28-4cec-9ab9-e64e06960a61" class=""><mark class="highlight-red"><strong>Mitsui Garden Hotel Otemachi </strong></mark>is a 4-star hotel situated near the <mark class="highlight-red"><strong>Imperial Palace</strong></mark>. It is also near <mark class="highlight-red"><strong>Tokyo Station</strong></mark><mark class="highlight-red"> (東京駅)</mark>, ensuring easy access to the train and metro. </p></div><div id="a1d01a6a-bf29-4657-beed-61cee34c787e" style="width:49.999999999999986%" class="column"><h3 id="3dc46d49-befa-46af-8525-3f4ac3b77213" class="">APA Hotel &amp; Resort Ryogoku Eki Tower </h3><figure id="4eaa1b45-3ca0-4e69-bb6b-0f788952bd5b" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2020.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2020.png"/></a></figure><p id="868b0db2-c904-491b-8525-f97da258bbd3" class=""><strong>(Angie: 3夜 - 7/3, 7/4, 7/5) </strong></p><p id="cb7d317a-c1b2-4d38-9d8b-d69dceb8f72a" class=""><mark class="highlight-red">A</mark><mark class="highlight-red"><strong>PA Hotel &amp; Resort Ryogoku Eki Tower</strong></mark><strong> </strong>is a 3-star hotel situated in Taito City, a reasonable distance from <mark class="highlight-red"><strong>Tokyo Skytree </strong></mark>and <mark class="highlight-red"><strong>Asakusa</strong></mark>. It is close to <mark class="highlight-red"><strong>Ryogoku Station</strong></mark><mark class="highlight-red"> (両国駅)</mark>.</p></div></div><h1 id="01cd48b8-0cd9-4108-97ea-071d434d34ba" class="">Shibuya 渋谷</h1><div id="7efae2f9-9c3e-49ad-9f3c-f332e5497a54" class="column-list"><div id="576c1846-69b6-4ec0-9c3b-8190f7556c1c" style="width:50%" class="column"><h3 id="76fd3405-d44c-4808-b4cb-f5149f03a5a6" class="">SHIBUYA SKY <mark class="highlight-red">渋谷スカイ</mark> (2:00 PM)</h3><p id="4cfd0cc6-774a-41fa-8721-c8d17c3d9b2e" class=""><mark class="highlight-red"><strong>Shibuya Sky</strong></mark> is a 229 meter (751 feet) tall observation deck located on the 47th floor (top floor) <mark class="highlight-red"><strong>of Shibuya Scramble Square Tower</strong></mark>. The open-air deck offers a 360-degree panoramic view of Tokyo. </p><p id="0944e7be-e5b4-4a12-90a5-e4c2486db3c3" class="">It is a place to take the most stunning photos, so make sure to bring you camera and phone. Unfortunately, tickets during the evening (which is the most popular) was all taken even 4 weeks in advance, but the view is still spectacular during the day.</p><p id="6fd62f5c-8c8b-40d1-8294-b0f2085a7d68" class="">The tickets I purchased are for TWO ADULTS and TWO HIGH SCHOOL STUDENTS, and the time to enter is 2:00-2:20. Therefore, we should get there around 1:45.</p><h3 id="5b09b777-02b5-4331-8f3b-05ab0fff8f97" class="">Shibuya Scramble Crossing <mark class="highlight-red"><strong>渋谷スクランブル交差点</strong></mark> (3:00 PM)</h3><p id="398002ff-9d9e-4e2e-9eeb-9f4e955f6769" class=""><mark class="highlight-red"><strong>Shibuya Crossing</strong></mark>, is a popular pedestrian scramble crossing in Tokyo. It is located in front of the Shibuya Station Hachikō exit and stops vehicles in all directions to allow pedestrians to inundate the entire intersection. Note that there is also a famous dog statue on one of the corners of the intersection.</p><p id="30af62d9-87f1-44b4-869d-22543cb01363" class="">This is right next to Shibuya Sky, so there will be almost no commute time between the two of them. There is also small cafes (also Starbucks) nearby where you can watch the crossing in action and get something to drink. </p><h3 id="5663b233-0907-432c-ab1e-f8c40eb30f91" class="">MEGA Don Quijote <mark class="highlight-red">メガドンキホーテ </mark>(3:30 PM)</h3><p id="d48ff757-08ff-403c-9baa-bff4ae5dcaf7" class="">Main Store is a go-to shopping destination for international tourists in Tokyo, offering a vast range of affordable items, from daily essentials to souvenirs. It&#x27;s one of Tokyo&#x27;s largest stores and offers tax-free shopping for overseas visitors.</p><p id="e8785dc6-3d15-4063-8b5e-9d03e8951dca" class="">This expansive discount store offers an array of products, ranging from essential daily goods to groceries, home appliances, brand-name products, medicines, and souvenirs, all at incredibly reasonable prices!</p><p id="ee89a508-399c-493b-91f7-d30c0daa1053" class="">Check out YouTube videos to see all the things to buy! A majority of the products are all very high quality! Note that if you want a tax refund, you are not allowed to open the packaging until you leave Japan.</p><h3 id="4429d7b8-06be-4519-87f6-e5e289169d71" class=""><strong>CAFE: dotcom space Tokyo (5:00 PM)</strong></h3><p id="1bac3563-dc09-437d-9c76-da24c0295dcb" class="">This cafe is located near our next location (<mark class="highlight-red"><strong>Meiji Shrine</strong></mark>), and is in one of the most popular subdistricts—<mark class="highlight-red"><strong>Harajuku</strong></mark><mark class="highlight-red"> 原宿</mark>. It is a few steps away from <mark class="highlight-red"><strong>Takeshita</strong></mark><mark class="highlight-red"> </mark><mark class="highlight-red"><strong>Street</strong></mark><mark class="highlight-red"> 竹下通り</mark>, a popular point in Harajuku that features a variety of fashion and wacky, youth-driven shops selling colorful and crazy clothes and accessories.</p><p id="555fc422-29c5-47a5-b37b-a8210d867353" class="">The cafe itself features very aesthetic and delicious foods, and is a good place to rest before continuing on for the rest of the night. Note that this cafe closes at 6:30 PM, in case of any change to the day itinerary. </p><h3 id="54750db3-fc58-4393-8a4c-7d4bac396263" class="">Meiji Shrine <mark class="highlight-red">明治神宮</mark> (6:00 PM)</h3><p id="beaa5a17-fcf5-4f69-885b-4a022ea52af4" class="">Meiji Shrine (明治神宮, Meiji Jingū) is a <a href="https://www.japan-guide.com/e/e2059.html">shrine</a> dedicated to the deified spirits of <a href="https://www.japan-guide.com/e/e2130.html">Emperor Meiji</a> and his consort, Empress Shoken. Located just beside the <a href="https://www.japan-guide.com/e/e2370.html">JR Yamanote Line</a>&#x27;s busy <a href="https://www.japan-guide.com/e/e3006.html">Harajuku</a> Station, Meiji Shrine and the adjacent <a href="https://www.japan-guide.com/e/e3034_002.html">Yoyogi Park</a> make up a large forested area within the densely built-up city and offer walking paths for a relaxing stroll away from the concrete.</p><p id="f51dd1e2-23dd-4fec-a180-338036fb736d" class="">Meiji Shrine closes at sunset, which is around 7:00 PM or later. It has no entrance fee so you are able to come and go as you wish. Due to its location next to the JR, it is very convenient to commute to Shinjuku, which is where the next set of locations are.</p></div><div id="37ccd8d6-2de7-49ef-afeb-1daadce73a24" style="width:50%" class="column"><figure id="0d69d49a-60b2-41fd-8e71-0bfc8f945972" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2021.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2021.png"/></a></figure><figure id="6169cc13-b512-4744-9744-ce47b4c3f01c" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2022.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2022.png"/></a></figure><figure id="66fa4bd7-4a1c-4ac4-83ee-bd37a6d12027" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2023.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2023.png"/></a></figure><figure id="a8ae36cd-3d87-4ddf-9374-8a6946a7311a" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2024.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2024.png"/></a></figure><figure id="e4e4e498-b460-4aaf-bc60-759d02dc5ce8" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2025.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2025.png"/></a></figure></div></div><h1 id="6037a10c-b9b5-4e44-bd47-b89754823758" class="">Shinjuku 新宿</h1><div id="455ce632-a776-4e7a-9fd5-9e4f737c9d30" class="column-list"><div id="a39f7194-9504-4b6a-a476-3ae923ee8c58" style="width:50%" class="column"><h3 id="7aef08e3-3138-4853-90f7-f84d3e2a453d" class="">Cross Shinjuku Vision <mark class="highlight-red">東新宿ビル クロス </mark>(7:30 PM)</h3><p id="91c59ca7-e83c-4783-8b8c-b4a685193151" class="">Right outside the East Exit of <mark class="highlight-red"><strong>Shinjuku Station</strong></mark>, Cross Shinjuku Vision is an electronic billboard famous for its 3D effect. The most famous appearance on the billboard is the cat, which is pretty much an icon of Tokyo itself.</p><p id="94ef6501-3ae7-4c8e-bb37-59a93d1760c2" class="">There is also a famous Cat Cafe in the building (hence the giant cat), and if you want to check that out the hours are from 1 to 9 PM. The area is surrounded by many fashion shops, restraunts, and other things that are sure to fill your time in the evening. However, doing so will cut into the time for the next area, which is similar in that it is mostly shopping. Feel free to adjust the time in each area to your liking.</p><h3 id="078cc17f-fecc-4114-b575-af9a2448189e" class="">Central Road, <mark class="highlight-red">セントラルロード </mark>(8:00 PM)</h3><p id="84e75cd0-6cb9-4fca-a875-c18ec8c16207" class="">Central Road in Kabukicho is the brighest and most famous area of Shinjuku.</p><h3 id="9e25822d-e02e-4a97-a164-9d846e9f87b1" class="">Tokyo Metropolitan Government Observation Decks (9:00 PM)</h3><h3 id="5888b929-b447-40bc-9119-2a88cf63097a" class="">Omoide Yokocho (9:45 PM)</h3><p id="da324ea3-06e0-42b6-bff9-ee44012efdba" class="">Omoide Yokocho is a maze of narrow alleyways on the West Exit of <mark class="highlight-red"><strong>Shinjuku Station</strong></mark>. Over the years, it&#x27;s become popular for its <strong>unique atmosphere</strong>, which is in stark contrast to modern Shinjuku. Also known as Memory Lane, Omoide Yokocho is packed with historic eateries and buzzing with energy. It is the home of many</p><p id="c4843d36-669b-42b5-a183-a468ec56b58c" class="">
-</p></div><div id="a08ebbc2-0204-4bf9-b1b6-a933478e8a42" style="width:50%" class="column"><figure id="7bf48f90-587c-47c3-8966-2b57cf7cd7f2" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2026.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2026.png"/></a></figure><figure id="097f60de-2fc8-492c-8363-195eb2740121" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2027.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2027.png"/></a></figure><figure id="a4198472-307c-4944-9e5a-8e8031536dcf" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2028.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2028.png"/></a></figure><figure id="4d655ead-39ae-41ad-bcdd-21f22181e5e7" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2029.png"><img style="width:499.9913330078125px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2029.png"/></a></figure></div></div><ul id="5373e3d6-c9ce-40a0-987c-1869ce8fc7cb" class="bulleted-list"><li style="list-style-type:disc">omoide yokocho</li></ul><ul id="1b87c7b1-3f0e-47a2-a186-98ab3ad02fb5" class="bulleted-list"><li style="list-style-type:disc">shinjuku cat cafe (shinjuku station)</li></ul><ul id="2c77ff52-797e-4c62-87df-e414919a5fde" class="bulleted-list"><li style="list-style-type:disc">kobukicho rd</li></ul><ul id="f04ef2c5-f657-4e7e-a830-282add3d4421" class="bulleted-list"><li style="list-style-type:disc">central road shinjuku</li></ul><ul id="b4e02a8a-5bc6-4ca5-8088-f111df625325" class="bulleted-list"><li style="list-style-type:disc">tokyo metropolitan government observation decks</li></ul><figure id="055dc443-1cd1-4650-89a0-512740eef19b"><div class="source"><a href="https://www.google.com/maps/d/u/0/edit?mid=1taKWqQi5xnx7fe-YrPsaagF8-QPJMbg&amp;usp=sharing">https://www.google.com/maps/d/u/0/edit?mid=1taKWqQi5xnx7fe-YrPsaagF8-QPJMbg&amp;usp=sharing</a></div></figure><h1 id="e4f3afb6-f6e6-4dcb-aabf-889957f4dd1b" class="block-color-red_background">7/3: Day 2 Of Tokyo　東京の2日</h1><h2 id="568ec35a-e7c4-4811-a726-bf99133c6121" class="">Minato 港区</h2><ul id="f7f4b209-e282-4160-8b9e-20eff589f6e6" class="bulleted-list"><li style="list-style-type:disc">tokyo tower RED 東京タワー</li></ul><ul id="b23021d0-2538-4e04-a844-8140d9354039" class="bulleted-list"><li style="list-style-type:disc">teamlab borderless</li></ul><p id="e5675f79-f8f0-4393-a9e3-40c853ec85d6" class=""><a href="https://webket.jp/pc/member/top?fc=00396&amp;ac=8001&amp;lang=1">https://webket.jp/pc/member/top?fc=00396&amp;ac=8001&amp;lang=1</a></p><p id="b0f3224f-e2e9-4913-b074-de6458fa1b64" class=""><a href="https://borderless-azabudai.ticket.teamlab.art/tickets/#/id/nyaZ1I1ivjhh01UsQw5avJpaOywb77LIhFuDnjWCqfAQh5ltXGYvHApEpBmk5Kg4">https://borderless-azabudai.ticket.teamlab.art/tickets/#/id/nyaZ1I1ivjhh01UsQw5avJpaOywb77LIhFuDnjWCqfAQh5ltXGYvHApEpBmk5Kg4</a></p><h2 id="f7a63d63-e211-4b18-8643-61929a892490" class="">Ginza &amp; Chiyoda 銀座と千代田</h2><ul id="ccd65a70-c1ab-4865-bda9-044d25742df9" class="bulleted-list"><li style="list-style-type:disc">shopping district<ul id="6207b911-9187-4c89-bb43-4260ccd63a10" class="bulleted-list"><li style="list-style-type:circle">art aquarium museum</li></ul><ul id="d4f280fd-19a2-4abe-967e-d0107e121aa9" class="bulleted-list"><li style="list-style-type:circle">12 floor UNIQLO</li></ul></li></ul><ul id="e0ec8e79-8e5c-4c90-8528-9bd5af4239a4" class="bulleted-list"><li style="list-style-type:disc">imperial palace</li></ul><h2 id="e9642a85-bdd6-4515-af3b-70874a3ee4ac" class="">Taito and Sumida 台東と墨田</h2><ul id="41e5bce8-9c58-400d-9bbe-ab8fb94ca907" class="bulleted-list"><li style="list-style-type:disc">tokyo skytree 東京スカイツリー</li></ul><ul id="bd9d85b6-8ecf-428f-a888-2acb36a7a9f5" class="bulleted-list"><li style="list-style-type:disc">askakusa temple 浅草寺</li></ul><ul id="e59c4bd6-7baa-4d68-a17b-b6805229404e" class="bulleted-list"><li style="list-style-type:disc">akihabara district 秋葉原</li></ul><p id="d4ba0c03-583d-4620-92fb-0925d11886a4" class="">
-</p><p id="551f2412-f2cc-4ac4-8929-b7459040fffb" class="">
-</p><p id="d0931518-32c4-4fd6-969a-ef8e6d9c423f" class="">all flights from haneda</p><p id="9de68ca3-6e91-4dfb-a4ce-823cad5cf8ae" class="">taiwan 6/26 2:20 pm TSA airport ⇒ 6:45 pm haneda</p><p id="846dc800-ec50-42bb-a0ad-e1108b95a862" class="">6/29 12:45 pm haneda airport ⇒ 2:10 pm kansai KIX airport</p><p id="456343be-8f7b-4041-bd2d-4742057e1594" class="">7/3 6:20 pm haneda airport ⇒ 8:50 pm taipei TSA (songshan) airport</p><p id="ef907882-4bd3-4b19-9dd8-402e220c07a1" class=""><strong>Hotel Metropolitan Haneda (INITIAL ARRIVAL)</strong></p><p id="bec251b1-2826-4ce8-ab2a-5c0f38472441" class="">
-</p><p id="28640b85-9125-4faa-ba59-dff2742b4b57" class="">
-</p><p id="3a2e981e-518a-424a-9b40-2e44abdeb877" class="">
-</p><p id="84c85192-84a5-45bd-aa22-98e79b232eab" class="">
-</p><p id="079126cc-b5e9-4229-a254-d1b8ed624faf" class="">
-</p><p id="8a5a3b08-d7ae-41a0-9d20-cbcb56dcc238" class="">
-</p><p id="5ca8af3a-c48b-4c53-9e3e-f756bfcef761" class="">
-</p><p id="d0e39c1a-38c3-4b0c-843b-c2a26061723e" class="">
-</p><p id="e9ede8f9-e3d2-4d48-aab7-63c43e437180" class="">
-</p><p id="d6899459-4d81-4d2a-bb19-28b97ae61d5a" class="">
-</p><hr id="9d9307d2-c73a-4d49-9faa-a9da19964fb9"/><h1 id="e0008176-bbfe-460f-a6c9-6f4c732fcd7b" class="">EVERYTHING BELOW IS JUST RANDOM RESEARCH</h1><hr id="3650b3d5-44ed-4f3b-8174-692bf1fd51ac"/><hr id="a17492ae-0f8a-4433-9ce9-6ba948d79320"/><figure id="cb73b532-5846-4b6e-9d02-378aaae8cbb5" class="image"><a href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2030.png"><img style="width:473.9930725097656px" src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2030.png"/></a></figure><h3 id="92c8fadd-5a13-422f-bd83-ae5af804c347" class="">accommodations</h3><ul id="c6ba68e4-f76a-4c61-a770-8b8854d806a6" class="bulleted-list"><li style="list-style-type:disc">hotel gajoen ホテル雅条 <a href="https://www.hotelgajoen-tokyo.com/en/">https://www.hotelgajoen-tokyo.com/en/</a> ($500/night)</li></ul><ul id="067c23b9-ec4c-404f-8ddb-d706c9309146" class="bulleted-list"><li style="list-style-type:disc">prince park hotel <a href="https://www.princehotels.com/parktower/">https://www.princehotels.com/parktower/</a> ($300/night for park twin room)<ul id="28680d2f-0a0d-4062-ab63-074f68eebb79" class="bulleted-list"><li style="list-style-type:circle">right next to tokyo tower and shiba park</li></ul></li></ul><ul id="ffbfb122-1abd-431a-b268-3079e379ed91" class="bulleted-list"><li style="list-style-type:disc">imperial hotel tokyo </li></ul><ul id="c676382c-fb3a-4c45-ab44-2c130c9d8cf8" class="bulleted-list"><li style="list-style-type:disc">hotel zen tokyo <a href="https://zen.intokyohotels.com/en/">https://zen.intokyohotels.com/en/</a>  (capsule hotel!)</li></ul><h1 id="b88c8542-c239-41e9-94fd-ef52a1e05b62" class="">hakone 箱根 kamakura 鎌倉</h1><ul id="c9914b16-41cf-482d-929b-5ddd5cd47d78" class="bulleted-list"><li style="list-style-type:disc">平和の鳥居</li></ul><h1 id="4119f131-4160-4699-baed-191be70df1a3" class="">kyoto 京都</h1><ul id="bb62a93a-508a-4ba8-8c30-d36d73a16b5b" class="bulleted-list"><li style="list-style-type:disc">fushimi inari name 伏見稲荷大社 (thousand red gates)</li></ul><ul id="4e4edb7c-157b-4161-81e1-1b33144021cd" class="bulleted-list"><li style="list-style-type:disc">higashiyama ward</li></ul><ul id="445ea7dd-2fb0-4375-887d-da1ef09d73ee" class="bulleted-list"><li style="list-style-type:disc">arashiyama bamboo forest</li></ul><h1 id="1b6c950a-a902-4153-8ff9-a79500ad6ca1" class=""><del>osaka 大阪</del></h1><ul id="09b7ec65-f570-4f3e-b9d9-acfc6cb364aa" class="bulleted-list"><li style="list-style-type:disc"><del>osaka castle</del></li></ul><ul id="6d473e8b-0c3f-44d3-af3d-a63eb5da8561" class="bulleted-list"><li style="list-style-type:disc"><del>umeda sky building</del></li></ul><ul id="e83d1f39-433e-4d5d-a101-6faa74cc4ada" class="bulleted-list"><li style="list-style-type:disc"><del>tenma</del></li></ul><ul id="6e16d69d-328d-4e91-8ff7-5aaa36102756" class="bulleted-list"><li style="list-style-type:disc"><del>namba park (shopping mall)?</del></li></ul><ul id="261013b1-3e8c-482a-8124-6cadc5809f23" class="bulleted-list"><li style="list-style-type:disc"><del>eat takoyaki and okonomiyaki</del></li></ul><ul id="a6a27565-6887-4039-a400-5f4518025270" class="bulleted-list"><li style="list-style-type:disc"><del>universal studios</del></li></ul><h1 id="83acad36-d3fe-4156-ad80-f98f322ca0f5" class="">nara 奈良</h1><ul id="88df9720-5691-4266-b626-bfdd6c35a10c" class="bulleted-list"><li style="list-style-type:disc">nara park</li></ul><ul id="241553bf-8f8a-413b-9a1c-26f3ee3971de" class="bulleted-list"><li style="list-style-type:disc"></li></ul><p id="e01ec7a3-6852-49a0-9021-a35746d11ecf" class="">
-</p><p id="bc89060e-abf4-414d-8de4-6fbd24097172" class=""><a href="https://www.expedia.com/Tokyo-Hotels-Keio-Presso-Inn-Hamamatsucho.h19072524.Hotel-Information?chkin=2024-03-03&amp;chkout=2024-03-04&amp;destType=MARKET&amp;destination=Tokyo%2C%20Tokyo%20Prefecture%2C%20Japan&amp;gclid=CjwKCAiAloavBhBOEiwAbtAJOzhPdK1nQLPwJlp--kEE_JMx_YZA8HP5T9QNw69UUDUTwYOIdf11yhoCYZIQAvD_BwE&amp;latLong=35.681143%2C139.767208&amp;mctc=10&amp;mdpcid=US.META.HPA.HOTEL-CORESEARCH-desktop.HOTEL&amp;mdpdtl=HTL.19072524.20240303.20240304.DDT.1.CID.20736826772.AUDID..RRID.bex_us_desktop&amp;neighborhoodId=553248635976382250&amp;pwa_ts=1709418620579&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;regionId=3593&amp;rfrr=HSR&amp;rm1=a2&amp;searchId=a1ab8cc9-1a28-4bb6-b2b9-38c25e9ba0df&amp;selected=19072524&amp;selectedRatePlan=390773285&amp;selectedRoomType=202054545&amp;sort=RECOMMENDED&amp;top_cur=USD&amp;top_dp=69&amp;useRewards=false&amp;userIntent=&amp;x_pwa=1">https://www.expedia.com/Tokyo-Hotels-Keio-Presso-Inn-Hamamatsucho.h19072524.Hotel-Information?chkin=2024-03-03&amp;chkout=2024-03-04&amp;destType=MARKET&amp;destination=Tokyo%2C Tokyo Prefecture%2C Japan&amp;gclid=CjwKCAiAloavBhBOEiwAbtAJOzhPdK1nQLPwJlp--kEE_JMx_YZA8HP5T9QNw69UUDUTwYOIdf11yhoCYZIQAvD_BwE&amp;latLong=35.681143%2C139.767208&amp;mctc=10&amp;mdpcid=US.META.HPA.HOTEL-CORESEARCH-desktop.HOTEL&amp;mdpdtl=HTL.19072524.20240303.20240304.DDT.1.CID.20736826772.AUDID..RRID.bex_us_desktop&amp;neighborhoodId=553248635976382250&amp;pwa_ts=1709418620579&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;regionId=3593&amp;rfrr=HSR&amp;rm1=a2&amp;searchId=a1ab8cc9-1a28-4bb6-b2b9-38c25e9ba0df&amp;selected=19072524&amp;selectedRatePlan=390773285&amp;selectedRoomType=202054545&amp;sort=RECOMMENDED&amp;top_cur=USD&amp;top_dp=69&amp;useRewards=false&amp;userIntent=&amp;x_pwa=1</a></p><p id="1607867e-9cc2-4808-81df-1715d8415101" class="">(Angie: 6/29 noon-7/5) flights on those days </p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>夏 2024 日本 旅行</title>
+	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
+		body {
+			margin: 2em auto;
+			max-width: 1100px; /* also makes it a bit wider */
+			color: rgb(245, 245, 245); /* light text */
+			background-color: #1e1e1e; /* dark background */
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 3px;
+			padding: 1rem;
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.column {
+			padding: 0 1em;
+		}
+
+		.column:first-child {
+			padding-left: 0;
+		}
+
+		.column:last-child {
+			padding-right: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding: 0.125rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+			border-collapse: collapse;
+		}
+
+		table {
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			padding-inline-start: 0;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.page-description {
+			margin-bottom: 2em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-block;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			transform: scale(1.5);
+			margin-right: 0.6em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1.25em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(50, 48, 44, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.highlight-default_background {
+			color: rgba(50, 48, 44, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(248, 248, 247, 1);
+		}
+
+		.highlight-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.highlight-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.highlight-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.highlight-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.highlight-purple_background {
+			background: rgba(248, 243, 252, 1);
+		}
+
+		.highlight-pink_background {
+			background: rgba(252, 241, 246, 1);
+		}
+
+		.highlight-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.block-color-default_background {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray_background {
+			background: rgba(248, 248, 247, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(248, 243, 252, 1);
+		}
+
+		.block-color-pink_background {
+			background: rgba(252, 241, 246, 1);
+		}
+
+		.block-color-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.select-value-color-uiBlue {
+			background-color: undefined;
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(225, 136, 179, 0.27);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(168, 129, 197, 0.27);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(123, 183, 129, 0.27);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(84, 72, 49, 0.15);
+		}
+
+		.select-value-color-transparentGray {
+			background-color: undefined;
+		}
+
+		.select-value-color-translucentGray {
+			background-color: undefined;
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(224, 124, 57, 0.27);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(210, 162, 141, 0.35);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(244, 171, 159, 0.4);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(236, 191, 66, 0.39);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(93, 165, 206, 0.27);
+		}
+
+		.select-value-color-pageGlass {
+			background-color: undefined;
+		}
+
+		.select-value-color-washGlass {
+			background-color: undefined;
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+	</style>
+</head>
+
+<body>
+	<article id="511f8550-dc89-442c-beb4-929781df43b6" class="page sans">
+		<header><img class="page-cover-image" src="https://wallpapercave.com/wp/wp6573584.jpg"
+				style="object-position:center 66.97999999999999%" />
+			<div class="page-header-icon page-header-icon-with-cover"><span class="icon">⛩️</span></div>
+			<h1 class="page-title">夏 2024 日本 旅行</h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<div id="62538d5b-5df7-4949-b6a5-0c9fb034c570" class="collection-content">
+				<h4 class="collection-title">Summer Asia Travel Timeline</h4>
+				<table class="collection-content">
+					<thead>
+						<tr>
+							<th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol"
+										viewBox="0 0 16 16"
+										style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0"
+										class="typesTitle">
+										<path
+											d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z">
+										</path>
+									</svg></span>Name</th>
+							<th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol"
+										viewBox="0 0 16 16"
+										style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0"
+										class="typesPerson">
+										<path
+											d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z">
+										</path>
+									</svg></span>Assign</th>
+							<th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol"
+										viewBox="0 0 16 16"
+										style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0"
+										class="typesDate">
+										<path
+											d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z">
+										</path>
+									</svg></span>Date</th>
+							<th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol"
+										viewBox="0 0 16 16"
+										style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0"
+										class="typesStatus">
+										<path
+											d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z">
+										</path>
+									</svg></span>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="227fa404-5a80-4710-945e-d7223a6ab863">
+							<td class="cell-title"><a
+									href="https://www.notion.so/angie-wu-in-japan-227fa4045a804710945ed7223a6ab863?pvs=21">angie
+									wu in japan</a></td>
+							<td class="cell-\MT&gt;"></td>
+							<td class="cell-Nkzw"><time>@June 29, 2024 → July 5, 2024</time></td>
+							<td class="cell-;?tD"><span class="status-value">
+									<div class="status-dot"></div>Not started
+								</span></td>
+						</tr>
+						<tr id="83bbb047-db5b-4180-8dbe-3e21ef7811f0">
+							<td class="cell-title"><a
+									href="https://www.notion.so/tokyo-83bbb047db5b41808dbe3e21ef7811f0?pvs=21">tokyo
+									東京</a></td>
+							<td class="cell-\MT&gt;"></td>
+							<td class="cell-Nkzw"><time>@June 26, 2024 → June 28, 2024</time></td>
+							<td class="cell-;?tD"><span class="status-value">
+									<div class="status-dot"></div>Not started
+								</span></td>
+						</tr>
+						<tr id="17542b8d-507d-4dfb-8f6e-a5b3f1bbcdde">
+							<td class="cell-title"><a
+									href="https://www.notion.so/kamakura-17542b8d507d4dfb8f6ea5b3f1bbcdde?pvs=21">kamakura
+									鎌倉</a></td>
+							<td class="cell-\MT&gt;"></td>
+							<td class="cell-Nkzw"><time>@June 27, 2024</time></td>
+							<td class="cell-;?tD"><span class="status-value">
+									<div class="status-dot"></div>Not started
+								</span></td>
+						</tr>
+						<tr id="20e155d8-a8e5-4635-95f6-14df3b2b2b44">
+							<td class="cell-title"><a
+									href="https://www.notion.so/hakone-20e155d8a8e5463595f614df3b2b2b44?pvs=21">hakone
+									箱根</a></td>
+							<td class="cell-\MT&gt;"></td>
+							<td class="cell-Nkzw"><time>@June 28, 2024</time></td>
+							<td class="cell-;?tD"><span class="status-value">
+									<div class="status-dot"></div>Not started
+								</span></td>
+						</tr>
+						<tr id="41cbe02f-251a-46c8-9eb6-a7bebe403599">
+							<td class="cell-title"><a
+									href="https://www.notion.so/kyoto-41cbe02f251a46c89eb6a7bebe403599?pvs=21">kyoto
+									京都</a></td>
+							<td class="cell-\MT&gt;"></td>
+							<td class="cell-Nkzw"><time>@June 29, 2024 → July 1, 2024</time></td>
+							<td class="cell-;?tD"><span class="status-value">
+									<div class="status-dot"></div>Not started
+								</span></td>
+						</tr>
+						<tr id="f50b5efa-e2eb-4661-82e5-3cd4f7201b61">
+							<td class="cell-title"><a
+									href="https://www.notion.so/nara-f50b5efae2eb466182e53cd4f7201b61?pvs=21">nara
+									奈良</a></td>
+							<td class="cell-\MT&gt;"></td>
+							<td class="cell-Nkzw"><time>@July 1, 2024</time></td>
+							<td class="cell-;?tD"><span class="status-value">
+									<div class="status-dot"></div>Not started
+								</span></td>
+						</tr>
+						<tr id="19aa7365-8e25-4508-8805-0159f51c4d16">
+							<td class="cell-title"><a
+									href="https://www.notion.so/tokyo-19aa73658e25450888050159f51c4d16?pvs=21">tokyo
+									東京</a></td>
+							<td class="cell-\MT&gt;"></td>
+							<td class="cell-Nkzw"><time>@July 2, 2024 → July 5, 2024</time></td>
+							<td class="cell-;?tD"><span class="status-value">
+									<div class="status-dot"></div>Not started
+								</span></td>
+						</tr>
+						<tr id="a90991cb-0ce4-4dcc-8504-f46b087a4b15">
+							<td class="cell-title"><a
+									href="https://www.notion.so/rickey-chiu-in-japan-a90991cb0ce44dcc8504f46b087a4b15?pvs=21">rickey
+									chiu in japan</a></td>
+							<td class="cell-\MT&gt;"></td>
+							<td class="cell-Nkzw"><time>@June 26, 2024 → July 3, 2024</time></td>
+							<td class="cell-;?tD"><span class="status-value">
+									<div class="status-dot"></div>Not started
+								</span></td>
+						</tr>
+					</tbody>
+				</table><br /><br />
+			</div>
+			<hr id="733b940f-858b-47e1-b2cd-6e8a049da70e" />
+			<figure id="82ccfa5d-baf3-4d30-a511-60dd74388c09" class="image"><a
+					href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled.png"><img
+						style="width:470.0000305175781px"
+						src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled.png" /></a>
+			</figure>
+			<hr id="2164eea7-10dc-4523-b30a-a30d4f746032" />
+			<h1 id="93936182-2679-4960-bd38-6ce72e2f0c9f" class="block-color-red_background">6/29: Initial Arrival at
+				Kyoto 京都の到着</h1>
+			<div id="5c188d3a-a7ad-4a8c-a213-449f6b854ca4" class="column-list">
+				<div id="cdfde537-befc-4765-af0f-0a8863ec25e2" style="width:50%" class="column">
+					<h3 id="03f3554c-7124-4705-af50-258c3cffff2c" class="">Accommodation: <strong>Keio Prelia Hotel
+							Kyoto </strong></h3>
+					<p id="92093ed7-424f-4429-93bb-08b23b95e1fb" class=""><a
+							href="https://www.keioprelia.co.jp/kyoto/en/">https://www.keioprelia.co.jp/kyoto/en/</a>
+						<strong>(4夜 - 6/29, 6/30, 7/1, 7/2)</strong></p>
+					<figure id="7a60c103-7741-4a11-a4ac-d8837b74dcb8" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-03-29_at_6.33.09_PM.png"><img
+								style="width:488.9930725097656px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-03-29_at_6.33.09_PM.png" /></a>
+					</figure>
+					<p id="aa811d82-5af0-4284-a1b5-ee26fd6562b0" class=""><strong>Standard twin (19㎡) Bed width 113cm -
+						</strong>￥17,784 ($117) per night</p>
+					<p id="939a2e71-8a84-4fd0-a7ef-535582e7035b" class="">The price for a 2 people in a standard twin
+						room is around $117 per night, which is around $60 per person. This is the hotel for </p>
+					<h3 id="9cb9c331-7e6e-48ce-bae7-891a24d68e1b" class="">Pictures of Yasaka Shrine</h3>
+					<div id="c206cf5b-85e0-4bd2-bcaa-f3cb5452c501" class="column-list">
+						<div id="a017610f-2037-44c3-9ec5-5ec22439c0ff" style="width:100%" class="column">
+							<figure id="edea0152-54db-4d1d-93dc-e2e3ddc2de88" class="image"><a
+									href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%201.png"><img
+										style="width:221.49307250976562px"
+										src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%201.png" /></a>
+							</figure>
+						</div>
+						<div id="fe9d37e1-bad6-41bc-bdbb-af455545e0fd" style="width:100%" class="column">
+							<figure id="5732d7ec-1582-4975-ace6-ef1dfdb09e61" class="image"><a
+									href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%202.png"><img
+										style="width:221.49307250976562px"
+										src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%202.png" /></a>
+							</figure>
+						</div>
+					</div>
+				</div>
+				<div id="f13dbfef-e712-4e98-9664-a18d26adcfe9" style="width:50%" class="column">
+					<h3 id="cd38d23f-945f-4282-901e-6d94b41eceee" class="">Neighborhood Activities and Food</h3>
+					<p id="623e7138-beb0-4ede-ae69-538283b84383" class="">Assuming Angie and her mother will arrive at
+						Kyoto around 4 PM from taking the <mark
+							class="highlight-red"><strong>Shinkansen</strong></mark><mark class="highlight-red">
+						</mark><mark class="highlight-red"><strong>新幹線</strong></mark> from <mark
+							class="highlight-red"><strong>Tokyo NRT Airport</strong></mark><mark class="highlight-red">
+						</mark><mark class="highlight-red"><strong>東京成田空港</strong></mark>, they should spend around an
+						hour checking in, unpacking, and unwinding at the hotel.</p>
+					<p id="f8382eef-60f4-40e9-90a0-4cf5d0627dfa" class="">
+					</p>
+					<p id="6ea5d8a2-f2bd-4d2d-90a4-072dcda5db08" class="">Following that, around 6 PM, we can have
+						dinner at <strong><mark class="highlight-red">YAYOI Gojo Karasuma Branch (やよい軒 五条烏丸店)
+							</mark></strong>which is only around a block from the hotel. They are open until around 11
+						PM which means that we can eat this later if needed, and if we come back late another day. The
+						restaurant serves mainly <strong>teishoku style (定食)</strong><mark
+							class="highlight-red"><strong> </strong></mark>which is a set meal. You can see the <a
+							href="https://www.yayoiken.com/en_files/regular_menu_pdf/279_Yayoi_RegularMenu_EN_2404_0314_ol_.pdf?id=3486">menu
+							at this link</a>.</p>
+					<p id="7d9d9e9b-1884-4635-a1a6-18ad1fe0c00f" class="">
+					</p>
+					<p id="a2c75647-0ade-4e1e-9a20-865b3aadcbf7" class="">After dinner, we can check out <mark
+							class="highlight-red"><strong>Yasaka Shrine (八坂神社 御旅所)</strong></mark><mark
+							class="highlight-red"> </mark>which is only a few stops down the metro. It is a popular
+						shrine for <strong>New Years Shrine Visits (初詣)</strong>, and it is well illuminated at night.
+						See the photos at the left. Following that, we can walk around and explore the city and buy some
+						breakfast before heading back to the hotel, since we have to wake up early the next morning.</p>
+					<figure id="53cd5cec-9395-47d2-af98-87098b676ff4" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-04-17_at_11.26.19_PM.png"><img
+								style="width:488.9930725097656px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-04-17_at_11.26.19_PM.png" /></a>
+					</figure>
+				</div>
+			</div>
+			<h1 id="6cb6c4c4-2709-4487-9ac9-d9a070e1de89" class="block-color-red_background">6/30: Kyoto’s Shrines and
+				Temples　京都の神社と寺</h1>
+			<div id="3e3e76eb-03d8-43b6-b53a-d7306a4db76b" class="column-list">
+				<div id="c67d4607-b0b3-4728-97d2-558de09ef90a" style="width:50%" class="column">
+					<h3 id="7f02d5b0-b0eb-46a8-9d18-4ff5604892ce" class="">Thousand Red Gates <mark
+							class="highlight-red">伏見稲荷大社 </mark>(7:30AM)</h3>
+					<p id="a8e38058-c1b9-4af0-ab70-26d978004da2" class="">The shrine sits at the base of a mountain,
+						also named Inari, which is 233 meters (764 ft) above sea level, and includes trails up the
+						mountain to many smaller shrines which span 4 kilometers (2.5 mi) and take approximately 2 hours
+						to walk up all the way.</p>
+					<p id="8d62c460-65ef-4249-9509-59d8d39a785a" class="">This shrine is always crowded by tourists, so
+						it is best to be there early (at 7 to 8 AM). There is no need to go to the end, but if you would
+						like there should be a view of Kyoto on the peak.</p>
+					<h3 id="5b964714-0871-4daf-9eed-c45d898f8385" class="">Yasaka Pagoda <mark
+							class="highlight-red">八坂の塔 </mark>(9:00AM)</h3>
+					<p id="1dce2476-2825-4cb0-9442-36b9a0c55865" class="">The <mark class="highlight-red"><strong>Yasaka
+								Pagoda</strong></mark>, also known as the Tower of Yasaka, is a Buddhist pagoda located
+						in Higashiyama-ku, Kyoto, Japan. The 5-story tall pagoda is the last remaining structure of a
+						6th-century temple complex known as Hōkan Temple. The pagoda is now a tourist attraction. </p>
+					<p id="1122377e-ee31-4683-b6c9-e0d76f7692b0" class="">This alleyway shown in the photo is also
+						usually crowded by tourists, so if you want any clear photo opportunities it is best to go
+						early. If clear photos aren’t that important, it may be more convenient to go at the same time
+						we are planning to head to Kiyomizu temple, because they are essentially a few minutes away from
+						one other.</p>
+					<p id="b0d3e863-1169-4cb0-ae1a-59be4f1b5c2c" class="">Note that this is located in the <mark
+							class="highlight-red"><strong>Gion District</strong></mark>, which the Kyoto Government has
+						restricted access for tourists in certain alleyways to prevent geisha harassment.</p>
+					<h3 id="7230666f-7e42-4ab6-a8ff-31d348d91d0e" class="">Kiyomizu Temple <mark
+							class="highlight-red">清水寺 </mark>(11:00AM)</h3>
+					<p id="2fffe3f5-4b5f-4e37-8337-195d87c30d1f" class=""><mark
+							class="highlight-red"><strong>Kiyomizu-dera</strong></mark> (&quot;Pure Water
+						Monastery&quot;) is a Buddhist temple located in eastern Kyoto, Japan. The temple is part of the
+						Historic Monuments of the Ancient Kyoto UNESCO World Heritage Site. </p>
+					<p id="e09b728d-f138-4c78-99b3-aed048a3607c" class="">The popular expression &quot;to jump off the
+						stage at Kiyomizu&quot; is the Japanese translation of the English expression &quot;to take the
+						plunge&quot;. This refers to an Edo-period tradition that held that if one were to survive a
+						13-meter (43-foot) jump from the stage, one&#x27;s wish would be granted. </p>
+					<p id="e86780a3-4020-4516-b1b5-cb2d6e0eedc0" class="">There is a good view of the city and visitors
+						can take a sip of mountain spring water from <mark class="highlight-red"><strong>Otowa Waterfall
+								音羽の滝 </strong></mark>using the long scoops provided at the site. Hold out the long
+						scoops, which has been pre-sterilized in UV blue light, to catch one of the 3 streams of spring
+						water. Each stream is said to bestow longevity, success, and love. Go early, as the queues for
+						Otowa Waterfall can get windingly long.</p>
+					<p id="ff23e07f-eb54-421a-abf3-f5cf998dc1d0" class="">See the website for more things to do at
+						Kiyomizu Temple. <a
+							href="https://plingthinks.com/2016/09/25/kiyomizu-dera-kyoto-temple-8-things-to-do/">https://plingthinks.com/2016/09/25/kiyomizu-dera-kyoto-temple-8-things-to-do/</a>
+					</p>
+					<h3 id="ff06ed17-7e91-4105-af95-33632815aa90" class="">Heian Shrine<mark class="highlight-red"> 平安神宮
+						</mark>(3:00 PM)</h3>
+					<p id="7a25b25a-0209-490c-bb11-d69438733d9b" class="">The <mark
+							class="highlight-red"><strong>Heian-jingu</strong></mark> Shrine (平安神宮, Heian-jingū) is a
+						Shinto shrine located in Sakyō-ku, Kyoto, Japan. The Shrine is ranked as a Beppyō Jinja (別表神社),
+						meaning it is one of the most important shrines in all of Japan. </p>
+					<p id="a749f658-2c5c-489c-900d-8c9a0ccdf9c8" class="">The history is rooted in the fact that it was
+						built to commemorate the 1100th anniversary of <mark class="highlight-red"><strong>Heian-kyo
+								(平安京, Japan’s Old Capital) </strong></mark>and honor Emperor Tenmu, the emperor that
+						ruled over Kyoto at that time.</p>
+					<p id="8d530cea-95cd-4162-8aab-134cfe34f073" class="">The Japanese-style garden in the land of Heian
+						Shrine takes up about half the land area (approximately 33060 meters-squared). It consists of
+						beautiful sakura and maple trees, along with many ponds and flowers.</p>
+				</div>
+				<div id="a82304d2-9234-4ac7-b658-153dead614ac" style="width:49.99999999999999%" class="column">
+					<p id="03e28cb4-ded9-4075-91c1-331dd94458d7" class="">Due to the commonality of crowding in Kyoto,
+						especially in the Gion District where most of the attractions are located, it is much better to
+						wake up early 6:30 AM or 7 AM to get to the points of interest first to enjoy them.</p>
+					<h3 id="a08faed8-20ee-47c7-9dbb-a71f85b26301" class="">Photos of Points of Interest</h3>
+					<figure id="bc6859cd-1606-4871-9de6-9a386139639c" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%203.png"><img
+								style="width:537.4913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%203.png" /></a>
+					</figure>
+					<figure id="8459f854-f551-44c2-b020-2854c1933f05" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%204.png"><img
+								style="width:537.4913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%204.png" /></a>
+					</figure>
+					<figure id="65b54403-41fd-41f9-8f36-f73e21325c65" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%205.png"><img
+								style="width:2119px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%205.png" /></a>
+					</figure>
+					<figure id="661f0c4b-efef-4074-9b69-983e876e6ea8" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%206.png"><img
+								style="width:655.6510620117188px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%206.png" /></a>
+					</figure>
+				</div>
+			</div>
+			<div id="c030eea8-bc19-4ca0-9241-dec9a97e6d9f" class="column-list">
+				<div id="9a807b58-6539-4c68-a88d-68cd9694e503" style="width:33.33333333333333%" class="column">
+					<h3 id="a11a3b63-efc7-40bb-ab7d-539d2ee9f007" class=""><strong>Rental Kimono Okamoto Kiyomizudera
+							Shop (10:00 AM)</strong></h3>
+					<p id="0dc9ce1b-0bd8-4bab-9672-cf221be269b5" class=""><strong>レンタル着物岡本 清水店</strong></p>
+					<p id="7f78c69d-f41b-4d01-8586-fb725649cbb5" class=""><a
+							href="https://www.okamoto-kimono-en.com/storeinfo/kiyomizudera.html">https://www.okamoto-kimono-en.com/storeinfo/kiyomizudera.html</a>
+					</p>
+					<p id="47e76413-e7c2-41f9-8ee6-a834f1cfb28f" class="">This is a popular kimono rental place near
+						<mark class="highlight-red"><strong>Kiyomizu Temple</strong></mark>. The reviews are good and
+						the condition is that you must return it by 6 PM. You can also make reservations in the website
+						above.</p>
+					<p id="494e1dbf-cab5-467c-896a-df1ae0228b1d" class="">Note that there are two different times:
+						t<strong>raditional kimonos (着物)</strong> and <strong>yukatas (浴衣</strong>), which are lighter
+						and made for summer weather. </p>
+				</div>
+				<div id="217650cb-bc1a-4558-b7e3-97687de94dcd" style="width:33.33333333333333%" class="column">
+					<h3 id="3365212f-27eb-47cf-8068-060e20e897bb" class=""><strong>Sanmikouan </strong>(2:00 PM)</h3>
+					<p id="0e43c5f2-0eb5-4f4e-9237-fe2460200271" class=""><strong>三味洪庵 京都 本店</strong></p>
+					<p id="18afe99d-75f1-49fc-b86a-7a31d96fd84e" class=""><a
+							href="https://sanmikouan.jp/menu/">https://sanmikouan.jp/menu/</a></p>
+					<p id="b46c571b-1619-497f-a84d-8777bdb750d2" class="">This is a popular local soba shop that accepts
+						reservation so you can skip the line that usually appears. Check the link above to see the menu.
+					</p>
+					<figure id="2ffe2496-2a2a-49be-8fd1-6e3280d2b46d" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%207.png"><img
+								style="width:310.65972900390625px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%207.png" /></a>
+					</figure>
+				</div>
+				<div id="15490020-5fd0-499a-806c-cbb06fe87ba8" style="width:33.33333333333333%" class="column">
+					<h3 id="25f8e383-c1f9-4b09-a545-df9a0800ec61" class="">Map of Route (roughly)</h3>
+					<figure id="0537631f-b9eb-45c1-887b-fc643405f762" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-04-05_at_11.57.31_AM.png"><img
+								style="width:265.328125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Screen_Shot_2024-04-05_at_11.57.31_AM.png" /></a>
+					</figure>
+					<p id="a2d9c925-04fa-47b1-b80a-232af83be9e8" class="">
+					</p>
+				</div>
+			</div>
+			<div id="5d5e0849-5a1e-4468-9dd8-8971e4197177" class="column-list">
+				<div id="30c824f3-209a-4785-bc6b-c8c9866df995" style="width:50%" class="column">
+					<h3 id="afc7bc64-8c6d-4228-8bff-656aeea0395d" class="">Strolling Gion &amp; Returning Kimonos (5:00
+						PM)</h3>
+					<p id="8295cadd-109d-46b3-9f30-57608749319b" class="">Make sure to return our kimonos at the Okamoto
+						Kiyomizudera shop before 6 PM. We can travel back on the metro and also explore the <mark
+							class="highlight-red"><strong>Gion Historical District</strong></mark> if we have any extra
+						time. Make sure to be mindful and respectful of any geishas and not enter or take pictures of
+						any private walkways.</p>
+					<figure id="9077a15f-e316-4788-af77-c651ad20a767" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%208.png"><img
+								style="width:488.9930725097656px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%208.png" /></a>
+					</figure>
+				</div>
+				<div id="a8299f55-d4db-4b7a-835f-cc2b6f83d805" style="width:50%" class="column">
+					<h3 id="b8c005e5-3a0b-410f-8a25-c9ab9bdf0e85" class="">Nidec Kyoto Tower <mark
+							class="highlight-red"><strong>ニデック京都タワー </strong></mark> (7:00 PM)</h3>
+					<p id="db25afa3-84c9-4b26-8dac-f1dc73116f62" class="">Take a view on the top of Kyoto Tower around
+						sunset of the city. Tickts are relatively cheap, only around $6.00 USD, which is cheap compared
+						to Tokyo Skytree. There are free telescopes to zoom in on temples and castles. There are also
+						many dinner options nearby before heading back to the hotel. </p>
+					<figure id="8d9ca05f-bb92-45e0-adc5-5bde9743af7a" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%209.png"><img
+								style="width:488.9930725097656px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%209.png" /></a>
+					</figure>
+					<p id="d2ea3629-9208-4799-9214-94fad50d1429" class="">
+					</p>
+				</div>
+			</div>
+			<hr id="27f88db1-10f7-4f25-afe7-fadecd1c2c9c" />
+			<figure id="f90d4d36-c8c3-4e94-80dc-00b6e6924726" class="image"><a
+					href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2010.png"><img
+						style="width:526.8923950195312px"
+						src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2010.png" /></a>
+			</figure>
+			<hr id="206fe7ab-422f-45df-89ad-f0bcf794dd68" />
+			<h1 id="8e0b324c-c540-4ece-8368-e2606b012a8d" class="block-color-red_background"><mark
+					class="highlight-red_background">7/1: Day Trip to Nara　奈良の一日旅</mark></h1>
+			<div id="962216ba-da0b-4324-934f-e73bf6831f9f" class="column-list">
+				<div id="a87d5f5d-e4a2-4980-beef-9e01cbbf284c" style="width:50%" class="column">
+					<h3 id="04c5023c-a766-41a0-a7f9-b56709da1f99" class="">Arriving in Nara By Train <mark
+							class="highlight-red">奈良に行く </mark>(10:30 AM)</h3>
+					<p id="16cc73aa-319c-4afa-b75b-e1c31e55acfb" class="">The train ride from Kyoto to
+						Nara—specifically<mark class="highlight-red"><strong> Kintetsu-Nara Station</strong></mark>
+						<mark class="highlight-red"><strong>(近鉄奈良駅)</strong></mark> takes around 45 minutes one way, and
+						there is usually one train every 20 minutes. Assuming we arrive at the station at around 9 AM,
+						we can safely get out of Nara Station at 10:30 AM.</p>
+					<h3 id="94a18a84-6a94-4b17-8973-cdf18b3f9fe1" class=""><strong>Tonkatsu Ganko Nara </strong><mark
+							class="highlight-red"><strong>とんかつがんこ奈良店 </strong></mark><strong>(11 AM)</strong></h3>
+					<p id="b8d583ba-5e6d-4383-a147-5320a131902a" class="">This is a famous Tonkatsu restaurant that has
+						a very high rating, opens at 11 AM on Mondays. This restaurant is very popular, so it is a good
+						idea to eat it earlier (i.e. close to when we arrive at the station) before exploring the rest
+						of Nara.</p>
+					<h3 id="c67f16b6-2b26-4ac4-9994-70681026ab94" class=""><strong>Nakatanidou Mochi Shop
+							Show</strong><mark class="highlight-red"><strong> 中谷堂</strong></mark><strong> (12
+							PM)</strong></h3>
+					<p id="2240579f-700a-40ab-9943-e9e0b62a9ddf" class="">This shop is famous for its theatrical and
+						traditional way of making mochi and has went viral over its captivating process of rhythmic
+						shouting and hammering mochi on a wooden mortar. The line for the mochi is usually quite long,
+						but it moves quite fast. However, the view for the mochi making may be more crowded and hard to
+						see during peak times.</p>
+					<p id="7670f2a5-62e3-474f-b28f-ba004a30e684" class="">If you would like to see the viral video on
+						YouTube, it is in the link here: <a
+							href="https://www.youtube.com/watch?v=tmSrULDVRPc"><strong>Pounding Mochi With the Fastest
+								Mochi Maker in Japan</strong></a><strong> (24 million views on Great Big Story)</strong>
+					</p>
+					<p id="5557f1f5-72df-4422-8522-5d484801c153" class="">From all the reviews however, the mochi seems
+						very delicious and worth the wait.</p>
+					<h3 id="b802c83d-25dd-4032-a8ab-80e63aef6b3e" class=""><strong>Kofuku-ji </strong><mark
+							class="highlight-red"><strong>興福寺 </strong></mark><strong>(1 PM)</strong></h3>
+					<p id="aff73ef4-d1d0-4389-b6a0-9d17a4dd4fe1" class="">Kofukuji (興福寺) used to be the family <a
+							href="https://www.japan-guide.com/e/e2058.html">temple</a> of the <a
+							href="https://www.japan-guide.com/e/e2132.html">Fujiwara</a>, the most powerful aristocratic
+						clan during much of the <a href="https://www.japan-guide.com/e/e2132.html">Nara and Heian
+							Periods</a>. At 50 meters, the <strong>five-storied pagoda</strong> is Japan&#x27;s second
+						tallest wooden pagoda, just seven meters shorter than the five-storied pagoda at Kyoto&#x27;s <a
+							href="https://www.japan-guide.com/e/e3919.html">Toji Temple</a>.</p>
+					<p id="902b2254-a400-4607-87fe-ecbfcdafb959" class="">The complex is quite large, emcompassing a
+						park, many buildings, and the famous <mark class="highlight-red"><strong>Sarusawa Pond
+								(猿沢池)</strong></mark>. This area is part of a large green space that connects the to the
+						<mark class="highlight-red"><strong>Asajigahara Enchi</strong></mark> and then Nara Park, so we
+						can take our time walking through it and enjoying the scenery.</p>
+					<h3 id="21f55ea9-dffa-4e12-8bc0-60b36e1dda7d" class=""><strong>Asajigahara Enchi </strong><mark
+							class="highlight-red"><strong>浅茅ヶ原園地 </strong></mark><strong>(2:30 PM)</strong></h3>
+					<p id="1f0873c0-bd9c-49f6-9956-50242997c522" class="">Asajigahara-enchi Park, part of the
+						extensive <a href="https://www.gltjp.com/en/directory/item/11611/">Nara Park</a>, is known for
+						its diverse landscape and cultural heritage. Located on the southern side of the park, near the
+						first Torii gate of <a href="https://www.gltjp.com/en/directory/item/12017/">Kasuga Taisha
+							Shrine</a>, this hilly area offers stunning views, especially around the Sagiike Pond where
+						the Ukimido Pavilion stands.</p>
+					<p id="973abacf-a220-4c71-b545-2114f3d5491e" class="">This is also quite close to Nara Park proper,
+						so there are many deers in this area as well.</p>
+					<h3 id="7b686625-ac89-4fd1-aac8-1ac0d3af3f7c" class=""><strong>Kuki Cake </strong><mark
+							class="highlight-red"><strong>空気ケーキ</strong></mark><strong> (4 PM)</strong></h3>
+					<p id="cebc6f91-9625-4a0b-b4ad-7903537fa02f" class="">Kuki Cake is in a area close to Asajigahara
+						Enchi and is a nice cafe to take a rest to eat some delicious pastries. VIsit the website below
+						or look online for the menu!</p>
+					<p id="e756d2c2-799d-4dcb-84a6-810ec7e580fd" class=""><a
+							href="http://www.kuukicake.com/">http://www.kuukicake.com/</a></p>
+					<h3 id="94c26e1d-fb4c-4ffe-9fd8-5fb3135e1f11" class=""><strong>Nara Park </strong><mark
+							class="highlight-red"><strong>奈良公園 </strong></mark><strong>(5:30 PM)</strong></h3>
+					<p id="0027d5dd-d37f-4fd2-bfd7-117529e2a148" class="">Landscaped, public park with ancient temples
+						&amp; the Nara National Museum of art, plus tame deer. This is Nara Park proper, but essentially
+						just another green space connected with the other places explored earlier in the day. You can
+						feed the deer at Nara Park (along with Asajigahara Enchi) with special deer food that you can
+						buy in the area. The deer are very polite and will bow for you to feed them, but be careful as
+						sometimes they will get aggressive when you don’t give them what they want.</p>
+					<h3 id="45fbd99f-92a1-4436-b347-821829c150d0" class=""><strong>Kasuga Taisha </strong><mark
+							class="highlight-red"><strong>春日大社</strong></mark><strong> (6:30 PM)</strong></h3>
+					<p id="b1ff0112-559c-4bd3-a205-ec88d25d284c" class="">Kasuga Taisha is one of the most sacred sites
+						in all of Japan. it attracts both devotees and tourists seeking an iconic Shinto experience. It
+						was built during 768 AD, and is beautifully lit up at night. There is no entrance fee but it is
+						a short walk (or hike) from Nara Park and the rest of the previously visited green space.</p>
+					<h3 id="96418b78-6da5-4862-956d-4095ea9b8708" class=""><strong>Wagyu Suji Curry </strong><mark
+							class="highlight-red"><strong>和牛スジカレー </strong></mark><strong>(8 PM)</strong></h3>
+					<p id="f83b049c-aeec-4174-8dcd-e73c34b3cc48" class="">This restaurant specializes in Japanese curry
+						and omurice, and it receives very high ratings from both Japanese and foreigners. Check out
+						their menu here: <a href="https://steak-cielbleu.com/">https://steak-cielbleu.com/</a></p>
+				</div>
+				<div id="a991da42-fd34-46fb-abd6-0c5bdc330d30" style="width:50%" class="column">
+					<figure id="224a3aed-832e-495c-8714-62154df52d79" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2011.png"><img
+								style="width:499.4965515136719px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2011.png" /></a>
+					</figure>
+					<figure id="ba25c55c-6a90-4d90-b2f0-5a057cb8c2a4" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2012.png"><img
+								style="width:499.4965515136719px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2012.png" /></a>
+					</figure>
+					<figure id="d6576e55-880f-4747-b4f2-be5bcddfadfa" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2013.png"><img
+								style="width:1023.9583740234375px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2013.png" /></a>
+					</figure>
+					<figure id="20795005-8d49-4e3d-977d-18ff7c06b786" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2014.png"><img
+								style="width:488.9930725097656px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2014.png" /></a>
+					</figure>
+					<figure id="91bbae4e-2cb7-449c-a39c-07b74aafa082" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2015.png"><img
+								style="width:499.4965515136719px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2015.png" /></a>
+					</figure>
+					<figure id="f7b80a6a-2a3b-45ea-b5e5-c93ae9d18052" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2016.png"><img
+								style="width:488.9930725097656px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2016.png" /></a>
+					</figure>
+				</div>
+			</div>
+			<figure id="65327b5c-3941-40ae-b738-e8d6adefb6c6">
+				<div class="source"><a
+						href="https://www.google.com/maps/d/u/0/edit?mid=1Iot4wkKRushA3d4L1Uh797EarUIpP5g&amp;usp=sharing">https://www.google.com/maps/d/u/0/edit?mid=1Iot4wkKRushA3d4L1Uh797EarUIpP5g&amp;usp=sharing</a>
+				</div>
+			</figure>
+			<hr id="2eda5a8e-889c-45bc-a14c-0b6382ae3d57" />
+			<figure id="8a3d7150-24d4-4747-afe2-bcca6df074a6" class="image"><a
+					href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2017.png"><img
+						style="width:510.998291015625px"
+						src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2017.png" /></a>
+			</figure>
+			<hr id="02cd85d0-65e7-4cae-aa81-5da81038ab74" />
+			<h1 id="82df12c0-3a8e-4bc5-95a3-86c1168183eb" class="block-color-red_background">7/2: Arrival in Tokyo　東京の到着
+			</h1>
+			<div id="4a0b38ea-8321-4089-af7a-d63622dfaeaa" class="column-list">
+				<div id="349262e3-8bdc-40b5-b058-2ca8121c3e37" style="width:50%" class="column">
+					<h1 id="c0fed99d-cb35-477d-88a6-9dfaff51859e" class="">Bullet Train <mark
+							class="highlight-red">新幹線</mark> </h1>
+					<p id="acab978f-8800-4d5c-a811-15f7df08c421" class="">There are online tickets for the bullet train
+						from <mark class="highlight-red"><strong>Kyoto Station 京都駅</strong></mark> to <mark
+							class="highlight-red"><strong>Tokyo Station 東京駅</strong></mark>, and the trip almost always
+						consistently takes just less than 2 hours and 15 minutes. Assuming we take the train at
+						<strong>8:30 AM,</strong> we will need to wake up and check out around 7 to 7:30 AM and head to
+						the station. We will arrive at Tokyo station around <strong>10:45 AM.</strong></p>
+					<p id="d0f8c41a-c1ae-4c8f-aee1-fb82327e9413" class="">If you want to buy a ticket where you can see
+						Mt. Fuji outside the window, make sure to purchase the tickets for the <strong>LEFT
+							SIDE</strong> of the train.</p>
+				</div>
+				<div id="38b17823-9b57-473e-ac11-919e19170569" style="width:50%" class="column">
+					<figure id="7abefec0-fa6d-4a77-a4e8-80a8edec9805" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2018.png"><img
+								style="width:444.982666015625px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2018.png" /></a>
+					</figure>
+				</div>
+			</div>
+			<h1 id="86871918-c233-448a-8faf-ccf03996f71a" class="">Accommodations</h1>
+			<p id="ab9507bb-4003-4876-8b08-91285738f4f7" class="">From <mark class="highlight-red"><strong>Tokyo Station
+						東京駅</strong></mark>, we will to Mitsui Garden Hotel Otemachi and drop off all of our luggage so
+				that we can travel around Tokyo that day. </p>
+			<div id="e806f3e3-361a-4c97-b426-d5952bedd295" class="column-list">
+				<div id="ac28cfbb-e423-471c-b509-b4d06b3a939e" style="width:50%" class="column">
+					<h3 id="afd402b5-8fc4-4806-b6fd-a8dba9f83472" class=""><strong>Mitsui Garden Hotel Otemachi</strong>
+					</h3>
+					<figure id="fd10b47a-ddbc-4229-9a79-2a76eaad602f" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2019.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2019.png" /></a>
+					</figure>
+					<p id="22ec2cc1-b51b-40fe-beaa-84171b41623f" class=""><strong>(Rickey: 1夜 - 7/3) </strong> </p>
+					<p id="607a6292-9b28-4cec-9ab9-e64e06960a61" class=""><mark class="highlight-red"><strong>Mitsui
+								Garden Hotel Otemachi </strong></mark>is a 4-star hotel situated near the <mark
+							class="highlight-red"><strong>Imperial Palace</strong></mark>. It is also near <mark
+							class="highlight-red"><strong>Tokyo Station</strong></mark><mark class="highlight-red">
+							(東京駅)</mark>, ensuring easy access to the train and metro. </p>
+				</div>
+				<div id="a1d01a6a-bf29-4657-beed-61cee34c787e" style="width:49.999999999999986%" class="column">
+					<h3 id="3dc46d49-befa-46af-8525-3f4ac3b77213" class="">APA Hotel &amp; Resort Ryogoku Eki Tower
+					</h3>
+					<figure id="4eaa1b45-3ca0-4e69-bb6b-0f788952bd5b" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2020.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2020.png" /></a>
+					</figure>
+					<p id="868b0db2-c904-491b-8525-f97da258bbd3" class=""><strong>(Angie: 3夜 - 7/3, 7/4, 7/5) </strong>
+					</p>
+					<p id="cb7d317a-c1b2-4d38-9d8b-d69dceb8f72a" class=""><mark class="highlight-red">A</mark><mark
+							class="highlight-red"><strong>PA Hotel &amp; Resort Ryogoku Eki
+								Tower</strong></mark><strong> </strong>is a 3-star hotel situated in Taito City, a
+						reasonable distance from <mark class="highlight-red"><strong>Tokyo Skytree </strong></mark>and
+						<mark class="highlight-red"><strong>Asakusa</strong></mark>. It is close to <mark
+							class="highlight-red"><strong>Ryogoku Station</strong></mark><mark class="highlight-red">
+							(両国駅)</mark>.</p>
+				</div>
+			</div>
+			<h1 id="01cd48b8-0cd9-4108-97ea-071d434d34ba" class="">Shibuya 渋谷</h1>
+			<div id="7efae2f9-9c3e-49ad-9f3c-f332e5497a54" class="column-list">
+				<div id="576c1846-69b6-4ec0-9c3b-8190f7556c1c" style="width:50%" class="column">
+					<h3 id="76fd3405-d44c-4808-b4cb-f5149f03a5a6" class="">SHIBUYA SKY <mark
+							class="highlight-red">渋谷スカイ</mark> (2:00 PM)</h3>
+					<p id="4cfd0cc6-774a-41fa-8721-c8d17c3d9b2e" class=""><mark class="highlight-red"><strong>Shibuya
+								Sky</strong></mark> is a 229 meter (751 feet) tall observation deck located on the 47th
+						floor (top floor) <mark class="highlight-red"><strong>of Shibuya Scramble Square
+								Tower</strong></mark>. The open-air deck offers a 360-degree panoramic view of Tokyo.
+					</p>
+					<p id="0944e7be-e5b4-4a12-90a5-e4c2486db3c3" class="">It is a place to take the most stunning
+						photos, so make sure to bring you camera and phone. Unfortunately, tickets during the evening
+						(which is the most popular) was all taken even 4 weeks in advance, but the view is still
+						spectacular during the day.</p>
+					<p id="6fd62f5c-8c8b-40d1-8294-b0f2085a7d68" class="">The tickets I purchased are for TWO ADULTS and
+						TWO HIGH SCHOOL STUDENTS, and the time to enter is 2:00-2:20. Therefore, we should get there
+						around 1:45.</p>
+					<h3 id="5b09b777-02b5-4331-8f3b-05ab0fff8f97" class="">Shibuya Scramble Crossing <mark
+							class="highlight-red"><strong>渋谷スクランブル交差点</strong></mark> (3:00 PM)</h3>
+					<p id="398002ff-9d9e-4e2e-9eeb-9f4e955f6769" class=""><mark class="highlight-red"><strong>Shibuya
+								Crossing</strong></mark>, is a popular pedestrian scramble crossing in Tokyo. It is
+						located in front of the Shibuya Station Hachikō exit and stops vehicles in all directions to
+						allow pedestrians to inundate the entire intersection. Note that there is also a famous dog
+						statue on one of the corners of the intersection.</p>
+					<p id="30af62d9-87f1-44b4-869d-22543cb01363" class="">This is right next to Shibuya Sky, so there
+						will be almost no commute time between the two of them. There is also small cafes (also
+						Starbucks) nearby where you can watch the crossing in action and get something to drink. </p>
+					<h3 id="5663b233-0907-432c-ab1e-f8c40eb30f91" class="">MEGA Don Quijote <mark
+							class="highlight-red">メガドンキホーテ </mark>(3:30 PM)</h3>
+					<p id="d48ff757-08ff-403c-9baa-bff4ae5dcaf7" class="">Main Store is a go-to shopping destination for
+						international tourists in Tokyo, offering a vast range of affordable items, from daily
+						essentials to souvenirs. It&#x27;s one of Tokyo&#x27;s largest stores and offers tax-free
+						shopping for overseas visitors.</p>
+					<p id="e8785dc6-3d15-4063-8b5e-9d03e8951dca" class="">This expansive discount store offers an array
+						of products, ranging from essential daily goods to groceries, home appliances, brand-name
+						products, medicines, and souvenirs, all at incredibly reasonable prices!</p>
+					<p id="ee89a508-399c-493b-91f7-d30c0daa1053" class="">Check out YouTube videos to see all the things
+						to buy! A majority of the products are all very high quality! Note that if you want a tax
+						refund, you are not allowed to open the packaging until you leave Japan.</p>
+					<h3 id="4429d7b8-06be-4519-87f6-e5e289169d71" class=""><strong>CAFE: dotcom space Tokyo (5:00
+							PM)</strong></h3>
+					<p id="1bac3563-dc09-437d-9c76-da24c0295dcb" class="">This cafe is located near our next location
+						(<mark class="highlight-red"><strong>Meiji Shrine</strong></mark>), and is in one of the most
+						popular subdistricts—<mark class="highlight-red"><strong>Harajuku</strong></mark><mark
+							class="highlight-red"> 原宿</mark>. It is a few steps away from <mark
+							class="highlight-red"><strong>Takeshita</strong></mark><mark class="highlight-red">
+						</mark><mark class="highlight-red"><strong>Street</strong></mark><mark class="highlight-red">
+							竹下通り</mark>, a popular point in Harajuku that features a variety of fashion and wacky,
+						youth-driven shops selling colorful and crazy clothes and accessories.</p>
+					<p id="555fc422-29c5-47a5-b37b-a8210d867353" class="">The cafe itself features very aesthetic and
+						delicious foods, and is a good place to rest before continuing on for the rest of the night.
+						Note that this cafe closes at 6:30 PM, in case of any change to the day itinerary. </p>
+					<h3 id="54750db3-fc58-4393-8a4c-7d4bac396263" class="">Meiji Shrine <mark
+							class="highlight-red">明治神宮</mark> (6:00 PM)</h3>
+					<p id="beaa5a17-fcf5-4f69-885b-4a022ea52af4" class="">Meiji Shrine (明治神宮, Meiji Jingū) is a <a
+							href="https://www.japan-guide.com/e/e2059.html">shrine</a> dedicated to the deified spirits
+						of <a href="https://www.japan-guide.com/e/e2130.html">Emperor Meiji</a> and his consort, Empress
+						Shoken. Located just beside the <a href="https://www.japan-guide.com/e/e2370.html">JR Yamanote
+							Line</a>&#x27;s busy <a
+							href="https://www.japan-guide.com/e/e3006.html">Harajuku</a> Station, Meiji Shrine and the
+						adjacent <a href="https://www.japan-guide.com/e/e3034_002.html">Yoyogi Park</a> make up a large
+						forested area within the densely built-up city and offer walking paths for a relaxing stroll
+						away from the concrete.</p>
+					<p id="f51dd1e2-23dd-4fec-a180-338036fb736d" class="">Meiji Shrine closes at sunset, which is around
+						7:00 PM or later. It has no entrance fee so you are able to come and go as you wish. Due to its
+						location next to the JR, it is very convenient to commute to Shinjuku, which is where the next
+						set of locations are.</p>
+				</div>
+				<div id="37ccd8d6-2de7-49ef-afeb-1daadce73a24" style="width:50%" class="column">
+					<figure id="0d69d49a-60b2-41fd-8e71-0bfc8f945972" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2021.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2021.png" /></a>
+					</figure>
+					<figure id="6169cc13-b512-4744-9744-ce47b4c3f01c" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2022.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2022.png" /></a>
+					</figure>
+					<figure id="66fa4bd7-4a1c-4ac4-83ee-bd37a6d12027" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2023.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2023.png" /></a>
+					</figure>
+					<figure id="a8ae36cd-3d87-4ddf-9374-8a6946a7311a" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2024.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2024.png" /></a>
+					</figure>
+					<figure id="e4e4e498-b460-4aaf-bc60-759d02dc5ce8" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2025.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2025.png" /></a>
+					</figure>
+				</div>
+			</div>
+			<h1 id="6037a10c-b9b5-4e44-bd47-b89754823758" class="">Shinjuku 新宿</h1>
+			<div id="455ce632-a776-4e7a-9fd5-9e4f737c9d30" class="column-list">
+				<div id="a39f7194-9504-4b6a-a476-3ae923ee8c58" style="width:50%" class="column">
+					<h3 id="7aef08e3-3138-4853-90f7-f84d3e2a453d" class="">Cross Shinjuku Vision <mark
+							class="highlight-red">東新宿ビル クロス </mark>(7:30 PM)</h3>
+					<p id="91c59ca7-e83c-4783-8b8c-b4a685193151" class="">Right outside the East Exit of <mark
+							class="highlight-red"><strong>Shinjuku Station</strong></mark>, Cross Shinjuku Vision is an
+						electronic billboard famous for its 3D effect. The most famous appearance on the billboard is
+						the cat, which is pretty much an icon of Tokyo itself.</p>
+					<p id="94ef6501-3ae7-4c8e-bb37-59a93d1760c2" class="">There is also a famous Cat Cafe in the
+						building (hence the giant cat), and if you want to check that out the hours are from 1 to 9 PM.
+						The area is surrounded by many fashion shops, restraunts, and other things that are sure to fill
+						your time in the evening. However, doing so will cut into the time for the next area, which is
+						similar in that it is mostly shopping. Feel free to adjust the time in each area to your liking.
+					</p>
+					<h3 id="078cc17f-fecc-4114-b575-af9a2448189e" class="">Central Road, <mark
+							class="highlight-red">セントラルロード </mark>(8:00 PM)</h3>
+					<p id="84e75cd0-6cb9-4fca-a875-c18ec8c16207" class="">Central Road in Kabukicho is the brighest and
+						most famous area of Shinjuku.</p>
+					<h3 id="9e25822d-e02e-4a97-a164-9d846e9f87b1" class="">Tokyo Metropolitan Government Observation
+						Decks (9:00 PM)</h3>
+					<h3 id="5888b929-b447-40bc-9119-2a88cf63097a" class="">Omoide Yokocho (9:45 PM)</h3>
+					<p id="da324ea3-06e0-42b6-bff9-ee44012efdba" class="">Omoide Yokocho is a maze of narrow alleyways
+						on the West Exit of <mark class="highlight-red"><strong>Shinjuku Station</strong></mark>. Over
+						the years, it&#x27;s become popular for its <strong>unique atmosphere</strong>, which is in
+						stark contrast to modern Shinjuku. Also known as Memory Lane, Omoide Yokocho is packed with
+						historic eateries and buzzing with energy. It is the home of many</p>
+					<p id="c4843d36-669b-42b5-a183-a468ec56b58c" class="">
+					</p>
+				</div>
+				<div id="a08ebbc2-0204-4bf9-b1b6-a933478e8a42" style="width:50%" class="column">
+					<figure id="7bf48f90-587c-47c3-8966-2b57cf7cd7f2" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2026.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2026.png" /></a>
+					</figure>
+					<figure id="097f60de-2fc8-492c-8363-195eb2740121" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2027.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2027.png" /></a>
+					</figure>
+					<figure id="a4198472-307c-4944-9e5a-8e8031536dcf" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2028.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2028.png" /></a>
+					</figure>
+					<figure id="4d655ead-39ae-41ad-bcdd-21f22181e5e7" class="image"><a
+							href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2029.png"><img
+								style="width:499.9913330078125px"
+								src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2029.png" /></a>
+					</figure>
+				</div>
+			</div>
+			<ul id="5373e3d6-c9ce-40a0-987c-1869ce8fc7cb" class="bulleted-list">
+				<li style="list-style-type:disc">omoide yokocho</li>
+			</ul>
+			<ul id="1b87c7b1-3f0e-47a2-a186-98ab3ad02fb5" class="bulleted-list">
+				<li style="list-style-type:disc">shinjuku cat cafe (shinjuku station)</li>
+			</ul>
+			<ul id="2c77ff52-797e-4c62-87df-e414919a5fde" class="bulleted-list">
+				<li style="list-style-type:disc">kobukicho rd</li>
+			</ul>
+			<ul id="f04ef2c5-f657-4e7e-a830-282add3d4421" class="bulleted-list">
+				<li style="list-style-type:disc">central road shinjuku</li>
+			</ul>
+			<ul id="b4e02a8a-5bc6-4ca5-8088-f111df625325" class="bulleted-list">
+				<li style="list-style-type:disc">tokyo metropolitan government observation decks</li>
+			</ul>
+			<figure id="055dc443-1cd1-4650-89a0-512740eef19b">
+				<div class="source"><a
+						href="https://www.google.com/maps/d/u/0/edit?mid=1taKWqQi5xnx7fe-YrPsaagF8-QPJMbg&amp;usp=sharing">https://www.google.com/maps/d/u/0/edit?mid=1taKWqQi5xnx7fe-YrPsaagF8-QPJMbg&amp;usp=sharing</a>
+				</div>
+			</figure>
+			<h1 id="e4f3afb6-f6e6-4dcb-aabf-889957f4dd1b" class="block-color-red_background">7/3: Day 2 Of Tokyo　東京の2日
+			</h1>
+			<h2 id="568ec35a-e7c4-4811-a726-bf99133c6121" class="">Minato 港区</h2>
+			<ul id="f7f4b209-e282-4160-8b9e-20eff589f6e6" class="bulleted-list">
+				<li style="list-style-type:disc">tokyo tower RED 東京タワー</li>
+			</ul>
+			<ul id="b23021d0-2538-4e04-a844-8140d9354039" class="bulleted-list">
+				<li style="list-style-type:disc">teamlab borderless</li>
+			</ul>
+			<p id="e5675f79-f8f0-4393-a9e3-40c853ec85d6" class=""><a
+					href="https://webket.jp/pc/member/top?fc=00396&amp;ac=8001&amp;lang=1">https://webket.jp/pc/member/top?fc=00396&amp;ac=8001&amp;lang=1</a>
+			</p>
+			<p id="b0f3224f-e2e9-4913-b074-de6458fa1b64" class=""><a
+					href="https://borderless-azabudai.ticket.teamlab.art/tickets/#/id/nyaZ1I1ivjhh01UsQw5avJpaOywb77LIhFuDnjWCqfAQh5ltXGYvHApEpBmk5Kg4">https://borderless-azabudai.ticket.teamlab.art/tickets/#/id/nyaZ1I1ivjhh01UsQw5avJpaOywb77LIhFuDnjWCqfAQh5ltXGYvHApEpBmk5Kg4</a>
+			</p>
+			<h2 id="f7a63d63-e211-4b18-8643-61929a892490" class="">Ginza &amp; Chiyoda 銀座と千代田</h2>
+			<ul id="ccd65a70-c1ab-4865-bda9-044d25742df9" class="bulleted-list">
+				<li style="list-style-type:disc">shopping district<ul id="6207b911-9187-4c89-bb43-4260ccd63a10"
+						class="bulleted-list">
+						<li style="list-style-type:circle">art aquarium museum</li>
+					</ul>
+					<ul id="d4f280fd-19a2-4abe-967e-d0107e121aa9" class="bulleted-list">
+						<li style="list-style-type:circle">12 floor UNIQLO</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="e0ec8e79-8e5c-4c90-8528-9bd5af4239a4" class="bulleted-list">
+				<li style="list-style-type:disc">imperial palace</li>
+			</ul>
+			<h2 id="e9642a85-bdd6-4515-af3b-70874a3ee4ac" class="">Taito and Sumida 台東と墨田</h2>
+			<ul id="41e5bce8-9c58-400d-9bbe-ab8fb94ca907" class="bulleted-list">
+				<li style="list-style-type:disc">tokyo skytree 東京スカイツリー</li>
+			</ul>
+			<ul id="bd9d85b6-8ecf-428f-a888-2acb36a7a9f5" class="bulleted-list">
+				<li style="list-style-type:disc">askakusa temple 浅草寺</li>
+			</ul>
+			<ul id="e59c4bd6-7baa-4d68-a17b-b6805229404e" class="bulleted-list">
+				<li style="list-style-type:disc">akihabara district 秋葉原</li>
+			</ul>
+			<p id="d4ba0c03-583d-4620-92fb-0925d11886a4" class="">
+			</p>
+			<p id="551f2412-f2cc-4ac4-8929-b7459040fffb" class="">
+			</p>
+			<p id="d0931518-32c4-4fd6-969a-ef8e6d9c423f" class="">all flights from haneda</p>
+			<p id="9de68ca3-6e91-4dfb-a4ce-823cad5cf8ae" class="">taiwan 6/26 2:20 pm TSA airport ⇒ 6:45 pm haneda</p>
+			<p id="846dc800-ec50-42bb-a0ad-e1108b95a862" class="">6/29 12:45 pm haneda airport ⇒ 2:10 pm kansai KIX
+				airport</p>
+			<p id="456343be-8f7b-4041-bd2d-4742057e1594" class="">7/3 6:20 pm haneda airport ⇒ 8:50 pm taipei TSA
+				(songshan) airport</p>
+			<p id="ef907882-4bd3-4b19-9dd8-402e220c07a1" class=""><strong>Hotel Metropolitan Haneda (INITIAL
+					ARRIVAL)</strong></p>
+			<p id="bec251b1-2826-4ce8-ab2a-5c0f38472441" class="">
+			</p>
+			<p id="28640b85-9125-4faa-ba59-dff2742b4b57" class="">
+			</p>
+			<p id="3a2e981e-518a-424a-9b40-2e44abdeb877" class="">
+			</p>
+			<p id="84c85192-84a5-45bd-aa22-98e79b232eab" class="">
+			</p>
+			<p id="079126cc-b5e9-4229-a254-d1b8ed624faf" class="">
+			</p>
+			<p id="8a5a3b08-d7ae-41a0-9d20-cbcb56dcc238" class="">
+			</p>
+			<p id="5ca8af3a-c48b-4c53-9e3e-f756bfcef761" class="">
+			</p>
+			<p id="d0e39c1a-38c3-4b0c-843b-c2a26061723e" class="">
+			</p>
+			<p id="e9ede8f9-e3d2-4d48-aab7-63c43e437180" class="">
+			</p>
+			<p id="d6899459-4d81-4d2a-bb19-28b97ae61d5a" class="">
+			</p>
+			<hr id="9d9307d2-c73a-4d49-9faa-a9da19964fb9" />
+			<h1 id="e0008176-bbfe-460f-a6c9-6f4c732fcd7b" class="">EVERYTHING BELOW IS JUST RANDOM RESEARCH</h1>
+			<hr id="3650b3d5-44ed-4f3b-8174-692bf1fd51ac" />
+			<hr id="a17492ae-0f8a-4433-9ce9-6ba948d79320" />
+			<figure id="cb73b532-5846-4b6e-9d02-378aaae8cbb5" class="image"><a
+					href="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2030.png"><img
+						style="width:473.9930725097656px"
+						src="%E5%A4%8F%202024%20%E6%97%A5%E6%9C%AC%20%E6%97%85%E8%A1%8C%20511f8550dc89442cbeb4929781df43b6/Untitled%2030.png" /></a>
+			</figure>
+			<h3 id="92c8fadd-5a13-422f-bd83-ae5af804c347" class="">accommodations</h3>
+			<ul id="c6ba68e4-f76a-4c61-a770-8b8854d806a6" class="bulleted-list">
+				<li style="list-style-type:disc">hotel gajoen ホテル雅条 <a
+						href="https://www.hotelgajoen-tokyo.com/en/">https://www.hotelgajoen-tokyo.com/en/</a>
+					($500/night)</li>
+			</ul>
+			<ul id="067c23b9-ec4c-404f-8ddb-d706c9309146" class="bulleted-list">
+				<li style="list-style-type:disc">prince park hotel <a
+						href="https://www.princehotels.com/parktower/">https://www.princehotels.com/parktower/</a>
+					($300/night for park twin room)<ul id="28680d2f-0a0d-4062-ab63-074f68eebb79" class="bulleted-list">
+						<li style="list-style-type:circle">right next to tokyo tower and shiba park</li>
+					</ul>
+				</li>
+			</ul>
+			<ul id="ffbfb122-1abd-431a-b268-3079e379ed91" class="bulleted-list">
+				<li style="list-style-type:disc">imperial hotel tokyo </li>
+			</ul>
+			<ul id="c676382c-fb3a-4c45-ab44-2c130c9d8cf8" class="bulleted-list">
+				<li style="list-style-type:disc">hotel zen tokyo <a
+						href="https://zen.intokyohotels.com/en/">https://zen.intokyohotels.com/en/</a> (capsule hotel!)
+				</li>
+			</ul>
+			<h1 id="b88c8542-c239-41e9-94fd-ef52a1e05b62" class="">hakone 箱根 kamakura 鎌倉</h1>
+			<ul id="c9914b16-41cf-482d-929b-5ddd5cd47d78" class="bulleted-list">
+				<li style="list-style-type:disc">平和の鳥居</li>
+			</ul>
+			<h1 id="4119f131-4160-4699-baed-191be70df1a3" class="">kyoto 京都</h1>
+			<ul id="bb62a93a-508a-4ba8-8c30-d36d73a16b5b" class="bulleted-list">
+				<li style="list-style-type:disc">fushimi inari name 伏見稲荷大社 (thousand red gates)</li>
+			</ul>
+			<ul id="4e4edb7c-157b-4161-81e1-1b33144021cd" class="bulleted-list">
+				<li style="list-style-type:disc">higashiyama ward</li>
+			</ul>
+			<ul id="445ea7dd-2fb0-4375-887d-da1ef09d73ee" class="bulleted-list">
+				<li style="list-style-type:disc">arashiyama bamboo forest</li>
+			</ul>
+			<h1 id="1b6c950a-a902-4153-8ff9-a79500ad6ca1" class=""><del>osaka 大阪</del></h1>
+			<ul id="09b7ec65-f570-4f3e-b9d9-acfc6cb364aa" class="bulleted-list">
+				<li style="list-style-type:disc"><del>osaka castle</del></li>
+			</ul>
+			<ul id="6d473e8b-0c3f-44d3-af3d-a63eb5da8561" class="bulleted-list">
+				<li style="list-style-type:disc"><del>umeda sky building</del></li>
+			</ul>
+			<ul id="e83d1f39-433e-4d5d-a101-6faa74cc4ada" class="bulleted-list">
+				<li style="list-style-type:disc"><del>tenma</del></li>
+			</ul>
+			<ul id="6e16d69d-328d-4e91-8ff7-5aaa36102756" class="bulleted-list">
+				<li style="list-style-type:disc"><del>namba park (shopping mall)?</del></li>
+			</ul>
+			<ul id="261013b1-3e8c-482a-8124-6cadc5809f23" class="bulleted-list">
+				<li style="list-style-type:disc"><del>eat takoyaki and okonomiyaki</del></li>
+			</ul>
+			<ul id="a6a27565-6887-4039-a400-5f4518025270" class="bulleted-list">
+				<li style="list-style-type:disc"><del>universal studios</del></li>
+			</ul>
+			<h1 id="83acad36-d3fe-4156-ad80-f98f322ca0f5" class="">nara 奈良</h1>
+			<ul id="88df9720-5691-4266-b626-bfdd6c35a10c" class="bulleted-list">
+				<li style="list-style-type:disc">nara park</li>
+			</ul>
+			<ul id="241553bf-8f8a-413b-9a1c-26f3ee3971de" class="bulleted-list">
+				<li style="list-style-type:disc"></li>
+			</ul>
+			<p id="e01ec7a3-6852-49a0-9021-a35746d11ecf" class="">
+			</p>
+			<p id="bc89060e-abf4-414d-8de4-6fbd24097172" class=""><a
+					href="https://www.expedia.com/Tokyo-Hotels-Keio-Presso-Inn-Hamamatsucho.h19072524.Hotel-Information?chkin=2024-03-03&amp;chkout=2024-03-04&amp;destType=MARKET&amp;destination=Tokyo%2C%20Tokyo%20Prefecture%2C%20Japan&amp;gclid=CjwKCAiAloavBhBOEiwAbtAJOzhPdK1nQLPwJlp--kEE_JMx_YZA8HP5T9QNw69UUDUTwYOIdf11yhoCYZIQAvD_BwE&amp;latLong=35.681143%2C139.767208&amp;mctc=10&amp;mdpcid=US.META.HPA.HOTEL-CORESEARCH-desktop.HOTEL&amp;mdpdtl=HTL.19072524.20240303.20240304.DDT.1.CID.20736826772.AUDID..RRID.bex_us_desktop&amp;neighborhoodId=553248635976382250&amp;pwa_ts=1709418620579&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;regionId=3593&amp;rfrr=HSR&amp;rm1=a2&amp;searchId=a1ab8cc9-1a28-4bb6-b2b9-38c25e9ba0df&amp;selected=19072524&amp;selectedRatePlan=390773285&amp;selectedRoomType=202054545&amp;sort=RECOMMENDED&amp;top_cur=USD&amp;top_dp=69&amp;useRewards=false&amp;userIntent=&amp;x_pwa=1">https://www.expedia.com/Tokyo-Hotels-Keio-Presso-Inn-Hamamatsucho.h19072524.Hotel-Information?chkin=2024-03-03&amp;chkout=2024-03-04&amp;destType=MARKET&amp;destination=Tokyo%2C
+					Tokyo Prefecture%2C
+					Japan&amp;gclid=CjwKCAiAloavBhBOEiwAbtAJOzhPdK1nQLPwJlp--kEE_JMx_YZA8HP5T9QNw69UUDUTwYOIdf11yhoCYZIQAvD_BwE&amp;latLong=35.681143%2C139.767208&amp;mctc=10&amp;mdpcid=US.META.HPA.HOTEL-CORESEARCH-desktop.HOTEL&amp;mdpdtl=HTL.19072524.20240303.20240304.DDT.1.CID.20736826772.AUDID..RRID.bex_us_desktop&amp;neighborhoodId=553248635976382250&amp;pwa_ts=1709418620579&amp;referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&amp;regionId=3593&amp;rfrr=HSR&amp;rm1=a2&amp;searchId=a1ab8cc9-1a28-4bb6-b2b9-38c25e9ba0df&amp;selected=19072524&amp;selectedRatePlan=390773285&amp;selectedRoomType=202054545&amp;sort=RECOMMENDED&amp;top_cur=USD&amp;top_dp=69&amp;useRewards=false&amp;userIntent=&amp;x_pwa=1</a>
+			</p>
+			<p id="1607867e-9cc2-4808-81df-1715d8415101" class="">(Angie: 6/29 noon-7/5) flights on those days </p>
+		</div>
+	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+
+</html>
