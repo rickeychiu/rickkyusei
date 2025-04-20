@@ -3,6 +3,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>7-Day Japan Travel Itinerary</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
 	<style>
 		/* cspell:disable-file */
 		/* webkit printing magic: print all background colors */
@@ -19,12 +22,14 @@
 		body {
 			margin: 0;
 			padding: 0;
+			width: 100%
 		}
 
 		@media only screen {
 			body {
-				margin: 2em auto;
-				max-width: 1100px;
+				/* margin: 2em auto;
+				max-width: 1250px;
+				/* MASTER WIDTH HERE ------------------*/
 				color: rgb(55, 53, 47);
 			}
 		}
@@ -871,749 +876,1311 @@
 			height: 400px;
 			/* adjust as needed */
 		}
+
+		.page-wrapper {
+			display: flex;
+			gap: 2rem;
+			max-width: 1250px;
+			margin: 0 auto;
+		}
+
+		.sidebar {
+			position: sticky;
+			top: 70px;
+			/* or whatever height is below hero */
+			align-self: flex-start;
+			width: 200px;
+			padding: 1em;
+			background: #1e1e1e;
+			color: #fff;
+			border-right: 1px solid #333;
+			font-family: 'Inter', sans-serif !important;
+			z-index: 5;
+		}
+
+
+		.hero-title.scrolled {
+			position: sticky;
+			top: 0;
+			z-index: 10;
+			/* stays above the sidebar */
+		}
+
+
+
+		.timeline {
+			position: relative;
+			list-style: none;
+			padding-left: 1.5em;
+			margin: 0;
+		}
+
+
+		.timeline li a.active {
+			color: #90caf9;
+			font-weight: bold;
+		}
+
+		.timeline li a:hover {
+			color: #90caf9;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.timeline {
+			position: relative;
+			padding-left: 30px;
+			list-style: none;
+			margin: 0;
+		}
+
+		.timeline::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 14px;
+			width: 2px;
+			height: 100%;
+			background-color: #90caf9;
+		}
+
+		.timeline li {
+			position: relative;
+			margin: 1.5em 0;
+		}
+
+		.timeline li a {
+			color: #ccc;
+			text-decoration: none;
+			display: block;
+			padding-left: 1em;
+			position: relative;
+			z-index: 2;
+			transition: color 0.2s;
+		}
+
+		.timeline li a:hover {
+			color: #90caf9;
+		}
+
+		.timeline li a.active {
+			color: #90caf9;
+			font-weight: bold;
+		}
+
+		.timeline li a.active::before {
+			content: '';
+			position: absolute;
+			left: -23px;
+			top: 0.35em;
+			width: 14px;
+			height: 14px;
+			background-color: #90caf9;
+			border-radius: 50%;
+			z-index: 3;
+		}
+
+		.hero-container {
+			position: relative;
+			width: 100%;
+			height: 60vh;
+			overflow: hidden;
+			z-index: 2;
+			transition: all 0.4s ease-in-out;
+
+			display: block;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		.hero-container.scrolled {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 70px;
+			z-index: 1000;
+		}
+
+		/* Keep image inside the container and always fill it */
+		.hero-image {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: all 0.4s ease-in-out;
+		}
+
+		.hero-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 3rem;
+			font-weight: bold;
+			font-family: 'PT Serif', serif;
+			pointer-events: none;
+			z-index: 3;
+		}
+
+		/* When scrolled — shrink but keep it vertically visible */
+		.hero-container.scrolled .hero-title {
+			/* font-size: 1.5rem; */
+			top: 0%;
+			/* or adjust slightly if still too low */
+			transform: translate(-50%, -50%);
+		}
+
+
+
+		/* Push body down to make room for fixed bar */
+		body.has-sticky-hero {
+			padding-top: 100px;
+		}
+
+
+		.hero-container.scrolled .hero-image {
+			height: 70px;
+			object-position: center;
+		}
+
+		.hero-header {
+			position: relative;
+			height: 60vh;
+			width: 100%;
+			overflow: hidden;
+			z-index: 1;
+		}
+
+		.hero-header::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 100px;
+			background: linear-gradient(to bottom, transparent, #121212);
+			z-index: 3;
+		}
+
+
+		body.scrolled .hero-img {
+			opacity: 0;
+		}
+
+		.main-content-wrapper {
+			margin-top: 20vh;
+			/* pushes content below the hero image */
+			position: relative;
+		}
+
+		figure[id],
+		h1[id],
+		h2[id],
+		h3[id] {
+			scroll-margin-top: 90px;
+			/* matches or exceeds sticky hero height */
+		}
 	</style>
 </head>
 
 <body>
-	<article class="page serif">
-		<header>
-			<h1 class="page-title">7-Day Japan Travel Itinerary</h1>
 
-		</header>
-		<div class="page-body">
-			<p class="">
-			</p>
-			<figure class="image"><a href="media/hakonelabel.png"><img style="width:1063.9375px"
-						src="media/hakonelabel.png" /></a>
-			</figure>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h1 class="">Hakone Shrine・箱根神社</h1>
-					<p class="">Start your first morning with a peaceful stroll through <mark
-							class="highlight-red"><strong>Hakone Shrine</strong></mark>, nestled among towering cedar
-						trees along the shores of <mark class="highlight-red"><strong>Lake Ashi</strong></mark>. The
-						misty forest path leading up to the vibrant torii gate creates a serene, almost spiritual
-						atmosphere — perfect for reflection and quiet photos. Don&#x27;t miss the iconic red torii
-						standing in the lake, offering a stunning view framed by water and mountains.</p>
-					<h3 class="">Torii of Peace・平和の鳥居</h3>
-					<p class="">The <mark class="highlight-red"><strong>Torii of Peace</strong></mark> rises from the
-						waters of Lake Ashi, symbolizing harmony between nature and spirit. This iconic red gate,
-						standing serenely at the lake’s edge, offers a breathtaking photo spot with <mark
-							class="highlight-red"><strong>Mt. Fuji </strong></mark>often visible in the distance on
-						clear days.</p>
-					<h3 class="">The Ninety Steps・九十段</h3>
-					<p class="">After admiring the serene view of the lake, climb the <mark
-							class="highlight-red"><strong>Ninety Steps</strong></mark>, a moss-lined stone staircase
-						that leads through a quiet cedar forest to Hakone Shrine’s inner grounds. Each step adds to the
-						sense of anticipation, making the journey feel as sacred as the destination.</p>
-					<h3 class="">Worship Hall・拝殿</h3>
-					<p class="">At the top of the Ninety Steps lies the <mark class="highlight-red"><strong>Worship
-								Hall</strong></mark>, the spiritual heart of Hakone Shrine. Adorned with traditional
-						architecture and rich in history, it’s a place where visitors offer prayers for safe travels,
-						health, and good fortune. The quiet reverence in the air invites a moment of reflection.</p>
+	<div class="hero-container">
+		<img class="hero-image" src="media/tokyodaybanner.jpeg" alt="Hero Image">
+		<h1 class="hero-title">7-Day Japan Travel Itinerary</h1>
+	</div>
+
+	<!-- 
+	<header class="hero-header">
+		<img src="media/tokyodaybanner.jpeg" alt="Japan Travel" class="hero-img">
+		<div class="hero-title">7-Day Japan Travel Itinerary</div>
+	</header> -->
+	<div class="main-content-wrapper">
+		<div class="page-wrapper">
+			<aside class="sidebar">
+				<ul class="timeline">
+					<li><a href="#hakone">Hakone</a></li>
+					<li><a href="#kamakura">Kamakura</a></li>
+					<li><a href="#kyoto">Kyoto</a></li>
+					<li><a href="#nara">Nara</a></li>
+					<li><a href="#tokyo">Tokyo</a></li>
+				</ul>
+			</aside>
+
+			<article class="page serif">
+
+				<div class="page-body">
+					<p class="">
+					</p>
+					<figure id="hakone" class="image"><a href="media/hakonelabel.png"><img style="width:1063.9375px"
+								src="media/hakonelabel.png" /></a>
+					</figure>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h1 class="">Hakone Shrine・箱根神社</h1>
+							<p class="">Start your first morning with a peaceful stroll through <mark
+									class="highlight-red"><strong>Hakone Shrine</strong></mark>, nestled among towering
+								cedar
+								trees along the shores of <mark class="highlight-red"><strong>Lake Ashi</strong></mark>.
+								The
+								misty forest path leading up to the vibrant torii gate creates a serene, almost
+								spiritual
+								atmosphere — perfect for reflection and quiet photos. Don&#x27;t miss the iconic red
+								torii
+								standing in the lake, offering a stunning view framed by water and mountains.</p>
+							<h3 class="">Torii of Peace・平和の鳥居</h3>
+							<p class="">The <mark class="highlight-red"><strong>Torii of Peace</strong></mark> rises
+								from
+								the
+								waters of Lake Ashi, symbolizing harmony between nature and spirit. This iconic red
+								gate,
+								standing serenely at the lake’s edge, offers a breathtaking photo spot with <mark
+									class="highlight-red"><strong>Mt. Fuji </strong></mark>often visible in the distance
+								on
+								clear days.</p>
+							<h3 class="">The Ninety Steps・九十段</h3>
+							<p class="">After admiring the serene view of the lake, climb the <mark
+									class="highlight-red"><strong>Ninety Steps</strong></mark>, a moss-lined stone
+								staircase
+								that leads through a quiet cedar forest to Hakone Shrine’s inner grounds. Each step adds
+								to
+								the
+								sense of anticipation, making the journey feel as sacred as the destination.</p>
+							<h3 class="">Worship Hall・拝殿</h3>
+							<p class="">At the top of the Ninety Steps lies the <mark
+									class="highlight-red"><strong>Worship
+										Hall</strong></mark>, the spiritual heart of Hakone Shrine. Adorned with
+								traditional
+								architecture and rich in history, it’s a place where visitors offer prayers for safe
+								travels,
+								health, and good fortune. The quiet reverence in the air invites a moment of reflection.
+							</p>
+							<p class="">
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<figure class="image"><a href="media/toriiofpeace.png"><img
+										style="width:713.6632080078125px" src="media/toriiofpeace.png" /></a>
+								<figcaption>A picture taken of the Torii of Peace in the early morning.</figcaption>
+							</figure>
+							<figure class="image"><a href="media/hakonejinja.png"><img style="width:539.984375px"
+										src="media/hakonejinja.png" /></a>
+								<figcaption>A long-exposure photo taken of visitors praying at the Worship Hall at
+									Hakone
+									Shrine.</figcaption>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h2 class="">Hakoneya・箱根屋</h2>
+							<figure class="video">
+								<video controls preload="metadata" style="max-width: 100%">
+									<source src="media/hakoneya.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption>Hakoneya clip</figcaption>
+							</figure>
+							<p class="">Just steps from Hakone Shrine, <mark
+									class="highlight-red"><strong>Hakoneya</strong></mark> is a cozy local eatery
+								perfect
+								for a
+								post-shrine meal. Known for its comforting, home-style Japanese dishes, this spot is a
+								favorite
+								among both locals and travelers. The <strong><span
+										style="border-bottom:0.05em solid">katsudon</span></strong>—crispy pork cutlet
+								simmered
+								with egg over rice—is a must-try.</p>
+						</div>
+						<div style="width:50%" class="column">
+							<h2 class="">Lake Ashi Sightseeing Boat・芦ノ湖遊覧船</h2>
+							<figure class="video">
+								<video controls preload="metadata" style="max-width: 100%">
+									<source src="media/lakeashiboat.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption>Lake Ashi Sightseeing Boat</figcaption>
+							</figure>
+							<p class="">Set off from<mark class="highlight-red"><strong> Moto-Hakone Port
+									</strong></mark>on
+								the
+								Lake Ashi Sightseeing Boat for a serene cruise across the lake. With comfortable seating
+								and
+								warm drinks in hand, enjoy views of forested hills, floating torii, and—on clear days—a
+								stunning
+								glimpse of Mt. Fuji. The round-trip ride offers a peaceful and scenic break in your day.
+							</p>
+						</div>
+					</div>
+					<hr />
+					<figure class="video full-width">
+						<iframe width="560" height="315"
+							src="https://www.youtube.com/embed/VZGrHXNF0Pk?si=Xph6CxQ0lmCHKIfA"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+						</iframe>
+					</figure>
+					<hr />
+					<figure id="kamakura" class="image"><a href="media/kamakuralabel.png"><img style="width:1056px"
+								src="media/kamakuralabel.png" /></a>
+					</figure>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h2 class="">Enoshima・江ノ島</h2>
+							<p class="">After your relaxing getaway in the mountains of Hakone, spend your late
+								afternoon
+								admiring the blue waters of <mark
+									class="highlight-red"><strong>Kamakura</strong></mark>.
+								Nearby, there is <mark class="highlight-red"><strong>Enoshima</strong></mark>, a
+								charming
+								island
+								getaway just off the Shonan coast, connected to the mainland by a scenic bridge. Known
+								for
+								its
+								coastal views, shrines, street food, and hidden caves, the island offers a perfect mix
+								of
+								nature, culture, and seaside fun. Climb to the top for panoramic ocean vistas—or explore
+								the
+								narrow alleyways lined with local shops and cafes.</p>
+							<h2 class="">Kamakura Kōkōmae Station・鎌倉高校前駅</h2>
+							<p class="">Right before golden hour, take the local train to <mark
+									class="highlight-red"><strong>Kamakura Kokomae Station</strong></mark>, a small
+								seaside
+								stop
+								along the Enoden Line, famous for its picturesque ocean views and iconic railroad
+								crossing.
+								Beloved by anime fans and photographers alike, it&#x27;s a peaceful spot where trains
+								pass
+								by
+								with the sound of waves in the background—especially beautiful during sunset.</p>
+							<h2 class=""><strong>Ginza Kagari・</strong>銀座 篝 鎌倉店</h2>
+							<p class=""><mark class="highlight-red"><strong>Ginza Kagari</strong></mark>’s Kamakura
+								branch
+								brings its renowned refined ramen to a relaxed, coastal setting. Known for its signature
+								<em><strong>tori paitan</strong></em> (creamy chicken broth) ramen, the shop blends
+								delicate
+								flavors with beautifully presented bowls—perfect for a comforting yet elevated dinner
+								after
+								a
+								long time of exploring. After you are done, take head to<mark
+									class="highlight-red"><strong>
+										Kamakura Station</strong></mark> and return to your hotel in Tokyo.
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<figure class="image"><a href="media/enoshima.png"><img style="width:2667px"
+										src="media/enoshima.png" /></a>
+								<figcaption>A view of Enoshima, with its signature Sea Candle poking out into the
+									horizon.
+								</figcaption>
+							</figure>
+							<figure class="image"><a href="media/kamakurakokomae.png"><img style="width:526.96875px"
+										src="media/kamakurakokomae.png" /></a>
+								<figcaption>A well known train-crossing right by the shore near Kamakura Kokomae
+									Station.
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<figure id="yokohama" class="image"><a href="media/yokohamalabel.png"><img
+								style="width:1101.984375px" src="media/yokohamalabel.png" /></a>
+					</figure>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h1 class="">Minato Mirai・みなとみらい</h1>
+							<p class=""><mark class="highlight-red"><strong>Minato Mirai</strong></mark><strong>
+								</strong>is
+								Yokohama’s modern waterfront district, blending sleek skyscrapers with scenic bay views
+								and
+								laid-back attractions. Whether you&#x27;re shopping at Queen&#x27;s Square, strolling
+								along
+								the
+								promenade, or riding the iconic Cosmo Clock Ferris wheel, the area offers something for
+								everyone. With its mix of culture, entertainment, and seaside charm, Minato Mirai is the
+								perfect
+								place to spend a relaxed afternoon or romantic evening by the water.</p>
+							<p class=""><strong>Getting from Tokyo to Minato Mirai is quick and easy.</strong> Take the
+								JR
+								Tokaido Line or Yokosuka Line from <strong>Tokyo Station</strong> to <mark
+									class="highlight-red"><strong>Yokohama Station</strong></mark>—a direct ride of
+								about
+								25–30
+								minutes. From Yokohama, transfer to the <mark class="highlight-red"><strong>Minatomirai
+										Line</strong></mark> and ride just two stops to <mark
+									class="highlight-red"><strong>Minatomirai Station</strong></mark>, which drops you
+								right
+								into the heart of the waterfront district. </p>
+							<h3 class="">Shake Shack・<strong>シェイクシャック みなとみらい</strong>
+							</h3>
+							<p class="">Kick off your Yokohama adventure with a satisfying lunch at <mark
+									class="highlight-red"><strong>Shake Shack</strong></mark>, located conveniently in
+								the
+								stylish Minato Mirai district. With floor to ceiling windows and views of the waterfront
+								and
+								skyline, it&#x27;s the perfect casual spot to enjoy American-style burgers, crispy
+								fries,
+								and
+								creamy milkshakes. The relaxed vibe and familiar comfort food offer a nice balance
+								before
+								jumping into the more adventurous parts of your day.</p>
+							<h3 class="">Yokohama Air Cabin・横浜エアカビン</h3>
+							<p class="">After lunch, soar above the city on the <mark
+									class="highlight-red"><strong>Yokohama
+										Air
+										Cabin</strong></mark>, a sleek urban ropeway connecting Sakuragicho Station to
+								the
+								waterfront promenade. As you glide across the skyline, you&#x27;ll get a bird’s-eye view
+								of
+								the
+								iconic Cosmo Clock Ferris wheel, the <mark class="highlight-red"><strong>Red Brick
+										Warehouse</strong></mark>, and the shimmering bay. The ride only takes a few
+								minutes,
+								but the views—especially on a clear day—are a scenic highlight of Minato Mirai.</p>
+							<h3 class="">Cup Noodles Museum・<strong>カップヌードルミュージアム</strong></h3>
+							<p class="">Unleash your inner foodie and creative spirit at the <mark
+									class="highlight-red"><strong>Cup Noodles Museum</strong></mark>, a fun and
+								interactive
+								space dedicated to one of Japan’s greatest inventions. Learn the story of Momofuku Ando
+								and
+								how
+								instant ramen changed the world, explore quirky exhibits, and even design your own
+								custom
+								cup
+								noodle to take home. It&#x27;s educational, entertaining, and totally unique—perfect for
+								travelers of any age.</p>
+							<h3 class="">Yokohama Cosmo World・<strong>よこはまコスモワールド</strong></h3>
+							<p class="">Wrap up the afternoon with a visit to <mark
+									class="highlight-red"><strong>Yokohama
+										Cosmo
+										World</strong></mark>, a colorful amusement park along the bay. It’s home to the
+								iconic
+								<mark class="highlight-red"><strong>Cosmo Clock 21 Ferris Wheel</strong></mark>, which
+								offers
+								panoramic views of the city and ocean, especially magical at sunset. Try out the mini
+								coasters
+								or just enjoy the retro charm of the game arcades and carnival-style treats. No
+								admission
+								fee is
+								required to enter—just pay per ride, making it a flexible and fun way to end your time
+								in
+								Minato
+								Mirai.
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<figure class="image"><a href="media/yokohamamirai.png"><img style="width:526.984375px"
+										src="media/yokohamamirai.png" /></a>
+								<figcaption>A view of the Minato Mirai district from the waterfront during sunset.
+								</figcaption>
+							</figure>
+							<figure class="video">
+								<video controls preload="metadata" style="max-width: 100%">
+									<source src="media/aircabin.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption>Yokohama Air Cabin view</figcaption>
+							</figure>
+							<figure class="image"><a href="media/cupnoodlemuseum.png"><img style="width:526.96875px"
+										src="media/cupnoodlemuseum.png" /></a>
+								<figcaption>A exhibit inside the Cup Noodles Museum. Book your tickets online!
+								</figcaption>
+							</figure>
+							<figure class="video">
+								<video controls preload="metadata" style="max-width: 100%">
+									<source src="media/cosmoworld.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption>Cosmo World ferris wheel</figcaption>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<h1 class="">Yokohama Chinatown・横浜中華街</h1>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<figure class="video">
+								<video controls preload="metadata" style="max-width: 100%">
+									<source src="media/chinatown.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption>Yokohama Chinatown gate</figcaption>
+							</figure>
+							<p class=""><mark class="highlight-red"><strong>Yokohama Chinatown</strong></mark> the
+								largest
+								Chinatown in Japan and one of the most vibrant in the world, blending colorful
+								architecture,
+								rich history, and irresistible food into one dynamic neighborhood. Established in the
+								mid-19th
+								century as a hub for Chinese immigrants after Yokohama opened as an international port,
+								it
+								has
+								since become a cultural crossroads where tradition and modern tourism meet. Beyond its
+								famous
+								street food—like xiaolongbao, sesame balls, and roasted duck—you’ll find ornate gates,
+								Taoist
+								temples like <mark class="highlight-red"><strong>Kanteibyo</strong></mark>, and bustling
+								shops
+								selling everything from herbal remedies to souvenirs. It’s not just a food destination,
+								but
+								a
+								window into the deep-rooted Chinese influence on Yokohama’s cosmopolitan identity.</p>
+							<h3 class="">Yamashita Park・山下公園</h3>
+							<p class="">Stretching along the Yokohama waterfront,<mark class="highlight-red">
+								</mark><mark class="highlight-red"><strong>Yamashita Park</strong></mark> offers open
+								lawns, flower
+								beds,
+								and sweeping views of the bay. Originally built from the rubble of the 1923 Great Kanto
+								Earthquake, the park is now a peaceful place to relax, watch ships go by, or stroll
+								along
+								the
+								seaside promenade. With nearby attractions like the Hikawa Maru and the Red Brick
+								Warehouse,
+								it’s a lovely green space tucked between city life and the harbor.</p>
+							<p class="">
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<figure class="image"><a href="media/xiaolongbao.png"><img style="width:527px"
+										src="media/xiaolongbao.png" /></a>
+								<figcaption>An image showcasing the <em>xiaolongbao</em> (小籠包) coming out of the
+									steamer.
+								</figcaption>
+							</figure>
+							<h3 class=""><strong>Shichifuku・横浜中華街小籠包専門店 七福</strong>
+							</h3>
+							<p class="">Eat delicious <em><strong>xiaolongbao</strong></em><strong> (pork soup
+									dumplings)</strong> in Yokohama’s Chinatown, which has one of the richest Chinese
+								food
+								scenes in Japan. <mark class="highlight-red"><strong>Shichifuku</strong></mark>
+								specializes
+								in
+								freshly steamed, juicy xiaolongbao with delicate wrappers and rich, savory broth.
+								It&#x27;s
+								a
+								cozy stop with fast service—perfect for grabbing a quick bite between exploring the
+								vibrant
+								streets and shops of Chinatown. </p>
+							<figure class="video">
+								<video controls preload="metadata" style="max-width: 100%">
+									<source src="media/yamashitapark.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption>Yamashita Park view</figcaption>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<figure id="kyoto" class="image"><a href="media/kyotolabel.png"><img style="width:720px"
+								src="media/kyotolabel.png" /></a>
+					</figure>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h3 class=""><strong>Fushimi Inari Taisha</strong>・伏見稲荷大社 </h3>
+							<p class="">The shrine sits at the base of a mountain, also named <mark
+									class="highlight-red"><strong>Inari</strong></mark>, which is 233 meters (764 ft)
+								above
+								sea
+								level, and includes trails up the mountain to many smaller shrines which span 4
+								kilometers
+								(2.5
+								mi) and take approximately 2 hours to walk up all the way. This shrine is always crowded
+								by
+								tourists due to its major attraction: <mark class="highlight-red"><strong>The Thousand
+										Red
+										Gates</strong></mark>, so it is best to be there early (at 7 to 8 AM). There is
+								no
+								need
+								to go to the end, but if you would like there should be a view of Kyoto on the peak.</p>
+							<h3 class="">Yasaka Pagoda・八坂の塔 </h3>
+							<p class="">The <mark class="highlight-red"><strong>Yasaka Pagoda</strong></mark>, also
+								known as
+								the
+								Tower of <mark class="highlight-red"><strong>Yasaka</strong></mark>, is a Buddhist
+								pagoda
+								located in Higashiyama-ku, Kyoto, Japan. The 5-story tall pagoda is the last remaining
+								structure
+								of a 6th-century temple complex known as <mark class="highlight-red"><strong>Hōkan
+										Temple</strong></mark>. The pagoda is now a tourist attraction. </p>
+							<p class="">This alleyway shown in the photo is also usually crowded by tourists, so if you
+								want
+								any
+								clear photo opportunities it is best to go early. If clear photos aren’t that important,
+								it
+								may
+								be more convenient to go at the same time we are planning to head to Kiyomizu temple,
+								because
+								they are essentially a few minutes away from one other.</p>
+							<p class="">Note that this is located in the <mark class="highlight-red"><strong>Gion
+										District</strong></mark>, which the Kyoto Government has restricted access for
+								tourists
+								in certain alleyways to prevent geisha harassment.</p>
+							<h3 class="">Kiyomizu Temple・清水寺 </h3>
+							<p class=""><mark class="highlight-red"><strong>Kiyomizu-dera</strong></mark> (&quot;Pure
+								Water
+								Monastery&quot;) is a Buddhist temple located in eastern Kyoto, Japan. The temple is
+								part of
+								the
+								Historic Monuments of the Ancient Kyoto UNESCO World Heritage Site. </p>
+							<p class="">The popular expression &quot;to jump off the stage at Kiyomizu&quot; is the
+								Japanese
+								translation of the English expression &quot;to take the plunge&quot;. This refers to an
+								Edo-period tradition that held that if one were to survive a 13-meter (43-foot) jump
+								from
+								the
+								stage, one&#x27;s wish would be granted. </p>
+							<p class="">There is a good view of the city and visitors can take a sip of mountain spring
+								water
+								from <mark class="highlight-red"><strong>Otowa Waterfall 音羽の滝 </strong></mark>using the
+								long
+								scoops provided at the site. Hold out the long scoops, which has been pre-sterilized in
+								UV
+								blue
+								light, to catch one of the 3 streams of spring water. Each stream is said to bestow
+								longevity,
+								success, and love. Go early, as the queues for Otowa Waterfall can get windingly long.
+							</p>
+							<p class="">See the website for more things to do at Kiyomizu Temple. <a
+									href="https://plingthinks.com/2016/09/25/kiyomizu-dera-kyoto-temple-8-things-to-do/">https://plingthinks.com/2016/09/25/kiyomizu-dera-kyoto-temple-8-things-to-do/</a>
+							</p>
+							<h3 class="">Heian Shrine・平安神宮</h3>
+							<p class="">The <mark class="highlight-red"><strong>Heian-jingu</strong></mark> Shrine is a
+								Shinto
+								shrine located in Sakyō-ku, Kyoto, Japan. The Shrine is ranked as a Beppyō Jinja (別表神社),
+								meaning
+								it is one of the most important shrines in all of Japan. </p>
+							<p class="">The history is rooted in the fact that it was built to commemorate the 1100th
+								anniversary of <mark class="highlight-red"><strong>Heian-kyo </strong></mark>(平安京,
+								Japan’s
+								Old
+								Capital)<mark class="highlight-red"><strong>
+									</strong></mark>and honor Emperor Tenmu, the emperor that ruled over Kyoto at that
+								time.
+							</p>
+							<p class="">The Japanese-style garden in the land of Heian Shrine takes up about half the
+								land
+								area
+								(approximately 33060 meters-squared). It consists of beautiful sakura and maple trees,
+								along
+								with many ponds and flowers.</p>
+						</div>
+						<div style="width:50%" class="column">
+							<figure class="image"><a href="media/thousandredgates.png"><img style="width:526.984375px"
+										src="media/thousandredgates.png" /></a>
+								<figcaption>A photo of the Thousand Red Gates, which surrounds paths up a small
+									mountain.
+								</figcaption>
+							</figure>
+							<figure class="image"><a href="media/yasakapagoda.png"><img
+										style="width:537.4913330078125px" src="media/yasakapagoda.png" /></a>
+								<figcaption>An image of Yasaka Pagoda in the early morning at the Gion District.
+								</figcaption>
+							</figure>
+							<figure class="image"><a href="media/kiyomizudera.png"><img style="width:2119px"
+										src="media/kiyomizudera.png" /></a>
+								<figcaption>A photo of Kiyomizu Temple at sunset surrounded by the fall foliage.
+								</figcaption>
+							</figure>
+							<figure class="image"><a href="media/heianshrine.png"><img style="width:655.6510620117188px"
+										src="media/heianshrine.png" /></a>
+								<figcaption>A photo of Heian Shrine’s major buildings. It is surrounded by expansive
+									gardens.
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<div class="column-list">
+						<div style="width:33.33333333333333%" class="column">
+							<h3 class=""><strong>Rental Kimono Okamoto Kiyomizudera Shop<br />レンタル着物岡本
+									清水店<br /></strong>
+							</h3>
+							<p class="">This is a popular kimono rental place near <mark
+									class="highlight-red"><strong>Kiyomizu
+										Temple</strong></mark>. The reviews are good and the condition is that you must
+								return
+								it by 6 PM. You can also make reservations in the website above. </p>
+							<p class="">Note that there are two different times: t<strong>raditional kimonos
+									(着物)</strong>
+								and
+								<strong>yukatas (浴衣</strong>), which are lighter and made for summer weather.
+							</p>
+							<p class=""><a
+									href="https://www.okamoto-kimono-en.com/storeinfo/kiyomizudera.html">https://www.okamoto-kimono-en.com/storeinfo/kiyomizudera.html</a>
+							</p>
+							<p class="">
+							</p>
+						</div>
+						<div style="width:33.33333333333333%" class="column">
+							<h3 class=""><strong>Sanmikouan<br />三味洪庵 京都 本店<br /></strong></h3>
+							<figure class="image"><a href="media/sobanoodles.png"><img
+										style="width:310.65972900390625px" src="media/sobanoodles.png" /></a>
+							</figure>
+							<p class="">This is a popular local soba shop that accepts reservation so you can skip the
+								line
+								that
+								usually appears. Check the link below to see the menu. </p>
+							<p class=""><a href="https://sanmikouan.jp/menu/">https://sanmikouan.jp/menu/</a></p>
+						</div>
+						<div style="width:33.33333333333333%" class="column">
+							<h3 class="">Nidec Kyoto Tower<br /><br /><strong>ニデック京都タワー</strong><mark
+									class="highlight-red"><strong> </strong></mark>
+							</h3>
+							<figure class="image"><a href="media/kyototower.png"><img style="width:488.9930725097656px"
+										src="media/kyototower.png" /></a>
+							</figure>
+							<p class="">Take a view on the top of <mark
+									class="highlight-red"><strong>Kyoto</strong></mark>
+								<mark class="highlight-red"><strong>Tower</strong></mark> around sunset of the city.
+								Tickets
+								are
+								relatively cheap, only around $6.00 USD. There are many dinner options nearby before
+								heading
+								back to the hotel.
+							</p>
+						</div>
+					</div>
+					<hr />
+					<figure id="nara" class="image"><a href="media/naralabel.png"><img style="width:672px"
+								src="media/naralabel.png" /></a>
+					</figure>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<p class="">The train ride from Kyoto to Nara—specifically <mark
+									class="highlight-red"><strong>Kintetsu-Nara Station</strong></mark>
+								<strong>(近鉄奈良駅)</strong> takes around 45 minutes one way, and there is usually one train
+								every
+								20 minutes. Assuming we arrive at the station at around 9 AM, we can safely get out of
+								Nara
+								Station at 10:30 AM.
+							</p>
+							<h3 class=""><strong>Tonkatsu Ganko Nara・とんかつがんこ奈良店</strong></h3>
+							<p class="">This is a famous Tonkatsu restaurant that has a very high rating, opens at 11 AM
+								on
+								Mondays. This restaurant is very popular, so it is a good idea to eat it earlier (i.e.
+								close
+								to
+								when we arrive at the station) before exploring the rest of Nara.</p>
+							<h3 class=""><strong>Nakatanidou Mochi Shop Show・中谷堂</strong></h3>
+							<p class="">This shop is famous for its theatrical and traditional way of making mochi and
+								has
+								went
+								viral over its captivating process of rhythmic shouting and hammering mochi on a wooden
+								mortar.
+								The line for the mochi is usually quite long, but it moves quite fast. However, the view
+								for
+								the
+								mochi making may be more crowded and hard to see during peak times.</p>
+							<p class="">If you would like to see the viral video on YouTube, it is in the link here: <a
+									href="https://www.youtube.com/watch?v=tmSrULDVRPc">**Pounding Mochi With the Fastest
+									Mochi
+									Maker in Japan</a> </p>
+							<p class="">From all the reviews however, the mochi seems very delicious and worth the wait.
+							</p>
+							<h3 class=""><strong>Kofuku-ji・興福寺 </strong></h3>
+							<p class=""><mark class="highlight-red"><strong>Kofukuji</strong></mark> used to be the
+								family temple of the Fujiwara, the most powerful aristocratic clan during much of
+								the Nara
+								and
+								Heian Periods. At 50 meters, the <strong>five-storied pagoda</strong> is Japan&#x27;s
+								second
+								tallest wooden pagoda, just seven meters shorter than the five-storied pagoda at
+								Kyoto&#x27;s <mark class="highlight-red"><strong>Toji Temple</strong></mark>.</p>
+							<p class="">The complex is quite large, encompassing a park, many buildings, and the famous
+								<mark class="highlight-red"><strong>Sarusawa Pond</strong></mark>. This area is part of
+								a
+								large
+								green space that connects the to the <strong>Asajigahara Enchi</strong> and then Nara
+								Park,
+								so
+								we can take our time walking through it and enjoying the scenery.
+							</p>
+							<h3 class=""><strong>Kuki Cake・空気ケーキ</strong></h3>
+							<p class=""><mark class="highlight-red"><strong>Kuki Cake</strong></mark> is in a area close
+								to
+								<mark class="highlight-red"><strong>Asajigahara Enchi </strong></mark>and is a nice cafe
+								to
+								take
+								a rest to eat some delicious pastries. Visit the website below or look online for the
+								menu!
+							</p>
+							<p class=""><a href="http://www.kuukicake.com/">http://www.kuukicake.com/</a></p>
+							<h1 class=""><strong>Nara Park 奈良公園 </strong></h1>
+							<p class="">Landscaped, public park with ancient temples &amp; the <mark
+									class="highlight-red"><strong>Nara National Museum of Art</strong></mark>, plus tame
+								deer.
+								This is Nara Park proper, but essentially just another green space connected with the
+								other
+								places explored earlier in the day. You can feed the deer at Nara Park (along with
+								Asajigahara
+								Enchi) with special deer food that you can buy in the area. The deer are very polite and
+								will
+								bow for you to feed them, but be careful as sometimes they will get aggressive when you
+								don’t
+								give them what they want.</p>
+							<h3 class=""><strong>Asajigahara Enchi・浅茅ヶ原園地</strong>
+							</h3>
+							<p class=""><mark class="highlight-red"><strong>Asajigahara-enchi Park</strong></mark>, part
+								of
+								the
+								extensive <mark class="highlight-red"><strong>Nara Park</strong></mark>, is known for
+								its
+								diverse landscape and cultural heritage. Located on the southern side of the park, near
+								the
+								first Torii gate of <mark class="highlight-red"><strong>Kasuga Taisha
+										Shrine</strong></mark>,
+								this hilly area offers stunning views, especially around the Sagiike Pond where the
+								<mark class="highlight-red"><strong>Ukimido Pavilion </strong></mark>stands.
+							</p>
+							<p class="">This is also quite close to Nara Park proper, so there are many deers in this
+								area
+								as
+								well.</p>
+							<h3 class=""><strong>Kasuga Taisha・春日大社</strong></h3>
+							<p class=""><mark class="highlight-red"><strong>Kasuga Taisha</strong></mark> is one of the
+								most
+								sacred sites in all of Japan. it attracts both devotees and tourists seeking an iconic
+								Shinto
+								experience. It was built during 768 AD, and is beautifully lit up at night. There is no
+								entrance
+								fee but it is a short walk (or hike) from Nara Park and the rest of the previously
+								visited
+								green
+								space.</p>
+							<h3 class=""><strong>Wagyu Suji Curry・和牛スジカレー </strong>
+							</h3>
+							<p class="">This restaurant specializes in Japanese curry and omurice, and it receives very
+								high
+								ratings from both Japanese and foreigners. Check out their menu here: <a
+									href="https://steak-cielbleu.com/">https://steak-cielbleu.com/</a></p>
+						</div>
+						<div style="width:50%" class="column">
+							<figure class="image"><a href="media/tonkatsukanko.png"><img style="width:528px"
+										src="media/tonkatsukanko.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/mochishop.png"><img style="width:528px"
+										src="media/mochishop.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/kofukuji.png"><img style="width:528px"
+										src="media/kofukuji.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/narapark.png"><img style="width:528px"
+										src="media/narapark.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/asjigaharaenchi.png"><img style="width:528px"
+										src="media/asjigaharaenchi.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/kasugataisha.png"><img style="width:528px"
+										src="media/kasugataisha.png" /></a>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<figure class="full-width">
+						<iframe
+							src="https://www.google.com/maps/d/u/0/embed?mid=1Iot4wkKRushA3d4L1Uh797EarUIpP5g&ehbc=2E312F"
+							title="Japan Travel Map" allowfullscreen loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+						<figcaption>Custom Google Map of Locations in Japan</figcaption>
+					</figure>
+					<hr />
+					<figure id="tokyo" class="image"><a href="media/tokyolabel.png"><img style="width:720px"
+								src="media/tokyolabel.png" /></a>
+					</figure>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h1 class="">Shibuya・渋谷</h1>
+							<h3 class="">SHIBUYA SKY・渋谷スカイ </h3>
+							<p class=""><mark class="highlight-red"><strong>Shibuya Sky</strong></mark> is a 229 meter
+								(751
+								feet) tall observation deck located on the 47th floor (top floor) of<mark
+									class="highlight-red"><strong> Shibuya Scramble Square Tower</strong></mark>. The
+								open-air
+								deck offers a 360-degree panoramic view of Tokyo. </p>
+							<p class="">It is a place to take the most stunning photos, so make sure to bring you camera
+								and
+								phone. Unfortunately, tickets during the evening are almost always taken even 4 weeks in
+								advance, so plan accordingly or enjoy the view during the day.</p>
+							<h3 class="">Shibuya Scramble Crossing ・<strong>スクランブル交差点</strong> </h3>
+							<p class=""><mark class="highlight-red"><strong>Shibuya Crossing</strong></mark>, is a
+								popular
+								pedestrian scramble crossing in Tokyo. It is located in front of the <mark
+									class="highlight-red"><strong>Shibuya Station</strong></mark>
+								Hachikō exit and stops vehicles in all directions to allow pedestrians to inundate the
+								entire
+								intersection. Note that there is also a famous dog statue on one of the corners of the
+								intersection.</p>
+							<p class="">This is right next to Shibuya Sky, so there will be almost no commute time
+								between
+								the
+								two of them. There is also small cafes (also Starbucks) nearby where you can watch the
+								crossing
+								in action and get something to drink. </p>
+							<h3 class="">MEGA Don Quijote・メガドンキホーテ</h3>
+							<p class="">This is <mark class="highlight-red"><strong>Don Quijote</strong></mark>’s main
+								store,
+								and is a go-to shopping destination for international tourists in Tokyo, offering a vast
+								range
+								of affordable items, from daily essentials to souvenirs. It&#x27;s one of Tokyo&#x27;s
+								largest
+								stores and offers tax-free shopping for overseas visitors.</p>
+							<p class="">This expansive discount store offers an array of products, ranging from
+								essential
+								daily
+								goods to groceries, home appliances, brand-name products, medicines, and souvenirs, all
+								at
+								incredibly reasonable prices!</p>
+							<p class="">Check out YouTube videos to see all the things to buy! A majority of the
+								products
+								are
+								all very high quality! Note that if you want a tax refund, you are not allowed to open
+								the
+								packaging until you leave Japan.</p>
+							<h3 class=""><strong>CAFE: dotcom space Tokyo </strong>
+							</h3>
+							<p class="">This cafe is located near our next location, and is in one of the most popular
+								subdistricts—<mark class="highlight-red"><strong>Harajuku</strong></mark>. It is a few
+								steps
+								away from <mark class="highlight-red"><strong>Takeshita</strong></mark><mark
+									class="highlight-red">
+								</mark><mark class="highlight-red"><strong>Street</strong></mark>, a popular point in
+								Harajuku
+								that features a variety of fashion and wacky, youth-driven shops selling colorful and
+								crazy
+								clothes and accessories.</p>
+							<p class="">The cafe itself features very aesthetic and delicious foods, and is a good place
+								to
+								rest
+								before continuing on for the rest of the night. Note that this cafe closes at 6:30 PM,
+								in
+								case
+								of any change to the day itinerary. </p>
+							<h3 class="">Meiji Shrine <mark class="highlight-red">明治神宮</mark> </h3>
+							<p class=""><mark class="highlight-red"><strong>Meiji Shrine</strong></mark> (Meiji Jingū)
+								is
+								a shrine dedicated to the deified spirits of Emperor Meiji and his consort, Empress
+								Shoken.
+								Located just beside the JR Yamanote Line&#x27;s busy <mark
+									class="highlight-red"><strong>Harajuku</strong></mark> <mark
+									class="highlight-red"><strong>Station</strong></mark>, Meiji Shrine and the
+								adjacent <mark class="highlight-red"><strong>Yoyogi Park</strong></mark> make up a large
+								forested area
+								within the densely built-up city and offer walking paths for a relaxing stroll away from
+								the
+								concrete.</p>
+							<p class="">Meiji Shrine closes at sunset, which is around 7:00 PM or later. It has no
+								entrance
+								fee
+								so you are able to come and go as you wish. Due to its location next to the JR, it is
+								very
+								convenient to commute to Shinjuku, which is where the next set of locations are.</p>
+						</div>
+						<div style="width:50%" class="column">
+							<figure class="image"><a href="media/shibuyasky.png"><img style="width:499.9913330078125px"
+										src="media/shibuyasky.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/shibuyacrossing.png"><img
+										style="width:499.9913330078125px" src="media/shibuyacrossing.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/donquijote.png"><img style="width:499.9913330078125px"
+										src="media/donquijote.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/cafe.png"><img style="width:499.9913330078125px"
+										src="media/cafe.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/meijishrine.png"><img style="width:499.9913330078125px"
+										src="media/meijishrine.png" /></a>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h1 class="">Shinjuku・新宿</h1>
+							<p class=""><mark class="highlight-red"><strong>Shinjuku</strong></mark><strong> </strong>is
+								one
+								of
+								Tokyo’s busiest and most dynamic districts, known for its dazzling mix of skyscrapers,
+								shopping,
+								nightlife, and local flavor. From the neon-lit streets of <mark
+									class="highlight-red"><strong>Kabukicho</strong></mark> to peaceful spots like<mark
+									class="highlight-red"><strong> Shinjuku Gyoen</strong></mark>, it’s a place where
+								ultra-modern Tokyo and traditional pockets coexist. Whether you&#x27;re seeking ramen,
+								bars,
+								fashion, or just the energy of the city, Shinjuku is a must-see urban playground.</p>
+							<h3 class="">Cross Shinjuku Vision・東新宿ビル クロス </h3>
+							<p class="">Right outside the East Exit of <mark class="highlight-red"><strong>Shinjuku
+										Station</strong></mark>, Cross Shinjuku Vision is an electronic billboard famous
+								for
+								its
+								3D effect. The most famous appearance on the billboard is the cat, which is pretty much
+								an
+								icon
+								of Tokyo itself.</p>
+							<p class="">There is also a famous <mark class="highlight-red"><strong>Cat</strong></mark>
+								<mark class="highlight-red"><strong>Cafe</strong></mark> in the building (hence the
+								giant
+								cat),
+								and if you want to check that out the hours are from 1 to 9 PM. The area is surrounded
+								by
+								many
+								fashion shops, restaurants, and other things that are sure to fill your time in the
+								evening.
+								However, doing so will cut into the time for the next area, which is similar in that it
+								is
+								mostly shopping. Feel free to adjust the time in each area to your liking.
+							</p>
+							<h3 class="">Central Road・<strong>セントラルロード</strong><mark class="highlight-red"> </mark></h3>
+							<p class=""><mark class="highlight-red"><strong>Central Road</strong></mark> in <mark
+									class="highlight-red"><strong>Kabukicho</strong></mark> is the brightest and most
+								iconic
+								area of <mark class="highlight-red"><strong>Shinjuku</strong></mark>, glowing with neon
+								lights,
+								massive billboards, and nonstop energy. Known for its nightlife, entertainment, and
+								endless
+								photo ops, it’s where you&#x27;ll find everything from host clubs and arcades to cinemas
+								and
+								ramen joints. A stroll down this street captures the electric pulse of Tokyo after dark.
+							</p>
+							<h3 class="">Tokyo Metropolitan Government Observation Decks</h3>
+							<p class="">The <mark class="highlight-red"><strong>Tokyo Metropolitan Government
+										Building</strong></mark> offers <strong>free observation decks</strong> with
+								panoramic
+								views of the Tokyo skyline. Located in <mark class="highlight-red"><strong>West
+										Shinjuku</strong></mark>, the twin towers rise 243 meters high, giving you a
+								stunning
+								look at the cityscape—on clear days, even <strong>Mt. Fuji</strong>
+								is visible. It’s a peaceful, budget-friendly spot to take in Tokyo from above, day or
+								night.
+							</p>
+							<h3 class="">Omoide Yokocho </h3>
+							<p class=""><mark class="highlight-red"><strong>Omoide Yokocho</strong></mark> is a maze of
+								narrow
+								alleyways near the West Exit of <mark class="highlight-red"><strong>Shinjuku
+										Station</strong></mark>, famous for its retro charm and smoky izakayas. Also
+								known
+								as
+								<mark class="highlight-red"><strong>Memory Lane</strong></mark>, it offers a glimpse
+								into
+								postwar Tokyo, packed with tiny bars and eateries serving grilled skewers, sake, and
+								comfort
+								food. It’s the home of many long-running establishments where locals and tourists alike
+								gather
+								shoulder to shoulder for a taste of old Tokyo.
+							</p>
+							<p class="">
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<figure class="image"><a href="media/shinjukuvision.png"><img
+										style="width:499.9913330078125px" src="media/shinjukuvision.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/centralroad.png"><img style="width:499.9913330078125px"
+										src="media/centralroad.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/tokyometrodeck.png"><img
+										style="width:499.9913330078125px" src="media/tokyometrodeck.png" /></a>
+							</figure>
+							<figure class="image"><a href="media/omoideyokocho.png"><img
+										style="width:499.9913330078125px" src="media/omoideyokocho.png" /></a>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<h1 class="">Minato Ward・港区</h1>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h3 class="">Tokyo Tower ・東京タワー</h3>
+							<figure class="image"><a href="media/tokyotower.png"><img style="width:527px"
+										src="media/tokyotower.png" /></a>
+							</figure>
+							<p class="">An icon of Tokyo’s skyline, <mark class="highlight-red"><strong>Tokyo Tower
+									</strong></mark>stands 333 meters tall and glows bright red at night. Visit the
+								observation
+								decks for sweeping views of the city, and don’t miss the foot of the tower where you’ll
+								find
+								shops and quirky exhibits. Among the base of the tower, there is the esports center
+								<mark class="highlight-red"><strong>Tokyo Tower RED</strong></mark>, which features many
+								interactive games and physical activities.
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<h3 class="">TeamLab Borderless</h3>
+							<figure class="image"><a href="media/teamlabsborderless.png"><img style="width:3840px"
+										src="media/teamlabsborderless.png" /></a>
+							</figure>
+							<p class="">Step into a world of digital wonder at <mark
+									class="highlight-red"><strong>teamLab
+										Borderless</strong></mark>, an immersive art museum where light, color, and
+								motion
+								blend
+								seamlessly. Located in <mark class="highlight-red"><strong>Azabudai
+										Hills</strong></mark>
+								(formerly in Odaiba), it’s a surreal and unforgettable experience that’s perfect for
+								photos
+								and
+								reflection.</p>
+						</div>
+					</div>
+					<hr />
+					<h1 class="">Ginza &amp; Chiyoda・銀座と千代田</h1>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h3 class="">Ginza’s 12-Story UNIQLO &amp; Shopping District</h3>
+							<figure class="video">
+								<video controls preload="metadata" style="max-width: 100%">
+									<source src="media/uniqlo.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption>UNIQLO Ginza clip</figcaption>
+							</figure>
+							<p class=""><mark class="highlight-red">Ginza</mark> is Tokyo’s luxury shopping hub, lined
+								with
+								flagship stores, upscale boutiques, and elegant cafes. Don’t miss the <mark
+									class="highlight-red"><strong>12-floor UNIQLO </strong></mark>megastore or the
+								mesmerizing
+								<mark class="highlight-red"><strong>Art Aquarium Museum</strong></mark>, where goldfish
+								swim
+								through artful, illuminated displays.
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<h3 class="">Imperial Palace・皇居</h3>
+							<figure class="image"><a href="media/imperialpalace.png"><img style="width:526.96875px"
+										src="media/imperialpalace.png" /></a>
+							</figure>
+							<p class="">Home to Japan’s Emperor, the <mark class="highlight-red"><strong>Imperial
+										Palace</strong></mark> is surrounded by peaceful moats, stone bridges, and
+								gardens.
+								While the inner grounds are rarely open, the East Gardens offer a beautiful and historic
+								escape
+								right in the heart of the city.</p>
+						</div>
+					</div>
+					<hr />
+					<h1 class="">Taito &amp; Sumida・台東と墨田</h1>
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h3 class="">Tokyo Skytree・東京スカイツリー</h3>
+							<p class="">Soaring 634 meters into the sky,<mark class="highlight-red"><strong> Tokyo
+										Skytree</strong></mark> is the tallest structure in Japan and a striking symbol
+								of
+								modern Tokyo. Its sleek design blends cutting-edge engineering with traditional
+								aesthetics,
+								making it a must-see for architecture lovers and sightseers alike. Ride up to the two
+								observation decks for breathtaking, 360-degree views that stretch as far as Mt. Fuji on
+								a
+								clear
+								day. At the base, explore the bustling <mark
+									class="highlight-red"><strong>Solamachi</strong></mark> <mark
+									class="highlight-red"><strong>complex</strong></mark>, filled with shops,
+								restaurants,
+								and
+								even an aquarium—perfect for spending a full afternoon above and below the clouds.</p>
+							<p class="">
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<p class="">
+							</p>
+							<figure class="video">
+								<video controls preload="metadata" style="max-width: 100%">
+									<source src="media/tokyoskytree.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption>Tokyo Skytree panorama</figcaption>
+							</figure>
+						</div>
+					</div>
+					<hr />
+					<div class="column-list">
+						<div style="width:50%" class="column">
+							<h3 class="">Asakusa Temple・浅草寺</h3>
+							<figure class="image"><a href="media/asakusatemple.png"><img style="width:526.984375px"
+										src="media/asakusatemple.png" /></a>
+							</figure>
+							<p class="">Tokyo’s oldest and most famous temple, <mark
+									class="highlight-red"><strong>Sensoji</strong></mark> in Asakusa is a must-visit for
+								its
+								giant red lantern, vibrant shopping street (<strong>Nakamise-dori</strong>), and
+								spiritual
+								atmosphere. It&#x27;s a place where centuries of tradition meet lively modern tourism.
+							</p>
+						</div>
+						<div style="width:50%" class="column">
+							<h3 class="">Akihabara・秋葉原</h3>
+							<figure class="image"><a href="media/akihabara.png"><img style="width:526.984375px"
+										src="media/akihabara.png" /></a>
+							</figure>
+							<p class="">Known as Tokyo’s mecca for electronics, anime, and gaming, <mark
+									class="highlight-red"><strong>Akihabara</strong></mark> buzzes with energy. Explore
+								maid
+								cafes, retro game shops, and multi-story arcades, or dive into the otaku culture that
+								makes
+								this
+								district truly one of a kind.</p>
+						</div>
+					</div>
+					<hr />
 					<p class="">
 					</p>
 				</div>
-				<div style="width:50%" class="column">
-					<figure class="image"><a href="media/toriiofpeace.png"><img style="width:713.6632080078125px"
-								src="media/toriiofpeace.png" /></a>
-						<figcaption>A picture taken of the Torii of Peace in the early morning.</figcaption>
-					</figure>
-					<figure class="image"><a href="media/hakonejinja.png"><img style="width:539.984375px"
-								src="media/hakonejinja.png" /></a>
-						<figcaption>A long-exposure photo taken of visitors praying at the Worship Hall at Hakone
-							Shrine.</figcaption>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h2 class="">Hakoneya・箱根屋</h2>
-					<figure class="video">
-						<video controls preload="metadata" style="max-width: 100%">
-							<source src="media/hakoneya.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>Hakoneya clip</figcaption>
-					</figure>
-					<p class="">Just steps from Hakone Shrine, <mark
-							class="highlight-red"><strong>Hakoneya</strong></mark> is a cozy local eatery perfect for a
-						post-shrine meal. Known for its comforting, home-style Japanese dishes, this spot is a favorite
-						among both locals and travelers. The <strong><span
-								style="border-bottom:0.05em solid">katsudon</span></strong>—crispy pork cutlet simmered
-						with egg over rice—is a must-try.</p>
-				</div>
-				<div style="width:50%" class="column">
-					<h2 class="">Lake Ashi Sightseeing Boat・芦ノ湖遊覧船</h2>
-					<figure class="video">
-						<video controls preload="metadata" style="max-width: 100%">
-							<source src="media/lakeashiboat.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>Lake Ashi Sightseeing Boat</figcaption>
-					</figure>
-					<p class="">Set off from<mark class="highlight-red"><strong> Moto-Hakone Port </strong></mark>on the
-						Lake Ashi Sightseeing Boat for a serene cruise across the lake. With comfortable seating and
-						warm drinks in hand, enjoy views of forested hills, floating torii, and—on clear days—a stunning
-						glimpse of Mt. Fuji. The round-trip ride offers a peaceful and scenic break in your day.</p>
-				</div>
-			</div>
-			<hr />
-			<figure class="video full-width">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/VZGrHXNF0Pk?si=Xph6CxQ0lmCHKIfA"
-					title="YouTube video player" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-				</iframe>
-			</figure>
-			<hr />
-			<figure class="image"><a href="media/kamakuralabel.png"><img style="width:1056px"
-						src="media/kamakuralabel.png" /></a>
-			</figure>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h2 class="">Enoshima・江ノ島</h2>
-					<p class="">After your relaxing getaway in the mountains of Hakone, spend your late afternoon
-						admiring the blue waters of <mark class="highlight-red"><strong>Kamakura</strong></mark>.
-						Nearby, there is <mark class="highlight-red"><strong>Enoshima</strong></mark>, a charming island
-						getaway just off the Shonan coast, connected to the mainland by a scenic bridge. Known for its
-						coastal views, shrines, street food, and hidden caves, the island offers a perfect mix of
-						nature, culture, and seaside fun. Climb to the top for panoramic ocean vistas—or explore the
-						narrow alleyways lined with local shops and cafes.</p>
-					<h2 class="">Kamakura Kōkōmae Station・鎌倉高校前駅</h2>
-					<p class="">Right before golden hour, take the local train to <mark
-							class="highlight-red"><strong>Kamakura Kokomae Station</strong></mark>, a small seaside stop
-						along the Enoden Line, famous for its picturesque ocean views and iconic railroad crossing.
-						Beloved by anime fans and photographers alike, it&#x27;s a peaceful spot where trains pass by
-						with the sound of waves in the background—especially beautiful during sunset.</p>
-					<h2 class=""><strong>Ginza Kagari・</strong>銀座 篝 鎌倉店</h2>
-					<p class=""><mark class="highlight-red"><strong>Ginza Kagari</strong></mark>’s Kamakura branch
-						brings its renowned refined ramen to a relaxed, coastal setting. Known for its signature
-						<em><strong>tori paitan</strong></em> (creamy chicken broth) ramen, the shop blends delicate
-						flavors with beautifully presented bowls—perfect for a comforting yet elevated dinner after a
-						long time of exploring. After you are done, take head to<mark class="highlight-red"><strong>
-								Kamakura Station</strong></mark> and return to your hotel in Tokyo.
-					</p>
-				</div>
-				<div style="width:50%" class="column">
-					<figure class="image"><a href="media/enoshima.png"><img style="width:2667px"
-								src="media/enoshima.png" /></a>
-						<figcaption>A view of Enoshima, with its signature Sea Candle poking out into the horizon.
-						</figcaption>
-					</figure>
-					<figure class="image"><a href="media/kamakurakokomae.png"><img style="width:526.96875px"
-								src="media/kamakurakokomae.png" /></a>
-						<figcaption>A well known train-crossing right by the shore near Kamakura Kokomae Station.
-						</figcaption>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<figure class="image"><a href="media/yokohamalabel.png"><img style="width:1101.984375px"
-						src="media/yokohamalabel.png" /></a>
-			</figure>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h1 class="">Minato Mirai・みなとみらい</h1>
-					<p class=""><mark class="highlight-red"><strong>Minato Mirai</strong></mark><strong> </strong>is
-						Yokohama’s modern waterfront district, blending sleek skyscrapers with scenic bay views and
-						laid-back attractions. Whether you&#x27;re shopping at Queen&#x27;s Square, strolling along the
-						promenade, or riding the iconic Cosmo Clock Ferris wheel, the area offers something for
-						everyone. With its mix of culture, entertainment, and seaside charm, Minato Mirai is the perfect
-						place to spend a relaxed afternoon or romantic evening by the water.</p>
-					<p class=""><strong>Getting from Tokyo to Minato Mirai is quick and easy.</strong> Take the JR
-						Tokaido Line or Yokosuka Line from <strong>Tokyo Station</strong> to <mark
-							class="highlight-red"><strong>Yokohama Station</strong></mark>—a direct ride of about 25–30
-						minutes. From Yokohama, transfer to the <mark class="highlight-red"><strong>Minatomirai
-								Line</strong></mark> and ride just two stops to <mark
-							class="highlight-red"><strong>Minatomirai Station</strong></mark>, which drops you right
-						into the heart of the waterfront district. </p>
-					<h3 class="">Shake Shack・<strong>シェイクシャック みなとみらい</strong>
-					</h3>
-					<p class="">Kick off your Yokohama adventure with a satisfying lunch at <mark
-							class="highlight-red"><strong>Shake Shack</strong></mark>, located conveniently in the
-						stylish Minato Mirai district. With floor to ceiling windows and views of the waterfront and
-						skyline, it&#x27;s the perfect casual spot to enjoy American-style burgers, crispy fries, and
-						creamy milkshakes. The relaxed vibe and familiar comfort food offer a nice balance before
-						jumping into the more adventurous parts of your day.</p>
-					<h3 class="">Yokohama Air Cabin・横浜エアカビン</h3>
-					<p class="">After lunch, soar above the city on the <mark class="highlight-red"><strong>Yokohama Air
-								Cabin</strong></mark>, a sleek urban ropeway connecting Sakuragicho Station to the
-						waterfront promenade. As you glide across the skyline, you&#x27;ll get a bird’s-eye view of the
-						iconic Cosmo Clock Ferris wheel, the <mark class="highlight-red"><strong>Red Brick
-								Warehouse</strong></mark>, and the shimmering bay. The ride only takes a few minutes,
-						but the views—especially on a clear day—are a scenic highlight of Minato Mirai.</p>
-					<h3 class="">Cup Noodles Museum・<strong>カップヌードルミュージアム</strong></h3>
-					<p class="">Unleash your inner foodie and creative spirit at the <mark
-							class="highlight-red"><strong>Cup Noodles Museum</strong></mark>, a fun and interactive
-						space dedicated to one of Japan’s greatest inventions. Learn the story of Momofuku Ando and how
-						instant ramen changed the world, explore quirky exhibits, and even design your own custom cup
-						noodle to take home. It&#x27;s educational, entertaining, and totally unique—perfect for
-						travelers of any age.</p>
-					<h3 class="">Yokohama Cosmo World・<strong>よこはまコスモワールド</strong></h3>
-					<p class="">Wrap up the afternoon with a visit to <mark class="highlight-red"><strong>Yokohama Cosmo
-								World</strong></mark>, a colorful amusement park along the bay. It’s home to the iconic
-						<mark class="highlight-red"><strong>Cosmo Clock 21 Ferris Wheel</strong></mark>, which offers
-						panoramic views of the city and ocean, especially magical at sunset. Try out the mini coasters
-						or just enjoy the retro charm of the game arcades and carnival-style treats. No admission fee is
-						required to enter—just pay per ride, making it a flexible and fun way to end your time in Minato
-						Mirai.
-					</p>
-				</div>
-				<div style="width:50%" class="column">
-					<figure class="image"><a href="media/yokohamamirai.png"><img style="width:526.984375px"
-								src="media/yokohamamirai.png" /></a>
-						<figcaption>A view of the Minato Mirai district from the waterfront during sunset.</figcaption>
-					</figure>
-					<figure class="video">
-						<video controls preload="metadata" style="max-width: 100%">
-							<source src="media/aircabin.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>Yokohama Air Cabin view</figcaption>
-					</figure>
-					<figure class="image"><a href="media/cupnoodlemuseum.png"><img style="width:526.96875px"
-								src="media/cupnoodlemuseum.png" /></a>
-						<figcaption>A exhibit inside the Cup Noodles Museum. Book your tickets online!</figcaption>
-					</figure>
-					<figure class="video">
-						<video controls preload="metadata" style="max-width: 100%">
-							<source src="media/cosmoworld.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>Cosmo World ferris wheel</figcaption>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<h1 class="">Yokohama Chinatown・横浜中華街</h1>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<figure class="video">
-						<video controls preload="metadata" style="max-width: 100%">
-							<source src="media/chinatown.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>Yokohama Chinatown gate</figcaption>
-					</figure>
-					<p class=""><mark class="highlight-red"><strong>Yokohama Chinatown</strong></mark> the largest
-						Chinatown in Japan and one of the most vibrant in the world, blending colorful architecture,
-						rich history, and irresistible food into one dynamic neighborhood. Established in the mid-19th
-						century as a hub for Chinese immigrants after Yokohama opened as an international port, it has
-						since become a cultural crossroads where tradition and modern tourism meet. Beyond its famous
-						street food—like xiaolongbao, sesame balls, and roasted duck—you’ll find ornate gates, Taoist
-						temples like <mark class="highlight-red"><strong>Kanteibyo</strong></mark>, and bustling shops
-						selling everything from herbal remedies to souvenirs. It’s not just a food destination, but a
-						window into the deep-rooted Chinese influence on Yokohama’s cosmopolitan identity.</p>
-					<h3 class="">Yamashita Park・山下公園</h3>
-					<p class="">Stretching along the Yokohama waterfront,<mark class="highlight-red"> </mark><mark
-							class="highlight-red"><strong>Yamashita Park</strong></mark> offers open lawns, flower beds,
-						and sweeping views of the bay. Originally built from the rubble of the 1923 Great Kanto
-						Earthquake, the park is now a peaceful place to relax, watch ships go by, or stroll along the
-						seaside promenade. With nearby attractions like the Hikawa Maru and the Red Brick Warehouse,
-						it’s a lovely green space tucked between city life and the harbor.</p>
-					<p class="">
-					</p>
-				</div>
-				<div style="width:50%" class="column">
-					<figure class="image"><a href="media/xiaolongbao.png"><img style="width:527px"
-								src="media/xiaolongbao.png" /></a>
-						<figcaption>An image showcasing the <em>xiaolongbao</em> (小籠包) coming out of the steamer.
-						</figcaption>
-					</figure>
-					<h3 class=""><strong>Shichifuku・横浜中華街小籠包専門店 七福</strong>
-					</h3>
-					<p class="">Eat delicious <em><strong>xiaolongbao</strong></em><strong> (pork soup
-							dumplings)</strong> in Yokohama’s Chinatown, which has one of the richest Chinese food
-						scenes in Japan. <mark class="highlight-red"><strong>Shichifuku</strong></mark> specializes in
-						freshly steamed, juicy xiaolongbao with delicate wrappers and rich, savory broth. It&#x27;s a
-						cozy stop with fast service—perfect for grabbing a quick bite between exploring the vibrant
-						streets and shops of Chinatown. </p>
-					<figure class="video">
-						<video controls preload="metadata" style="max-width: 100%">
-							<source src="media/yamashitapark.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>Yamashita Park view</figcaption>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<figure class="image"><a href="media/kyotolabel.png"><img style="width:720px"
-						src="media/kyotolabel.png" /></a>
-			</figure>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h3 class=""><strong>Fushimi Inari Taisha</strong>・伏見稲荷大社 </h3>
-					<p class="">The shrine sits at the base of a mountain, also named <mark
-							class="highlight-red"><strong>Inari</strong></mark>, which is 233 meters (764 ft) above sea
-						level, and includes trails up the mountain to many smaller shrines which span 4 kilometers (2.5
-						mi) and take approximately 2 hours to walk up all the way. This shrine is always crowded by
-						tourists due to its major attraction: <mark class="highlight-red"><strong>The Thousand Red
-								Gates</strong></mark>, so it is best to be there early (at 7 to 8 AM). There is no need
-						to go to the end, but if you would like there should be a view of Kyoto on the peak.</p>
-					<h3 class="">Yasaka Pagoda・八坂の塔 </h3>
-					<p class="">The <mark class="highlight-red"><strong>Yasaka Pagoda</strong></mark>, also known as the
-						Tower of <mark class="highlight-red"><strong>Yasaka</strong></mark>, is a Buddhist pagoda
-						located in Higashiyama-ku, Kyoto, Japan. The 5-story tall pagoda is the last remaining structure
-						of a 6th-century temple complex known as <mark class="highlight-red"><strong>Hōkan
-								Temple</strong></mark>. The pagoda is now a tourist attraction. </p>
-					<p class="">This alleyway shown in the photo is also usually crowded by tourists, so if you want any
-						clear photo opportunities it is best to go early. If clear photos aren’t that important, it may
-						be more convenient to go at the same time we are planning to head to Kiyomizu temple, because
-						they are essentially a few minutes away from one other.</p>
-					<p class="">Note that this is located in the <mark class="highlight-red"><strong>Gion
-								District</strong></mark>, which the Kyoto Government has restricted access for tourists
-						in certain alleyways to prevent geisha harassment.</p>
-					<h3 class="">Kiyomizu Temple・清水寺 </h3>
-					<p class=""><mark class="highlight-red"><strong>Kiyomizu-dera</strong></mark> (&quot;Pure Water
-						Monastery&quot;) is a Buddhist temple located in eastern Kyoto, Japan. The temple is part of the
-						Historic Monuments of the Ancient Kyoto UNESCO World Heritage Site. </p>
-					<p class="">The popular expression &quot;to jump off the stage at Kiyomizu&quot; is the Japanese
-						translation of the English expression &quot;to take the plunge&quot;. This refers to an
-						Edo-period tradition that held that if one were to survive a 13-meter (43-foot) jump from the
-						stage, one&#x27;s wish would be granted. </p>
-					<p class="">There is a good view of the city and visitors can take a sip of mountain spring water
-						from <mark class="highlight-red"><strong>Otowa Waterfall 音羽の滝 </strong></mark>using the long
-						scoops provided at the site. Hold out the long scoops, which has been pre-sterilized in UV blue
-						light, to catch one of the 3 streams of spring water. Each stream is said to bestow longevity,
-						success, and love. Go early, as the queues for Otowa Waterfall can get windingly long.</p>
-					<p class="">See the website for more things to do at Kiyomizu Temple. <a
-							href="https://plingthinks.com/2016/09/25/kiyomizu-dera-kyoto-temple-8-things-to-do/">https://plingthinks.com/2016/09/25/kiyomizu-dera-kyoto-temple-8-things-to-do/</a>
-					</p>
-					<h3 class="">Heian Shrine・平安神宮</h3>
-					<p class="">The <mark class="highlight-red"><strong>Heian-jingu</strong></mark> Shrine is a Shinto
-						shrine located in Sakyō-ku, Kyoto, Japan. The Shrine is ranked as a Beppyō Jinja (別表神社), meaning
-						it is one of the most important shrines in all of Japan. </p>
-					<p class="">The history is rooted in the fact that it was built to commemorate the 1100th
-						anniversary of <mark class="highlight-red"><strong>Heian-kyo </strong></mark>(平安京, Japan’s Old
-						Capital)<mark class="highlight-red"><strong>
-							</strong></mark>and honor Emperor Tenmu, the emperor that ruled over Kyoto at that time.</p>
-					<p class="">The Japanese-style garden in the land of Heian Shrine takes up about half the land area
-						(approximately 33060 meters-squared). It consists of beautiful sakura and maple trees, along
-						with many ponds and flowers.</p>
-				</div>
-				<div style="width:50%" class="column">
-					<figure class="image"><a href="media/thousandredgates.png"><img style="width:526.984375px"
-								src="media/thousandredgates.png" /></a>
-						<figcaption>A photo of the Thousand Red Gates, which surrounds paths up a small mountain.
-						</figcaption>
-					</figure>
-					<figure class="image"><a href="media/yasakapagoda.png"><img style="width:537.4913330078125px"
-								src="media/yasakapagoda.png" /></a>
-						<figcaption>An image of Yasaka Pagoda in the early morning at the Gion District.</figcaption>
-					</figure>
-					<figure class="image"><a href="media/kiyomizudera.png"><img style="width:2119px"
-								src="media/kiyomizudera.png" /></a>
-						<figcaption>A photo of Kiyomizu Temple at sunset surrounded by the fall foliage.</figcaption>
-					</figure>
-					<figure class="image"><a href="media/heianshrine.png"><img style="width:655.6510620117188px"
-								src="media/heianshrine.png" /></a>
-						<figcaption>A photo of Heian Shrine’s major buildings. It is surrounded by expansive gardens.
-						</figcaption>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<div class="column-list">
-				<div style="width:33.33333333333333%" class="column">
-					<h3 class=""><strong>Rental Kimono Okamoto Kiyomizudera Shop<br />レンタル着物岡本 清水店<br /></strong></h3>
-					<p class="">This is a popular kimono rental place near <mark class="highlight-red"><strong>Kiyomizu
-								Temple</strong></mark>. The reviews are good and the condition is that you must return
-						it by 6 PM. You can also make reservations in the website above. </p>
-					<p class="">Note that there are two different times: t<strong>raditional kimonos (着物)</strong> and
-						<strong>yukatas (浴衣</strong>), which are lighter and made for summer weather.
-					</p>
-					<p class=""><a
-							href="https://www.okamoto-kimono-en.com/storeinfo/kiyomizudera.html">https://www.okamoto-kimono-en.com/storeinfo/kiyomizudera.html</a>
-					</p>
-					<p class="">
-					</p>
-				</div>
-				<div style="width:33.33333333333333%" class="column">
-					<h3 class=""><strong>Sanmikouan<br />三味洪庵 京都 本店<br /></strong></h3>
-					<figure class="image"><a href="media/sobanoodles.png"><img style="width:310.65972900390625px"
-								src="media/sobanoodles.png" /></a>
-					</figure>
-					<p class="">This is a popular local soba shop that accepts reservation so you can skip the line that
-						usually appears. Check the link below to see the menu. </p>
-					<p class=""><a href="https://sanmikouan.jp/menu/">https://sanmikouan.jp/menu/</a></p>
-				</div>
-				<div style="width:33.33333333333333%" class="column">
-					<h3 class="">Nidec Kyoto Tower<br /><br /><strong>ニデック京都タワー</strong><mark
-							class="highlight-red"><strong> </strong></mark>
-					</h3>
-					<figure class="image"><a href="media/kyototower.png"><img style="width:488.9930725097656px"
-								src="media/kyototower.png" /></a>
-					</figure>
-					<p class="">Take a view on the top of <mark class="highlight-red"><strong>Kyoto</strong></mark>
-						<mark class="highlight-red"><strong>Tower</strong></mark> around sunset of the city. Tickets are
-						relatively cheap, only around $6.00 USD. There are many dinner options nearby before heading
-						back to the hotel.
-					</p>
-				</div>
-			</div>
-			<hr />
-			<figure class="image"><a href="media/naralabel.png"><img style="width:672px"
-						src="media/naralabel.png" /></a>
-			</figure>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<p class="">The train ride from Kyoto to Nara—specifically <mark
-							class="highlight-red"><strong>Kintetsu-Nara Station</strong></mark>
-						<strong>(近鉄奈良駅)</strong> takes around 45 minutes one way, and there is usually one train every
-						20 minutes. Assuming we arrive at the station at around 9 AM, we can safely get out of Nara
-						Station at 10:30 AM.
-					</p>
-					<h3 class=""><strong>Tonkatsu Ganko Nara・とんかつがんこ奈良店</strong></h3>
-					<p class="">This is a famous Tonkatsu restaurant that has a very high rating, opens at 11 AM on
-						Mondays. This restaurant is very popular, so it is a good idea to eat it earlier (i.e. close to
-						when we arrive at the station) before exploring the rest of Nara.</p>
-					<h3 class=""><strong>Nakatanidou Mochi Shop Show・中谷堂</strong></h3>
-					<p class="">This shop is famous for its theatrical and traditional way of making mochi and has went
-						viral over its captivating process of rhythmic shouting and hammering mochi on a wooden mortar.
-						The line for the mochi is usually quite long, but it moves quite fast. However, the view for the
-						mochi making may be more crowded and hard to see during peak times.</p>
-					<p class="">If you would like to see the viral video on YouTube, it is in the link here: <a
-							href="https://www.youtube.com/watch?v=tmSrULDVRPc">**Pounding Mochi With the Fastest Mochi
-							Maker in Japan</a> </p>
-					<p class="">From all the reviews however, the mochi seems very delicious and worth the wait.</p>
-					<h3 class=""><strong>Kofuku-ji・興福寺 </strong></h3>
-					<p class=""><mark class="highlight-red"><strong>Kofukuji</strong></mark> used to be the
-						family temple of the Fujiwara, the most powerful aristocratic clan during much of the Nara and
-						Heian Periods. At 50 meters, the <strong>five-storied pagoda</strong> is Japan&#x27;s second
-						tallest wooden pagoda, just seven meters shorter than the five-storied pagoda at
-						Kyoto&#x27;s <mark class="highlight-red"><strong>Toji Temple</strong></mark>.</p>
-					<p class="">The complex is quite large, encompassing a park, many buildings, and the famous <mark
-							class="highlight-red"><strong>Sarusawa Pond</strong></mark>. This area is part of a large
-						green space that connects the to the <strong>Asajigahara Enchi</strong> and then Nara Park, so
-						we can take our time walking through it and enjoying the scenery. </p>
-					<h3 class=""><strong>Kuki Cake・空気ケーキ</strong></h3>
-					<p class=""><mark class="highlight-red"><strong>Kuki Cake</strong></mark> is in a area close to
-						<mark class="highlight-red"><strong>Asajigahara Enchi </strong></mark>and is a nice cafe to take
-						a rest to eat some delicious pastries. Visit the website below or look online for the menu!
-					</p>
-					<p class=""><a href="http://www.kuukicake.com/">http://www.kuukicake.com/</a></p>
-					<h1 class=""><strong>Nara Park 奈良公園 </strong></h1>
-					<p class="">Landscaped, public park with ancient temples &amp; the <mark
-							class="highlight-red"><strong>Nara National Museum of Art</strong></mark>, plus tame deer.
-						This is Nara Park proper, but essentially just another green space connected with the other
-						places explored earlier in the day. You can feed the deer at Nara Park (along with Asajigahara
-						Enchi) with special deer food that you can buy in the area. The deer are very polite and will
-						bow for you to feed them, but be careful as sometimes they will get aggressive when you don’t
-						give them what they want.</p>
-					<h3 class=""><strong>Asajigahara Enchi・浅茅ヶ原園地</strong>
-					</h3>
-					<p class=""><mark class="highlight-red"><strong>Asajigahara-enchi Park</strong></mark>, part of the
-						extensive <mark class="highlight-red"><strong>Nara Park</strong></mark>, is known for its
-						diverse landscape and cultural heritage. Located on the southern side of the park, near the
-						first Torii gate of <mark class="highlight-red"><strong>Kasuga Taisha Shrine</strong></mark>,
-						this hilly area offers stunning views, especially around the Sagiike Pond where the <mark
-							class="highlight-red"><strong>Ukimido Pavilion </strong></mark>stands.</p>
-					<p class="">This is also quite close to Nara Park proper, so there are many deers in this area as
-						well.</p>
-					<h3 class=""><strong>Kasuga Taisha・春日大社</strong></h3>
-					<p class=""><mark class="highlight-red"><strong>Kasuga Taisha</strong></mark> is one of the most
-						sacred sites in all of Japan. it attracts both devotees and tourists seeking an iconic Shinto
-						experience. It was built during 768 AD, and is beautifully lit up at night. There is no entrance
-						fee but it is a short walk (or hike) from Nara Park and the rest of the previously visited green
-						space.</p>
-					<h3 class=""><strong>Wagyu Suji Curry・和牛スジカレー </strong>
-					</h3>
-					<p class="">This restaurant specializes in Japanese curry and omurice, and it receives very high
-						ratings from both Japanese and foreigners. Check out their menu here: <a
-							href="https://steak-cielbleu.com/">https://steak-cielbleu.com/</a></p>
-				</div>
-				<div style="width:50%" class="column">
-					<figure class="image"><a href="media/tonkatsukanko.png"><img style="width:528px"
-								src="media/tonkatsukanko.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/mochishop.png"><img style="width:528px"
-								src="media/mochishop.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/kofukuji.png"><img style="width:528px"
-								src="media/kofukuji.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/narapark.png"><img style="width:528px"
-								src="media/narapark.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/asjigaharaenchi.png"><img style="width:528px"
-								src="media/asjigaharaenchi.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/kasugataisha.png"><img style="width:528px"
-								src="media/kasugataisha.png" /></a>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<figure class="full-width">
-				<iframe
-					src="https://www.google.com/maps/d/u/0/embed?mid=1Iot4wkKRushA3d4L1Uh797EarUIpP5g&ehbc=2E312F"
-					title="Japan Travel Map"
-					allowfullscreen
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-				<figcaption>Custom Google Map of Locations in Japan</figcaption>
-			</figure>
-			<hr />
-			<figure class="image"><a href="media/tokyolabel.png"><img style="width:720px"
-						src="media/tokyolabel.png" /></a>
-			</figure>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h1 class="">Shibuya・渋谷</h1>
-					<h3 class="">SHIBUYA SKY・渋谷スカイ </h3>
-					<p class=""><mark class="highlight-red"><strong>Shibuya Sky</strong></mark> is a 229 meter (751
-						feet) tall observation deck located on the 47th floor (top floor) of<mark
-							class="highlight-red"><strong> Shibuya Scramble Square Tower</strong></mark>. The open-air
-						deck offers a 360-degree panoramic view of Tokyo. </p>
-					<p class="">It is a place to take the most stunning photos, so make sure to bring you camera and
-						phone. Unfortunately, tickets during the evening are almost always taken even 4 weeks in
-						advance, so plan accordingly or enjoy the view during the day.</p>
-					<h3 class="">Shibuya Scramble Crossing ・<strong>スクランブル交差点</strong> </h3>
-					<p class=""><mark class="highlight-red"><strong>Shibuya Crossing</strong></mark>, is a popular
-						pedestrian scramble crossing in Tokyo. It is located in front of the <mark
-							class="highlight-red"><strong>Shibuya Station</strong></mark>
-						Hachikō exit and stops vehicles in all directions to allow pedestrians to inundate the entire
-						intersection. Note that there is also a famous dog statue on one of the corners of the
-						intersection.</p>
-					<p class="">This is right next to Shibuya Sky, so there will be almost no commute time between the
-						two of them. There is also small cafes (also Starbucks) nearby where you can watch the crossing
-						in action and get something to drink. </p>
-					<h3 class="">MEGA Don Quijote・メガドンキホーテ</h3>
-					<p class="">This is <mark class="highlight-red"><strong>Don Quijote</strong></mark>’s main store,
-						and is a go-to shopping destination for international tourists in Tokyo, offering a vast range
-						of affordable items, from daily essentials to souvenirs. It&#x27;s one of Tokyo&#x27;s largest
-						stores and offers tax-free shopping for overseas visitors.</p>
-					<p class="">This expansive discount store offers an array of products, ranging from essential daily
-						goods to groceries, home appliances, brand-name products, medicines, and souvenirs, all at
-						incredibly reasonable prices!</p>
-					<p class="">Check out YouTube videos to see all the things to buy! A majority of the products are
-						all very high quality! Note that if you want a tax refund, you are not allowed to open the
-						packaging until you leave Japan.</p>
-					<h3 class=""><strong>CAFE: dotcom space Tokyo </strong>
-					</h3>
-					<p class="">This cafe is located near our next location, and is in one of the most popular
-						subdistricts—<mark class="highlight-red"><strong>Harajuku</strong></mark>. It is a few steps
-						away from <mark class="highlight-red"><strong>Takeshita</strong></mark><mark
-							class="highlight-red">
-						</mark><mark class="highlight-red"><strong>Street</strong></mark>, a popular point in Harajuku
-						that features a variety of fashion and wacky, youth-driven shops selling colorful and crazy
-						clothes and accessories.</p>
-					<p class="">The cafe itself features very aesthetic and delicious foods, and is a good place to rest
-						before continuing on for the rest of the night. Note that this cafe closes at 6:30 PM, in case
-						of any change to the day itinerary. </p>
-					<h3 class="">Meiji Shrine <mark class="highlight-red">明治神宮</mark> </h3>
-					<p class=""><mark class="highlight-red"><strong>Meiji Shrine</strong></mark> (Meiji Jingū) is
-						a shrine dedicated to the deified spirits of Emperor Meiji and his consort, Empress Shoken.
-						Located just beside the JR Yamanote Line&#x27;s busy <mark
-							class="highlight-red"><strong>Harajuku</strong></mark> <mark
-							class="highlight-red"><strong>Station</strong></mark>, Meiji Shrine and the adjacent <mark
-							class="highlight-red"><strong>Yoyogi Park</strong></mark> make up a large forested area
-						within the densely built-up city and offer walking paths for a relaxing stroll away from the
-						concrete.</p>
-					<p class="">Meiji Shrine closes at sunset, which is around 7:00 PM or later. It has no entrance fee
-						so you are able to come and go as you wish. Due to its location next to the JR, it is very
-						convenient to commute to Shinjuku, which is where the next set of locations are.</p>
-				</div>
-				<div style="width:50%" class="column">
-					<figure class="image"><a href="media/shibuyasky.png"><img style="width:499.9913330078125px"
-								src="media/shibuyasky.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/shibuyacrossing.png"><img style="width:499.9913330078125px"
-								src="media/shibuyacrossing.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/donquijote.png"><img style="width:499.9913330078125px"
-								src="media/donquijote.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/cafe.png"><img style="width:499.9913330078125px"
-								src="media/cafe.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/meijishrine.png"><img style="width:499.9913330078125px"
-								src="media/meijishrine.png" /></a>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h1 class="">Shinjuku・新宿</h1>
-					<p class=""><mark class="highlight-red"><strong>Shinjuku</strong></mark><strong> </strong>is one of
-						Tokyo’s busiest and most dynamic districts, known for its dazzling mix of skyscrapers, shopping,
-						nightlife, and local flavor. From the neon-lit streets of <mark
-							class="highlight-red"><strong>Kabukicho</strong></mark> to peaceful spots like<mark
-							class="highlight-red"><strong> Shinjuku Gyoen</strong></mark>, it’s a place where
-						ultra-modern Tokyo and traditional pockets coexist. Whether you&#x27;re seeking ramen, bars,
-						fashion, or just the energy of the city, Shinjuku is a must-see urban playground.</p>
-					<h3 class="">Cross Shinjuku Vision・東新宿ビル クロス </h3>
-					<p class="">Right outside the East Exit of <mark class="highlight-red"><strong>Shinjuku
-								Station</strong></mark>, Cross Shinjuku Vision is an electronic billboard famous for its
-						3D effect. The most famous appearance on the billboard is the cat, which is pretty much an icon
-						of Tokyo itself.</p>
-					<p class="">There is also a famous <mark class="highlight-red"><strong>Cat</strong></mark> <mark
-							class="highlight-red"><strong>Cafe</strong></mark> in the building (hence the giant cat),
-						and if you want to check that out the hours are from 1 to 9 PM. The area is surrounded by many
-						fashion shops, restaurants, and other things that are sure to fill your time in the evening.
-						However, doing so will cut into the time for the next area, which is similar in that it is
-						mostly shopping. Feel free to adjust the time in each area to your liking.</p>
-					<h3 class="">Central Road・<strong>セントラルロード</strong><mark class="highlight-red"> </mark></h3>
-					<p class=""><mark class="highlight-red"><strong>Central Road</strong></mark> in <mark
-							class="highlight-red"><strong>Kabukicho</strong></mark> is the brightest and most iconic
-						area of <mark class="highlight-red"><strong>Shinjuku</strong></mark>, glowing with neon lights,
-						massive billboards, and nonstop energy. Known for its nightlife, entertainment, and endless
-						photo ops, it’s where you&#x27;ll find everything from host clubs and arcades to cinemas and
-						ramen joints. A stroll down this street captures the electric pulse of Tokyo after dark.</p>
-					<h3 class="">Tokyo Metropolitan Government Observation Decks</h3>
-					<p class="">The <mark class="highlight-red"><strong>Tokyo Metropolitan Government
-								Building</strong></mark> offers <strong>free observation decks</strong> with panoramic
-						views of the Tokyo skyline. Located in <mark class="highlight-red"><strong>West
-								Shinjuku</strong></mark>, the twin towers rise 243 meters high, giving you a stunning
-						look at the cityscape—on clear days, even <strong>Mt. Fuji</strong>
-						is visible. It’s a peaceful, budget-friendly spot to take in Tokyo from above, day or night.
-					</p>
-					<h3 class="">Omoide Yokocho </h3>
-					<p class=""><mark class="highlight-red"><strong>Omoide Yokocho</strong></mark> is a maze of narrow
-						alleyways near the West Exit of <mark class="highlight-red"><strong>Shinjuku
-								Station</strong></mark>, famous for its retro charm and smoky izakayas. Also known as
-						<mark class="highlight-red"><strong>Memory Lane</strong></mark>, it offers a glimpse into
-						postwar Tokyo, packed with tiny bars and eateries serving grilled skewers, sake, and comfort
-						food. It’s the home of many long-running establishments where locals and tourists alike gather
-						shoulder to shoulder for a taste of old Tokyo.
-					</p>
-					<p class="">
-					</p>
-				</div>
-				<div style="width:50%" class="column">
-					<figure class="image"><a href="media/shinjukuvision.png"><img style="width:499.9913330078125px"
-								src="media/shinjukuvision.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/centralroad.png"><img style="width:499.9913330078125px"
-								src="media/centralroad.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/tokyometrodeck.png"><img style="width:499.9913330078125px"
-								src="media/tokyometrodeck.png" /></a>
-					</figure>
-					<figure class="image"><a href="media/omoideyokocho.png"><img style="width:499.9913330078125px"
-								src="media/omoideyokocho.png" /></a>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<h1 class="">Minato Ward・港区</h1>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h3 class="">Tokyo Tower ・東京タワー</h3>
-					<figure class="image"><a href="media/tokyotower.png"><img style="width:527px"
-								src="media/tokyotower.png" /></a>
-					</figure>
-					<p class="">An icon of Tokyo’s skyline, <mark class="highlight-red"><strong>Tokyo Tower
-							</strong></mark>stands 333 meters tall and glows bright red at night. Visit the observation
-						decks for sweeping views of the city, and don’t miss the foot of the tower where you’ll find
-						shops and quirky exhibits. Among the base of the tower, there is the esports center <mark
-							class="highlight-red"><strong>Tokyo Tower RED</strong></mark>, which features many
-						interactive games and physical activities.</p>
-				</div>
-				<div style="width:50%" class="column">
-					<h3 class="">TeamLab Borderless</h3>
-					<figure class="image"><a href="media/teamlabsborderless.png"><img style="width:3840px"
-								src="media/teamlabsborderless.png" /></a>
-					</figure>
-					<p class="">Step into a world of digital wonder at <mark class="highlight-red"><strong>teamLab
-								Borderless</strong></mark>, an immersive art museum where light, color, and motion blend
-						seamlessly. Located in <mark class="highlight-red"><strong>Azabudai Hills</strong></mark>
-						(formerly in Odaiba), it’s a surreal and unforgettable experience that’s perfect for photos and
-						reflection.</p>
-				</div>
-			</div>
-			<hr />
-			<h1 class="">Ginza &amp; Chiyoda・銀座と千代田</h1>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h3 class="">Ginza’s 12-Story UNIQLO &amp; Shopping District</h3>
-					<figure class="video">
-						<video controls preload="metadata" style="max-width: 100%">
-							<source src="media/uniqlo.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>UNIQLO Ginza clip</figcaption>
-					</figure>
-					<p class=""><mark class="highlight-red">Ginza</mark> is Tokyo’s luxury shopping hub, lined with
-						flagship stores, upscale boutiques, and elegant cafes. Don’t miss the <mark
-							class="highlight-red"><strong>12-floor UNIQLO </strong></mark>megastore or the mesmerizing
-						<mark class="highlight-red"><strong>Art Aquarium Museum</strong></mark>, where goldfish swim
-						through artful, illuminated displays.
-					</p>
-				</div>
-				<div style="width:50%" class="column">
-					<h3 class="">Imperial Palace・皇居</h3>
-					<figure class="image"><a href="media/imperialpalace.png"><img style="width:526.96875px"
-								src="media/imperialpalace.png" /></a>
-					</figure>
-					<p class="">Home to Japan’s Emperor, the <mark class="highlight-red"><strong>Imperial
-								Palace</strong></mark> is surrounded by peaceful moats, stone bridges, and gardens.
-						While the inner grounds are rarely open, the East Gardens offer a beautiful and historic escape
-						right in the heart of the city.</p>
-				</div>
-			</div>
-			<hr />
-			<h1 class="">Taito &amp; Sumida・台東と墨田</h1>
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h3 class="">Tokyo Skytree・東京スカイツリー</h3>
-					<p class="">Soaring 634 meters into the sky,<mark class="highlight-red"><strong> Tokyo
-								Skytree</strong></mark> is the tallest structure in Japan and a striking symbol of
-						modern Tokyo. Its sleek design blends cutting-edge engineering with traditional aesthetics,
-						making it a must-see for architecture lovers and sightseers alike. Ride up to the two
-						observation decks for breathtaking, 360-degree views that stretch as far as Mt. Fuji on a clear
-						day. At the base, explore the bustling <mark
-							class="highlight-red"><strong>Solamachi</strong></mark> <mark
-							class="highlight-red"><strong>complex</strong></mark>, filled with shops, restaurants, and
-						even an aquarium—perfect for spending a full afternoon above and below the clouds.</p>
-					<p class="">
-					</p>
-				</div>
-				<div style="width:50%" class="column">
-					<p class="">
-					</p>
-					<figure class="video">
-						<video controls preload="metadata" style="max-width: 100%">
-							<source src="media/tokyoskytree.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>Tokyo Skytree panorama</figcaption>
-					</figure>
-				</div>
-			</div>
-			<hr />
-			<div class="column-list">
-				<div style="width:50%" class="column">
-					<h3 class="">Asakusa Temple・浅草寺</h3>
-					<figure class="image"><a href="media/asakusatemple.png"><img style="width:526.984375px"
-								src="media/asakusatemple.png" /></a>
-					</figure>
-					<p class="">Tokyo’s oldest and most famous temple, <mark
-							class="highlight-red"><strong>Sensoji</strong></mark> in Asakusa is a must-visit for its
-						giant red lantern, vibrant shopping street (<strong>Nakamise-dori</strong>), and spiritual
-						atmosphere. It&#x27;s a place where centuries of tradition meet lively modern tourism.</p>
-				</div>
-				<div style="width:50%" class="column">
-					<h3 class="">Akihabara・秋葉原</h3>
-					<figure class="image"><a href="media/akihabara.png"><img style="width:526.984375px"
-								src="media/akihabara.png" /></a>
-					</figure>
-					<p class="">Known as Tokyo’s mecca for electronics, anime, and gaming, <mark
-							class="highlight-red"><strong>Akihabara</strong></mark> buzzes with energy. Explore maid
-						cafes, retro game shops, and multi-story arcades, or dive into the otaku culture that makes this
-						district truly one of a kind.</p>
-				</div>
-			</div>
-			<hr />
-			<p class="">
-			</p>
+			</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
 		</div>
-	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+
+		<script>
+			// Highlight active timeline link
+			document.addEventListener("DOMContentLoaded", () => {
+				const sections = Array.from(document.querySelectorAll("figure[id], h1[id], h2[id]"));
+				const navLinks = Array.from(document.querySelectorAll(".timeline li a"));
+
+				function getCurrentSection() {
+					const scrollPos = window.scrollY + window.innerHeight / 3;
+					let currentId = "";
+
+					for (let i = 0; i < sections.length; i++) {
+						if (sections[i].offsetTop <= scrollPos) {
+							currentId = sections[i].id;
+						}
+					}
+
+					navLinks.forEach(link => {
+						link.classList.toggle("active", link.getAttribute("href").substring(1) === currentId);
+					});
+				}
+
+				window.addEventListener("scroll", getCurrentSection);
+				getCurrentSection();
+			});
+		</script>
+
+		<script>
+			// Hero title becomes sticky and shrinks
+			window.addEventListener("scroll", () => {
+				const hero = document.querySelector(".hero-container");
+				const scrollY = window.scrollY;
+
+				if (scrollY > 200) {
+					hero.classList.add("scrolled");
+					document.body.classList.add("has-sticky-hero");
+				} else {
+					hero.classList.remove("scrolled");
+					document.body.classList.remove("has-sticky-hero");
+				}
+			});
+
+		</script>
+	</div>
+
+
 </body>
+
 
 </html>
